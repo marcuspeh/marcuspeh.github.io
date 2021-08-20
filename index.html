@@ -53,7 +53,7 @@
             <!-- About-->
             <section class="resume-section" id="main">
                 <div class="resume-section-content">
-                    <div class="flip-x">
+                    <div class="fade-in">
                         <h1 class="mb-0">
                             Marcus
                             <span class="text-primary">Peh</span>
@@ -79,7 +79,7 @@
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
-                    <h2 class="mb-5 flip-x">Education</h2>
+                    <h2 class="mb-5 fade-in">Education</h2>
                     <div class="enlarge">
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1">
@@ -127,7 +127,7 @@
             <!-- Additional Study-->
             <section class="resume-section" id="addtionalStudy">
                 <div class="resume-section-content">
-                    <h2 class="mb-5 flip-x">Additional Study</h2>
+                    <h2 class="mb-5 fade-in">Additional Study</h2>
                     <div class="slide-right">
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1">
@@ -161,7 +161,7 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5 flip-x">Work Experience</h2>
+                    <h2 class="mb-5 fade-in">Work Experience</h2>
                     <div class="fade-left-delay-1">
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1">
@@ -203,7 +203,7 @@
             <!-- Projects-->
             <section class="resume-section" id="project">
                 <div class="resume-section-content">
-                    <h2 class="mb-5 flip-x">Projects</h2>
+                    <h2 class="mb-5 fade-in">Projects</h2>
                     <!-- Portfolio Grid Items-->
                     <div class="row justify-content-center">
                         <!-- Portfolio Item 1-->
@@ -275,7 +275,7 @@
             <!--
             <section class="resume-section" id="testimonial">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Testimonial</h2>
+                    <h2 class="mb-5 fade-in">Testimonial</h2>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -317,7 +317,7 @@
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5 flip-x">Skills</h2>
+                    <h2 class="mb-5 fade-in">Skills</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item"><i class="fab fa-python"></i></li>
@@ -349,8 +349,8 @@
             <!-- About Me-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h2 class="mb-5 flip-x">About Me</h2>
-                    <div class="flip-xy">
+                    <h2 class="mb-5 fade-in">About Me</h2>
+                    <div class="flip-x">
                         <p style="font-size: 1.1em; width: 90%;">
                             A self-motivated, hardworking sophomore at National University of Singapore, majoring in Computer Science with a high GPA of 4.83. Creative and strong problem-solving and analytical skills. Firm foundation in Computer Science. 
                         </p>
@@ -374,7 +374,7 @@
         <script src="js/scripts.js"></script>
         <script>
             ScrollReveal().reveal('.enlarge', {scale: 0.85});
-            ScrollReveal().reveal('.enlarge-slow', {scale: 0.85, duration: 2000});
+            ScrollReveal().reveal('.enlarge-slow', {scale: 0.85, duration: 2000, delay: 400});
             ScrollReveal().reveal('.enlarge-delay-1', {scale: 0.85, delay: 400});
             ScrollReveal().reveal('.shrink', {scale: 1.5});
             ScrollReveal().reveal('.flip-x', {rotate: { x: 180, y: 0, z: 0 }, duration: 1200});
@@ -394,6 +394,7 @@
             ScrollReveal().reveal('.fade-right-delay-2', { origin: 'right', distance: '20%',  delay: 700, scale: 0.8, opacity: 0});
             ScrollReveal().reveal('.fade-up', { origin: 'top', distance: '20%', opacity: 0.2, delay: 400, duration: 1500});
             ScrollReveal().reveal('.fade-down', { origin: 'bottom', distance: '20%', opacity: 0.2, delay: 400, duration: 1500});
+            ScrollReveal().reveal('.fade-in', {opacity: 0})
         </script>
     </body>
 </html>
