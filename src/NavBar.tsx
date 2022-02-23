@@ -14,7 +14,16 @@ const NavBar: React.FC = (): JSX.Element => {
                         </Nav>
                     </Col>
                     <Col style={{ textAlign: "center" }}>
-                        <Navbar.Brand href="#home">Marcus Peh</Navbar.Brand>
+                        <Nav>
+                            <Nav.Link href="#home">
+                                <Row>
+                                    <h3 style={{margin: 0}}>Marcus Peh</h3>
+                                </Row>
+                                <Row>
+                                    <span>Computer Science Undergraduate</span>
+                                </Row>    
+                            </Nav.Link>
+                        </Nav>
                     </Col>
                     <Col style={{ textAlign: "right" }}>
                         <Nav className="justify-content-end">
@@ -25,9 +34,11 @@ const NavBar: React.FC = (): JSX.Element => {
                 </Row>
             </Container>
             <Container className=".d-block d-lg-none d-xl-none">
-                <Navbar.Brand href="#home">Marcus Peh</Navbar.Brand>
+                <Navbar.Brand href="#home">
+                    Marcus Peh
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav justify-content-end">
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Project</Nav.Link>
                         <Nav.Link href="#link">About</Nav.Link>
