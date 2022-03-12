@@ -1,18 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css';
 
-import App from './App';
-import NavBar from './NavBar';
+import Contact from './pages/contact/Contact';
+import Landing from './pages/landing/Landing';
+import NavBar from './components/navbar/NavBar';
+import Project from './pages/project/Project';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <NavBar />
-    <App />
-  </React.StrictMode>,
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/project" element={<Project />} />
+      <Route path="/about" element={<Landing />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<Landing />} />
+    </Routes>
+  </Router>,
   document.getElementById('root')
 );
 
