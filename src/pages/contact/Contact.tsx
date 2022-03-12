@@ -2,13 +2,15 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import profile from '../../assets/img/profile.jpeg';
 
+import ContactFrom from '../../components/contactForm/ContactForm';
+
 const Contact: React.FC = (): JSX.Element => {
   return (
     <div className="d-flex flex-column align-items-center">
       <Container style={{width:"80%"}}>
         <Row className='mb-4'>
           <Col md={4}>
-            <img style={{borderRadius:"50%", width:"95%"}} src={profile} />
+            <img style={{borderRadius:"50%", width:"100%", padding:"10%"}} src={profile} />
           </Col>
           <Col className="d-flex flex-column justify-content-center">
             <h1>Marcus Peh</h1>
@@ -30,7 +32,7 @@ const Contact: React.FC = (): JSX.Element => {
           </Col>
         </Row>
         <Row>
-          form form form form form form form form form form form form form form form form form form form form form form form form 
+          <ContactFrom />
         </Row>
       </Container>
       
