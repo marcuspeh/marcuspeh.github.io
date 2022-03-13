@@ -4,7 +4,39 @@ import profile from '../../assets/img/profile.jpeg';
 
 const Landing: React.FC = (): JSX.Element => {
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center" style={{height:"80vh"}}>
+    <div className="d-flex flex-column justify-content-center align-items-center" id='landing-animation' style={{height:"80vh"}}>
+      <div className="snowflakes" aria-hidden="true">
+  <div className="snowflake">
+  ❅
+  </div>
+  <div className="snowflake">
+  ❅
+  </div>
+  <div className="snowflake">
+  ❆
+  </div>
+  <div className="snowflake">
+  ❄
+  </div>
+  <div className="snowflake">
+  ❅
+  </div>
+  <div className="snowflake">
+  ❆
+  </div>
+  <div className="snowflake">
+  ❄
+  </div>
+  <div className="snowflake">
+  ❅
+  </div>
+  <div className="snowflake">
+  ❆
+  </div>
+  <div className="snowflake">
+  ❄
+  </div>
+</div>
       <Container style={{width:"70%"}}>
         <Row>
           <Col md={4} className='mb-3'>
