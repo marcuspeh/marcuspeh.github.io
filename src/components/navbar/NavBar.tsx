@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 
+import resume from '../../assets/file/Marcus_Peh_Resume.pdf';
+
 const NavBar: React.FC = (): JSX.Element => {
     return (
         <Navbar bg="light" expand="md" className='mb-4'>
@@ -17,7 +19,6 @@ const NavBar: React.FC = (): JSX.Element => {
                             <Nav.Link href="/">
                                 <Row style={{margin: 0}}>
                                     <h3 style={{margin: 0, padding: 0}}>Marcus Peh</h3>
-                                    <span style={{padding: 0}}>Computer Science Undergraduate</span>
                                 </Row> 
                             </Nav.Link>
                         </Nav>
@@ -25,7 +26,7 @@ const NavBar: React.FC = (): JSX.Element => {
                     <Col className="align-self-center">
                         <Nav className="justify-content-end">
                             <Nav.Link href="/contact">Contact</Nav.Link>
-                            <Nav.Link href="/resume">Resume</Nav.Link>
+                            <Nav.Link href={resume} target="_blank" >Resume</Nav.Link>
                         </Nav>
                     </Col>
                 </Row>
@@ -40,7 +41,7 @@ const NavBar: React.FC = (): JSX.Element => {
                         <Nav.Link href="/project">Project</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
-                        <Nav.Link href="/resume">Resume</Nav.Link>
+                        <Nav.Link href={resume} target="_blank" >Resume</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

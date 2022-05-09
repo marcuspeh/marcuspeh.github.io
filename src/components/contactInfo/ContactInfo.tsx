@@ -10,7 +10,7 @@ const ContactInfo: React.FC = (): JSX.Element => {
                     <img style={{borderRadius:"50%", width:"100%", padding:"10%"}} src={profile} alt='Profile picture :)'/>
                 </Col>
                 <Col className="d-flex flex-column justify-content-center">
-                    <h1>Marcus Peh</h1>
+                    <h2>Marcus Peh</h2>
                     <p>Mobile: (+65) 9776 8352<br/>Email: marcuspeh@u.nus.edu</p>
                     <div className='social-icons'>
                         <Button className="social-icon" variant="secondary" href="https://linkedin.com/in/marcuspeh" target="_blank">

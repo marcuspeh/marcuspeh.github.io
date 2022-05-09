@@ -1,10 +1,13 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
 
 const About: React.FC = (): JSX.Element => {
   return (
-    <div className="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-      Hi      
-    </div>
+    <Container>
+      <Row>
+        <h3>About</h3>
+      </Row>
+    </Container>
   );
 }
 

@@ -10,6 +10,7 @@ import Contact from './pages/contact/Contact';
 import Landing from './pages/landing/Landing';
 import NavBar from './components/navbar/NavBar';
 import Project from './pages/project/Project';
+import About from './pages/about/About';
 
 ReactDOM.render(
   <Router>
@@ -17,10 +18,11 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/project" element={<Project />} />
-      <Route path="/about" element={<Landing />} />
+      <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Landing />} />
     </Routes>
+    <br />
   </Router>,
   document.getElementById('root')
 );
