@@ -8,7 +8,7 @@ const Project: React.FC = (): JSX.Element => {
     <Container>
       <Row>
         <h3>Featured Projects</h3>
-        <p>View more at <a href='https://github.com/marcuspeh'>github.com/marcuspeh</a></p>
+        <p>View more at <a href='https://github.com/marcuspeh'  style={{textDecoration: 'none'}}>github.com/marcuspeh</a></p>
       </Row>
       <Row xs={1} md={2} lg={3} className="row justify-content-center">
           <ProjectCard 
