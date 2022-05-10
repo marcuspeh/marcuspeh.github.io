@@ -11,7 +11,7 @@ interface props {
 
 const ExperienceInfo: React.FC<props> = (props): JSX.Element => {
     return (
-        <div className="d-flex flex-column flex-md-row justify-content-between">
+        <div className="d-flex flex-column flex-md-row justify-content-between mb-3">
             <div className="flex-grow-1">
                 <h4 className="mb-0">{props.title}</h4>
                 <div className="mb-2" style={{fontSize:'1.2em'}}>{props.company}</div>

@@ -19,7 +19,6 @@ const EducationInfo: React.FC = (): JSX.Element => {
                     <li>(Grade: A<sup></sup>) CS2103T: Software Engineering</li>
                     <li>(Grade: A<sup>+</sup>) CS2106: Introduction to Operating Systems</li>
                 </ul>
-                <a href={transcript} target="_blank" style={{textDecoration: 'none'}}>Click here to view my transcript.</a>
             </div>
             <div className="flex-shrink-0">August 2020 - May 2024</div>
         </div>
