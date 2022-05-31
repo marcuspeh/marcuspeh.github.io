@@ -40,7 +40,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#main">Hello</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#addtionalStudy">Additional Study</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Work Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
@@ -48,9 +47,8 @@
                 </ul>
             </div>
         </nav>
-        <!-- Page Content-->
+        <!-- Landing -->
         <div class="container-fluid p-0">
-            <!-- About-->
             <section class="resume-section" id="main">
                 <div class="resume-section-content">
                     <div class="fade-in">
@@ -77,7 +75,7 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Education-->
+            <!-- Education -->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
                     <h2 class="mb-5 fade-in">Education</h2>
@@ -94,8 +92,10 @@
                                     <li>(Grade: A<sup>+</sup>) CS2030S: Programming Methodology II</li>
                                     <li>(Grade: A<sup>-</sup>) CS2040S: Data Structures and Algorithms</li>
                                     <li>(Grade: A<sup>+</sup>) CS2100: Computer Organisation</li>
+                                    <li>(Grade: A<sup>-</sup>) CS2102: Database Systems</li>
                                     <li>(Grade: A<sup></sup>) CS2103T: Software Engineering</li>
                                     <li>(Grade: A<sup>+</sup>) CS2106: Introduction to Operating Systems</li>
+                                    <li>(Grade: A<sup>-</sup>) CS3243: Introduction to Artificial Intelligence</li>
                                 </ul>
                                 <a href="assets/file/Marcus_Peh_Transcript.pdf" target="_blank" style="text-decoration: none;">Click here to view my transcript.</a>
                             </div>
@@ -125,49 +125,16 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Additional Study-->
-            <section class="resume-section" id="addtionalStudy">
-                <div class="resume-section-content">
-                    <h2 class="mb-5 fade-in">Additional Study</h2>
-                    <div class="slide-right">
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h4 class="mb-0">CS50X: Introduction to Computer Science</h4>
-                                <p class="mb-0">HarvardX</p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">2019</span></div>
-                        </div>
-                    </div>
-                    <div class="slide-right-delay-1">
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h4 class="mb-0">CS50AI: Introduction to Artificial Intelligence with Python</h4>
-                                <p class="mb-0">HarvardX</p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">2021</span></div>
-                        </div>
-                    </div>
-                    <div class="slide-right-delay-2">
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                            <div class="flex-grow-1">
-                                <h4 class="mb-0">CS50W: Web Programming with Python and JavaScript</h4>
-                                <p class="mb-0">HarvardX</p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">2021</span></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
+            <!-- Experience -->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5 fade-in">Work Experience</h2>
                     <div class="fade-left">
                         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                             <div class="flex-grow-1">
-                                <h3 class="mb-0">Incoming Software Engineering Intern</h3>
+                                <h3 class="mb-0">Software Engineering Intern</h3>
                                 <div class="subheading mb-3">GovTech</div>
+                                <p>Coming soon</p>
                             </div>
                             <div class="flex-shrink-0"><span class="text-primary">May 2022 - July 2022</span></div>
                         </div>
@@ -221,7 +188,7 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Projects-->
+            <!-- Projects -->
             <section class="resume-section" id="project">
                 <div class="resume-section-content">
                     <h2 class="mb-5 fade-in">Projects</h2>
@@ -234,7 +201,9 @@
                                   <h4 class="card-title">2048 Solver</h4>
                                   <p><i>Tech Stack:</i> Python</p>
                                   <p class="card-text">The solver plays the 2048 game based on Monte-Carlo (MC) algorithm. Since each step in 2048 will generate a new tile in random position, MC is the best algorithm for it.</p>
-                                  <a href="https://github.com/marcuspeh/2048solver" class="btn btn-primary" target="blank">View more</a>
+                                </div>
+                                <div class="card-footer" style="border: none; background-color: rgba(0,0,0,0);">
+                                    <a href="https://github.com/marcuspeh/2048solver" class="btn btn-primary" target="blank">View more</a>
                                 </div>
                             </div>
                         </div>
@@ -244,8 +213,10 @@
                                 <div class="card-body">
                                   <h4 class="card-title">Around the world in $80</h4>
                                   <p><i>Tech Stack:</i> Java, JavaFx</p>
-                                  <p class="card-text">Splitting bills during travel is often a hassle. Most travel groups often designate one person to pay. This method of settling payments poses a vexing task of splitting costs at the end of the day or on the spot. Our app effectively splits bills between different contacts to serve this purpose.</p>
-                                  <a href="https://github.com/marcuspeh/Around_The_World_In_80" class="btn btn-primary" target="blank">View more</a>
+                                  <p class="card-text">Splitting bills during travel is often a hassle. Most travel groups often designate one person to pay. This method of settling payments poses a vexing task of splitting costs at the end of the day or on the spot. Our app effectively splits bills between different contacts to serve this purpose.</p> 
+                                </div>
+                                <div class="card-footer" style="border: none; background-color: rgba(0,0,0,0);">
+                                    <a href="https://github.com/marcuspeh/Around_The_World_In_80" class="btn btn-primary" target="blank">View more</a>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +227,9 @@
                                   <h4 class="card-title">Point of Sales system</h4>
                                   <p><i>Tech Stack:</i> MongoDb, ExpressJS, ReactJs, NodeJs</p>
                                   <p class="card-text">Designed with both the business and consumers interest at heart. It incorporates a online web system to help store manage their sales and inventory as well as a telegram bot to help users check for stock in stores.</p>
-                                  <a href="https://github.com/marcuspeh/markeet" class="btn btn-primary" target="blank">View more</a>
+                                </div>
+                                <div class="card-footer" style="border: none; background-color: rgba(0,0,0,0);">
+                                    <a href="https://github.com/marcuspeh/markeet" class="btn btn-primary" target="blank">View more</a>
                                 </div>
                             </div>
                         </div>
@@ -267,6 +240,8 @@
                                   <h4 class="card-title">Splitlux</h4>
                                   <p><i>Tech Stack:</i> Flutter (dart), Django (Python)</p>
                                   <p class="card-text">Build using Flutter and Django, Splitlux targets travellers in sight of borders opening from the pandemic. It aims to expedites the process by splitting and monitoring bills in an efficient manner during travel.</p>
+                                </div>
+                                <div class="card-footer" style="border: none; background-color: rgba(0,0,0,0);">
                                   <a href="https://github.com/marcuspeh/Splitlux" class="btn btn-primary" target="blank">View more</a>
                                 </div>
                             </div>
@@ -279,6 +254,8 @@
                                   <h4 class="card-title">Auto Text Writer</h4>
                                   <p><i>Tech Stack:</i> Java</p>
                                   <p class="card-text">The generator will take in sample text at first and form Markov Model based on the next letter/word that comes after it. Using the Markov Model, it will then generate the text of certain length as specified by the user.</p>
+                                </div>
+                                <div class="card-footer" style="border: none; background-color: rgba(0,0,0,0);">
                                   <a href="https://github.com/marcuspeh/Automated-Writing" class="btn btn-primary" target="blank">View more</a>
                                 </div>
                             </div>
@@ -290,6 +267,8 @@
                                   <h4 class="card-title">Maze Solver</h4>                                  
                                   <p><i>Tech Stack:</i> Java</p>
                                   <p class="card-text">The codes run based on breadth first search and stores the path. The number of rooms reachable with each step is stored in a hashmap while computing the shortest path to solve the maze. This will reduce the computation needed</p>
+                                </div>
+                                <div class="card-footer" style="border: none; background-color: rgba(0,0,0,0);">
                                   <a href="https://github.com/marcuspeh/Maze-Solver" class="btn btn-primary" target="blank">View more</a>
                                 </div>
                             </div>
@@ -298,7 +277,7 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Skills-->
+            <!-- Skills -->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5 fade-in">Skills</h2>
@@ -386,7 +365,7 @@
                     
             </section>
             <hr class="m-0" />
-            <!-- About Me-->
+            <!-- About Me -->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h2 class="mb-5 fade-in">About Me</h2>
