@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 
-import profile from '../../assets/img/profile.jpeg';
 import _2048Demo from '../../assets/img/2048_demo.jpg';
 import aweDemo from '../../assets/img/awe_demo.png';
 import markeetDemo from '../../assets/img/markeet_demo.png';
 import mazeSolverDemo from '../../assets/img/mazesolver_demo.png';
 import splitlixDemo from '../../assets/img/splitlux_demo.png';
+import rgbDemo from '../../assets/img/rgb_demo.png';
 
 import ProjectCard from '../../components/projectCard/ProjectCard';
 
@@ -52,9 +52,9 @@ const Project: React.FC = (): JSX.Element => {
           
           <ProjectCard 
             title="IOT RGB LIGHTS" 
-            image={profile}
+            image={rgbDemo}
             techStacks={['Nodejs (TypeScript)', "TypeOrm", "Koa", "Postgres", "Arduino (C++)"]}
-            description='This project consists of the server to control the RGB lights, the codes to control the arduino as well as the app to interact with the rgb led from phone.' 
+            description='This project contains all the software needed to make an IOT RGB. It consists of the server to control the RGB lights, the codes to control the arduino as well as the app to interact with the rgb led from phone.' 
             projectLink='https://github.com/marcuspeh/IOT_RGB_Lights' 
           />
           
