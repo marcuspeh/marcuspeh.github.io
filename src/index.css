@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fbfbfb;
+  color: #000c28;
 }
 
 code {
@@ -32,4 +34,12 @@ code {
 .card-footer {
 	background-color: rgba(0, 0, 0, 0);
 	border-top: None;
+}
+
+.maroon {
+  color: #800000;
+}
+
+a {
+  text-decoration: none;
 }

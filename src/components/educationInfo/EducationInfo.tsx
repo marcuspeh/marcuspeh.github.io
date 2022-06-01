@@ -1,7 +1,5 @@
 import React from 'react';
 
-import transcript from '../../assets/file/Marcus_Peh_Transcript.pdf';
-
 const EducationInfo: React.FC = (): JSX.Element => {
     return (
         <div className="d-flex flex-column flex-md-row justify-content-between">

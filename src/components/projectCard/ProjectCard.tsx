@@ -20,7 +20,7 @@ const Project: React.FC<projectInfo> = (projectInfo): JSX.Element => {
                     <Card.Text>{projectInfo.description}</Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <Button variant="primary" href={projectInfo.projectLink} target="_blank">View more</Button>
+                    <Button variant="secondary" href={projectInfo.projectLink} target="_blank">View more</Button>
                 </Card.Footer>
             </Card>
         </div>

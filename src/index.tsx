@@ -10,7 +10,8 @@ import Contact from './pages/contact/Contact';
 import Landing from './pages/landing/Landing';
 import NavBar from './components/navbar/NavBar';
 import Project from './pages/project/Project';
-import About from './pages/about/About';
+import Background from './pages/background/Background';
+import Experience from './pages/experience/Experience';
 
 ReactDOM.render(
   <Router>
@@ -18,7 +19,8 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/project" element={<Project />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/background" element={<Background />} />
+      <Route path="/experience" element={<Experience />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Landing />} />
     </Routes>
