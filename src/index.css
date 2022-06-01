@@ -40,6 +40,14 @@ code {
   color: #800000;
 }
 
+.black {
+  color: #333;
+}
+
+.bold {
+  font-weight: 500;
+}
+
 a {
   text-decoration: none;
 }

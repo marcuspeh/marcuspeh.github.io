@@ -25,11 +25,11 @@ const Experience: React.FC = (): JSX.Element => {
         <ExperienceInfo 
           title='Teaching Assistant'
           company='National University of Singapore'
-          description='Took charge and led students towards active learning of Computer Science modules. Mentored students by providing apt feedback to queries and assignments.
-          Modules taught:
-          CS1010X Programming Methodology I (2021 Spring),
-          CS2030S Programming Methodology II (2021 Fall),
-          CS2040S Data Structures and Algorithms (2022 Spring)'
+          description='Took charge and led students towards active learning of Computer Science modules. Mentored students by providing apt feedback to queries and assignments.'
+          listsHeader='Modules taught:'
+          lists={['CS1010X Programming Methodology I (2021 Spring)',
+              'CS2030S Programming Methodology II (2021 Fall)',
+              'CS2040S Data Structures and Algorithms (2022 Spring)']}
           date='Jan 2021 - Present'
         />
 

@@ -32,7 +32,7 @@ const NavBar: React.FC = (): JSX.Element => {
             </Container>
             <Container className=".d-block d-lg-none d-xl-none">
                 <Navbar.Brand href="/" className="maroon">
-                    Marcus Peh
+                    <p className="maroon bold">Marcus Peh</p>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
