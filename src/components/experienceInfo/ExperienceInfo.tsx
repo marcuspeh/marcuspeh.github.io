@@ -11,14 +11,12 @@ interface props {
 
 
 function generateList(lists: string[], listsHeader: string|undefined) {
-    return <p>
-        {listsHeader}
+    return <>
+        <p>{listsHeader}</p>
         <ul>
-            {lists.map((a) => <li id={a}>{a}</li>)}
+            {lists.map((a) => <li key={a}>{a}</li>)}
         </ul>
-    </p>
-    
-   
+    </>
 }
 
 
@@ -28,10 +26,10 @@ const ExperienceInfo: React.FC<props> = (props): JSX.Element => {
             <div className="flex-grow-1">
                 <h4 className="mb-0">{props.title}</h4>
                 <div className="mb-2" style={{fontSize:'1.2em'}}>{props.company}</div>
-                <p>
-                    {props.description}
+                <div>
+                    <p>{props.description}</p>
                     {props.lists ? generateList(props.lists, props.listsHeader) : "" }
-                </p>
+                </div>
             </div>
             <div className="flex-shrink-0">{props.date}</div>
         </div>

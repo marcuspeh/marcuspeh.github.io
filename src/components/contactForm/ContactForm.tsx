@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, FloatingLabel, Form } from "react-bootstrap";
 
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/1fa106f0-a221-11ec-975b-f9cc2b0e6900"; 
@@ -14,7 +14,7 @@ const ContactForm = () => {
   if (submitted) {
     return (
       <>
-        <h2>Thank you!</h2>
+        <h3>Thank you!</h3>
         <div>We'll be in touch soon.</div>
       </>
     );
