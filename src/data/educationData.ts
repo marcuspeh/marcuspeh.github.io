@@ -1,10 +1,16 @@
-import { jsonObject } from "./jsonObject";
+export interface educationObject {
+    "univerity": string,
+    "major": string,
+    "gpa": string,
+    "date": string,
+    "modules": string[]
+}
 
-export const EducationData: jsonObject = {
-    "univerity": ["National University Of Singapore"],
-    "major": ["Bachelor of Computing, Computer Science (Honors)"],
-    "gpa": ["4.72 / 5.00"],
-    "date": ["August 2020 - May 2024"],
+export const EducationData: educationObject = {
+    "univerity": "National University Of Singapore",
+    "major": "Bachelor of Computing, Computer Science (Honors)",
+    "gpa": "4.72 / 5.00",
+    "date": "August 2020 - May 2024",
     "modules": [
         `(Grade: A) CS1010X: Programming Methodology I`,
         `(Grade: A-) CS1231S: Discrete Structures`,

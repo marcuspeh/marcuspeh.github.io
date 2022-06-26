@@ -13,19 +13,19 @@ const Experience: React.FC = (): JSX.Element => {
           ExperienceData.map((experience) => {
             if (experience.listHeader && experience.listContent && experience.listContent.length > 0) {
               return <ExperienceInfo 
-                title={experience.title[0]}
-                company={experience.company[0]}
-                description={experience.description[0]}
-                date={experience.date[0]}
-                listsHeader={experience.listHeader[0]}
+                title={experience.title}
+                company={experience.company}
+                description={experience.description}
+                date={experience.date}
+                listsHeader={experience.listHeader}
                 lists={experience.listContent}
               />
             } else {
               return <ExperienceInfo 
-                title={experience.title[0]}
-                company={experience.company[0]}
-                description={experience.description[0]}
-                date={experience.date[0]}
+                title={experience.title}
+                company={experience.company}
+                description={experience.description}
+                date={experience.date}
               />
             }
           })
