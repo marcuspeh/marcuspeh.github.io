@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
 
-import EducationInfo from '../../components/educationInfo/EducationInfo';
-import SkillsInfo from '../../components/skillsInfo/SkillsInfo';
+import EducationInfo from '../../components/educationInfo/EducationInfo'
+import SkillsInfo from '../../components/skillsInfo/SkillsInfo'
 
 const Background: React.FC = (): JSX.Element => {
   return (
@@ -16,7 +16,7 @@ const Background: React.FC = (): JSX.Element => {
         <SkillsInfo />
       </Row>
     </Container>
-  );
+  )
 }
 
-export default Background;
+export default Background

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Row} from 'react-bootstrap';
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
 
-import ContactFrom from '../../components/contactForm/ContactForm';
-import ContactInfo from '../../components/contactInfo/ContactInfo';
+import ContactFrom from '../../components/contactForm/ContactForm'
+import ContactInfo from '../../components/contactInfo/ContactInfo'
 
 const Contact: React.FC = (): JSX.Element => {
   return (
@@ -17,7 +17,7 @@ const Contact: React.FC = (): JSX.Element => {
         <ContactFrom />
       </Row>
     </Container>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

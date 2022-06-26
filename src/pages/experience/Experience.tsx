@@ -1,7 +1,7 @@
-import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
 
-import ExperienceInfoList from '../../components/experienceInfo/ExperienceInfoList';
+import ExperienceInfoList from '../../components/experienceInfo/ExperienceInfoList'
 
 const Experience: React.FC = (): JSX.Element => {
   return (
@@ -11,7 +11,7 @@ const Experience: React.FC = (): JSX.Element => {
         <ExperienceInfoList />
       </Row>
     </Container>
-  );
+  )
 }
 
-export default Experience;
+export default Experience

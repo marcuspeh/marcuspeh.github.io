@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Button, FloatingLabel, Form } from "react-bootstrap";
+import React, { useState } from "react"
+import { Button, FloatingLabel, Form } from "react-bootstrap"
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/1fa106f0-a221-11ec-975b-f9cc2b0e6900"; 
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/1fa106f0-a221-11ec-975b-f9cc2b0e6900" 
 
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false)
   const handleSubmit = () => {
     setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
-  };
+      setSubmitted(true)
+    }, 100)
+  }
 
   if (submitted) {
     return (
@@ -17,7 +17,7 @@ const ContactForm = () => {
         <h3>Thank you!</h3>
         <div>We'll be in touch soon.</div>
       </>
-    );
+    )
   }
 
   return (
@@ -44,7 +44,7 @@ const ContactForm = () => {
         Submit
       </Button>
     </Form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm
