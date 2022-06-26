@@ -1,4 +1,4 @@
-export interface educationObject {
+interface educationObject {
     "univerity": string,
     "major": string,
     "gpa": string,

@@ -1,16 +1,17 @@
 import React from 'react';
+import { SkillsData } from '../../data/skillsData'
 
 const SkillsInfo: React.FC = (): JSX.Element => {
     return (
         <div>
-            <h4 className='mb-1'>Programming Language</h4>
-            <p>Python, Java, C, Dart, HTML, CSS, JavaScript</p>
-            <h4 className='mb-1'>Libraries & Frameworks</h4>
-            <p>ReactJs, NodeJs, Django, Flutter, Junit, Pandas, Tabula, Tensorflow</p>
-            <h4 className='mb-1'>Databases</h4>
-            <p>Postgres, MongoDB</p>
-            <h4 className='mb-1'>Tools</h4>
-            <p>Figma, Heroku, Git</p>
+            {
+                SkillsData.map((skills) => {
+                    return <>
+                    <h4 className='mb-1'>{skills.header}</h4>
+                    <p>{skills.skills}</p>
+                    </>
+                })
+            }
         </div>
     )
 }
