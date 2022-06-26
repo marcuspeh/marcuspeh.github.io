@@ -3,7 +3,7 @@ import aweDemo from '../assets/img/awe_demo.png'
 import markeetDemo from '../assets/img/markeet_demo.png'
 import mazeSolverDemo from '../assets/img/mazesolver_demo.png'
 import splitlixDemo from '../assets/img/splitlux_demo.png'
-import rgbDemo from '../assets/img/rgb_demo.png'
+import todoDemo from '../assets/img/todo_demo.png'
 
 interface projectObject {
   "title": string,
@@ -48,12 +48,12 @@ const _2048Solver: projectObject = {
 }
 
 
-const iotRgbLights: projectObject = {
-  "title": "IOT RGB LIGHTS",
-  "image": rgbDemo,
-  "techStacks": ['Nodejs (TypeScript)', "TypeOrm", "Koa", "Postgres", "Arduino (C++)"],
-  "description": 'This project contains all the software needed to make an IOT RGB. It consists of the server to control the RGB lights, the codes to control the arduino as well as the app to interact with the rgb led from phone.',
-  "projectLink": 'https://github.com/marcuspeh/IOT_RGB_Lights',
+const todoManager: projectObject = {
+  "title": "TODO MANAGER",
+  "image": todoDemo,
+  "techStacks": ['ReactJs', "NextJs", "TypeScript", "TypeOrm", "Koa", "Postgres"],
+  "description": 'This to-do manager is designed as 2 separate parts for backend and frontend for scalability. The backend provides API for the frontend to call. Sensitive information such as password is done securely by encrypting the data before sending to the backend.Hash is also done before storing the data.',
+  "projectLink": 'https://github.com/marcuspeh/todo-manager',
 }
 
 
@@ -71,6 +71,6 @@ export const ProjectData: projectObject[] = [
   markeet,
   splitlux,
   _2048Solver,
-  iotRgbLights,
+  todoManager,
   mazeSolver,
 ]
