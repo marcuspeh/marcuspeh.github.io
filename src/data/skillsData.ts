@@ -10,7 +10,7 @@ const ProgrammingLanguage: skillsObject = {
 
 const LibraryLanguage: skillsObject = {
   "header": "Libraries & Frameworks",
-  "skills": "ReactJs, NextJs, Django, Flutter, Junit, Pandas, Tabula, Tensorflow"
+  "skills": "ReactJs, NextJs, Django, Flutter, React Native, Junit, Pandas, Tabula, Tensorflow"
 }
 
 const Databases: skillsObject = {
@@ -20,7 +20,7 @@ const Databases: skillsObject = {
 
 const Tools: skillsObject = {
   "header": "Tools",
-  "skills": "Figma, Heroku, Git"
+  "skills": "Figma, Heroku, Vercel, Git"
 }
 
 const SoftSkills: skillsObject = {

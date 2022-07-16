@@ -11,7 +11,7 @@ const govTechIntern: educationObject = {
   "title": "Software Engineering Intern",
   "company": "GovTech",
   "date": "May 2022 - Jul 2022",
-  "description": "" +
+  "description": 
     "Improved security by implementing 2FA. " +
     "Speed up API response time to 0.5% of the original time."
 }
