@@ -12,6 +12,7 @@ const govTechIntern: educationObject = {
   "company": "GovTech",
   "date": "May 2022 - Jul 2022",
   "description": 
+    "Developed platform to crowdsource sentiments from members of public. " +
     "Improved security by implementing 2FA. " +
     "Speed up API response time to 0.5% of the original time."
 }

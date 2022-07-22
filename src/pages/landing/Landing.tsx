@@ -2,7 +2,6 @@ import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 
 import profile from '../../assets/img/profile.jpeg'
-import resume from '../../assets/file/Marcus_Peh_Resume.pdf'
 
 const Landing: React.FC = (): JSX.Element => {
   return (    
@@ -25,7 +24,8 @@ const Landing: React.FC = (): JSX.Element => {
             solving. I believe in the power of programming to transform and improve the lives of 
             people around the world.
             <br />
-            <Button className="mt-3" variant="secondary" href={resume} target="_blank">Download resume</Button>
+            
+          <Button className="mt-3" variant="secondary" href={'/Marcus_Peh_Resume.pdf'} target="_blank" rel="noopener noreferrer">Download resume</Button>
           </p>
         </Row>
       </Container>
