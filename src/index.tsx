@@ -14,6 +14,7 @@ import Background from './pages/background/Background'
 import Experience from './pages/experience/Experience'
 
 ReactDOM.render(
+  <div style={{width: '100vw', height: '100vh'}}>
   <Router>
     <NavBar />
     <Routes>
@@ -24,8 +25,9 @@ ReactDOM.render(
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Landing />} />
     </Routes>
-    <br />
-  </Router>,
+  </Router>
+  <br />
+  </div>,
   document.getElementById('root')
 )
 
