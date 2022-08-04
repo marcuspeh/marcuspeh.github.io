@@ -38,7 +38,8 @@ const nusTa: educationObject = {
   "listContent": [
     "CS1010X Programming Methodology I (2021 Spring)",
     "CS2030S Programming Methodology II (2021 Fall)",
-    "CS2040S Data Structures and Algorithms (2022 Spring)"
+    "CS2040S Data Structures and Algorithms (2022 Spring)",
+    "CS2103T Software Engineering (2022 Fall)"
   ]
 }
 
