@@ -13,8 +13,8 @@ const govTechIntern: educationObject = {
   "date": "May 2022 - Jul 2022",
   "description": 
     "Developed platform to crowdsource sentiments from members of public. " +
-    "Improved security by implementing 2FA. " +
-    "Speed up API response time to 0.5% of the original time."
+    "Improved security by implementing Two-Factor Authentication (2FA). " +
+    "Increased server query response time under load by 200x through API restructuring."
 }
 
 const reluvateIntern: educationObject = {
@@ -22,7 +22,7 @@ const reluvateIntern: educationObject = {
   "company": "Reluvate Technologies",
   "date": "Nov 2021 - Jan 2022",
   "description":
-    "Worked on end to end web applications to house AI and Automation solutions. " +
+    "Established end to end web applications to house AI and Automation solutions. " +
     "Created backend APIs for a multi-national real-estate company. " +
     "Developed Optical character recognition (OCR) to process pdf."
 }
@@ -32,7 +32,7 @@ const nusTa: educationObject = {
   "company": "National University of Singapore",
   "date": "Jan 2021 - Present",
   "description": 
-    "Took charge and led students towards active learning of Computer Science modules. " +
+    "Led more than 60 students towards active learning of Computer Science modules. " +
     "Mentored students by providing apt feedback to queries and assignments.",
   "listHeader": "Modules taught:",
   "listContent": [
@@ -48,7 +48,7 @@ const robotoFreelance: educationObject = {
   "company": "Roboto Coding Academy",
   "date": "Jul 2020 - Present",
   "description": 
-    "Conducted coding lessons for kids from age of 5 to 15 to ignite interest in coding. " +
+    "Administered coding lessons for kids from age of 5 to 15 to ignite interest in coding. " +
     "Curated curriculum in Python, Html etc. " +
     "Taught in prestigious schools such as Victoria School and Chung Cheng High School. "
 }
@@ -60,13 +60,13 @@ const robotoIntern: educationObject = {
   "description": 
     "Devised customizable coding curriculum to be taught in schools nationwide. " +
     "Assimilated video and hands on activities to engage students during lessons. " +
-    " Incorporated robots to trigger interest and deepen students' understanding of core coding concept."
+    "Incorporated robots to trigger interest and deepen students' understanding of core coding concept. "
 }
 
 export const ExperienceData: educationObject[] = [
-  govTechIntern,
-  reluvateIntern,
   nusTa,
   robotoFreelance,
+  govTechIntern,
+  reluvateIntern,
   robotoIntern
 ]
