@@ -1,7 +1,7 @@
 import _2048Demo from '../assets/img/2048_demo.jpg'
 import aweDemo from '../assets/img/awe_demo.png'
 import markeetDemo from '../assets/img/markeet_demo.png'
-import mazeSolverDemo from '../assets/img/mazesolver_demo.png'
+import gardnerMiniChess from '../assets/img/gardner_mini_chess.png'
 import splitlixDemo from '../assets/img/splitlux_demo.png'
 import todoDemo from '../assets/img/todo_demo.png'
 
@@ -33,7 +33,7 @@ const markeet: projectObject = {
 const splitlux: projectObject = {
   "title": "SPLITLUX",
   "image": splitlixDemo,
-  "techStacks": ['Flutter (dart)', 'Django (Python)'],
+  "techStacks": ['Flutter (dart)', 'Django (Python)', 'ReactNative (TypeScript)'],
   "description": 'Build using Flutter and Django, Splitlux targets travellers in sight of borders opening from the pandemic. It aims to expedites the process by splitting and monitoring bills in an efficient manner during travel.', 
   "projectLink": 'https://github.com/marcuspeh/Splitlux',
 }
@@ -57,12 +57,12 @@ const todoManager: projectObject = {
 }
 
 
-const mazeSolver: projectObject = {
-  "title": "MAZE SOLVER" ,
-  "image": mazeSolverDemo,
-  "techStacks": ['Java'],
-  "description": 'The codes run based on breadth first search and stores the path. The number of rooms reachable with each step is stored in a hashmap while computing the shortest path to solve the maze. This will reduce the computation needed' ,
-  "projectLink": 'https://github.com/marcuspeh/Maze-Solver' ,
+const gardnerMiniChessAi: projectObject = {
+  "title": "GARDNER MINI CHESS AI" ,
+  "image": gardnerMiniChess,
+  "techStacks": ['Python'],
+  "description": "Implemented to solve Gardner's Mini Chess, this AI is designed using Alpha-Beta Pruning. To balance between response and performance, Alpha-Beta Pruning is done to a max depth of 4. It achieves 100% win/draw rates against other intelligent agents.s" ,
+  "projectLink": 'https://github.com/marcuspeh/gardner-mini-chess-AI' ,
 }
 
 
@@ -72,5 +72,5 @@ export const ProjectData: projectObject[] = [
   splitlux,
   _2048Solver,
   todoManager,
-  mazeSolver,
+  gardnerMiniChessAi,
 ]
