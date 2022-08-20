@@ -1,4 +1,4 @@
-interface educationObject {
+interface experienceData {
   "title": string,
   "company": string,
   "date": string,
@@ -7,7 +7,7 @@ interface educationObject {
   "listContent"?: string[]
 }
 
-const govTechIntern: educationObject = {
+const govTechIntern: experienceData = {
   "title": "Software Engineering Intern",
   "company": "Government Technology Agency",
   "date": "May 2022 - Jul 2022",
@@ -17,7 +17,7 @@ const govTechIntern: educationObject = {
     "Increased server query response time under load by 200x through API restructuring."
 }
 
-const reluvateIntern: educationObject = {
+const reluvateIntern: experienceData = {
   "title": "Software Engineering Intern",
   "company": "Reluvate Technologies",
   "date": "Nov 2021 - Jan 2022",
@@ -27,7 +27,17 @@ const reluvateIntern: educationObject = {
     "Developed Optical character recognition (OCR) to process pdf."
 }
 
-const nusTa: educationObject = {
+const orbital: experienceData = {
+  "title": "Software Developer",
+  "company": "NUS Orbital Program",
+  "date": "May 2021 - Jul 2022",
+  "description":
+    "Competed in the NUS Orbital Software Development Program to achieve Artemis (Distinction). " +
+    "Utilized MERN stack to manage inventory and manage sales. " +
+    "Employed comprehensive end-to-end testing of primary user flows with Cypress."
+}
+
+const nusTa: experienceData = {
   "title": "Teaching Assistant",
   "company": "National University of Singapore",
   "date": "Jan 2021 - Present",
@@ -43,7 +53,7 @@ const nusTa: educationObject = {
   ]
 }
 
-const robotoFreelance: educationObject = {
+const robotoFreelance: experienceData = {
   "title": "Coding Instructor",
   "company": "Roboto Coding Academy",
   "date": "Jul 2020 - Present",
@@ -53,7 +63,7 @@ const robotoFreelance: educationObject = {
     "Taught in prestigious schools such as Victoria School and Chung Cheng High School. "
 }
 
-const robotoIntern: educationObject = {
+const robotoIntern: experienceData = {
   "title": "Product Development Intern",
   "company": "Roboto Coding Academy",
   "date": "Jan 2020 - Jun 2020",
@@ -63,10 +73,11 @@ const robotoIntern: educationObject = {
     "Incorporated robots to trigger interest and deepen students' understanding of core coding concept. "
 }
 
-export const ExperienceData: educationObject[] = [
+export const ExperienceData: experienceData[] = [
   nusTa,
   robotoFreelance,
   govTechIntern,
   reluvateIntern,
+  orbital,
   robotoIntern
 ]
