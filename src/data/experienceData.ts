@@ -9,7 +9,7 @@ interface educationObject {
 
 const govTechIntern: educationObject = {
   "title": "Software Engineering Intern",
-  "company": "GovTech",
+  "company": "Government Technology Agency",
   "date": "May 2022 - Jul 2022",
   "description": 
     "Developed platform to crowdsource sentiments from members of public. " +
