@@ -10,7 +10,7 @@ interface experienceData {
 const govTechIntern: experienceData = {
   "title": "Software Engineering Intern",
   "company": "Government Technology Agency",
-  "date": "May 2022 - Jul 2022",
+  "date": "May 2022 - Jul 2022, Dec 2022 - Jan 2023",
   "description": 
     "Developed platform to crowdsource sentiments from members of public. " +
     "Improved security by implementing Two-Factor Authentication (2FA). " +
@@ -40,7 +40,7 @@ const orbital: experienceData = {
 const nusTa: experienceData = {
   "title": "Teaching Assistant",
   "company": "National University of Singapore",
-  "date": "Jan 2021 - Present",
+  "date": "Jan 2021 - Nov 2022",
   "description": 
     "Led more than 60 students towards active learning of Computer Science modules. " +
     "Mentored students by providing apt feedback to queries and assignments.",
