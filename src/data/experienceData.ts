@@ -10,7 +10,7 @@ interface experienceData {
 const govTechIntern: experienceData = {
   "title": "Software Engineering Intern",
   "company": "Government Technology Agency",
-  "date": "May 2022 - Jul 2022, Dec 2022 - Jan 2023",
+  "date": "May 2022 - Jul 2022",
   "description": 
     "Developed platform to crowdsource sentiments from members of public. " +
     "Improved security by implementing Two-Factor Authentication (2FA). " +
@@ -63,21 +63,11 @@ const robotoFreelance: experienceData = {
     "Taught in prestigious schools such as Victoria School and Chung Cheng High School. "
 }
 
-const robotoIntern: experienceData = {
-  "title": "Product Development Intern",
-  "company": "Roboto Coding Academy",
-  "date": "Jan 2020 - Jun 2020",
-  "description": 
-    "Devised customizable coding curriculum to be taught in schools nationwide. " +
-    "Assimilated video and hands on activities to engage students during lessons. " +
-    "Incorporated robots to trigger interest and deepen students' understanding of core coding concept. "
-}
 
 export const ExperienceData: experienceData[] = [
-  nusTa,
   robotoFreelance,
+  nusTa,
   govTechIntern,
   reluvateIntern,
-  orbital,
-  robotoIntern
+  orbital
 ]
