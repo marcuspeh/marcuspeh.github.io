@@ -79,7 +79,7 @@ function VerticalTabs() {
     <>
       <Hidden mdDown>
         <Box
-          sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', minHeight: '40vh' }}
+          sx={{ flexGrow: 1, display: 'flex', minHeight: '40vh' }}
         >
           <Tabs
             orientation="vertical"

@@ -11,7 +11,7 @@ function Experience() {
       direction="column"
       justifyContent="center"
       alignItems="left" 
-      sx={{ height: '95vh', marginTop: '5vh' }}
+      sx={{ minHeight: '95vh', marginTop: '5vh' }}
       id="experience"
     >
       <div>

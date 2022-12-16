@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
 import styled from '@mui/system/styled'
 import Stack from '@mui/material/Stack'
+import { Hidden } from '@mui/material'
 
 
 const NameLabel = styled('h2')({
@@ -35,7 +36,7 @@ function Contact() {
       direction="column"
       justifyContent="center"
       alignItems="left" 
-      sx={{ height: '95vh', marginTop: '5vh' }}
+      sx={{ minHeight: '95vh', marginTop: '5vh' }}
       id="contact"
     >
       <Grid container item>
@@ -43,7 +44,9 @@ function Contact() {
           <h3>CONTACT ME</h3>
         </Grid>
         <Grid item xs={12} md={4}>
-          <ProfileImg src='/profile.jpeg' />
+          <Hidden mdDown>
+            <ProfileImg src='/profile.jpeg' />
+          </Hidden>
         </Grid>
         <Grid container item xs={12} md={8} direction="column" justifyContent="center" alignItems="left" >
           <NameLabel>Marcus Peh</NameLabel>

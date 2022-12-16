@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import { styled } from '@mui/system'
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
+import { Box, Hidden } from '@mui/material'
 
 
 function Intro() {
@@ -13,12 +13,12 @@ function Intro() {
       direction="column"
       justifyContent="center"
       alignItems="center" 
-      sx={{ height: '95vh', marginTop: '5vh' }}
+      sx={{ minHeight: '95vh', marginTop: '5vh' }}
       id="intro"
     >
-      <Grid>
+      <Box>
         <p>Hi, my name is</p>
-        <h1>Marcus Peh.<br />I code for a better tomorrow!</h1>
+        <h1 style={{margin: "1rem 0rem"}}>Marcus Peh.<br /><Hidden mdDown>I code for a better tomorrow!</Hidden></h1>
         <p>
           Performance-driven penultimate Computer Science undergraduate at National 
           University of Singapore, with experience in Agile Software Development. Possess 
@@ -33,8 +33,7 @@ function Intro() {
         >
           Download my resume
         </Button>
-      </Grid>
-
+      </Box>
     </Grid>
   )
 }

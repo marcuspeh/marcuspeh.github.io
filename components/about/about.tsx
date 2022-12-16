@@ -14,6 +14,7 @@ const MoreInfoButton = styled(Button)({
   lineHeight: "1.75",
   paddingLeft: "1rem",
   paddingRight: "1rem",
+  margin: "1rem 0rem"
 })
 
 function About() {
@@ -23,19 +24,22 @@ function About() {
       direction="row"
       justifyContent="center"
       alignItems="center" 
-      sx={{ height: '95vh', marginTop: '5vh' }}
+      sx={{ minHeight: '95vh', marginTop: '5vh' }}
       id="about"
     >
-      <Grid item sm={12} md={6} justifyContent="center" >
+      <Grid item sm={12} md={6} sx={{ display: "flex", justifyContent: "center"}}>
         <AboutPicture src='/aboutPicture.png' />
       </Grid>
 
       <Grid item sm={12} md={6}>
-        <h3>ABOUT ME {" "}
-          <Hidden mdDown> 
-            <MoreInfoButton variant='outlined' href={'/Marcus_Peh_Resume.pdf'} >More Info</MoreInfoButton> 
-          </Hidden>
-        </h3>
+        <div style={{
+          display: "flex",
+          flexDirection: "row", 
+          justifyContent: "space-between"
+        }}>
+          <h3>ABOUT ME </h3>
+          <MoreInfoButton variant='outlined' href={'/Marcus_Peh_Resume.pdf'} >More Info</MoreInfoButton> 
+        </div>
         <p>
           I love writing code. Ever since writing my first program 
           in Python during National Service, I have been obsessed 
@@ -47,16 +51,13 @@ function About() {
           <Hidden mdDown>
             <br />
             <br />
-            My specialities include quickly learning new skills and 
-            programming languages. I managed to learn enough 
-            Ruby on Rails to be able to write new API endpoints within 
-            2 days. I have also managed to speed up API performance 
-            in my previous internship by a whopping 200x.
+            I am interested in working on backend development and find ways 
+            to speed things up. I find it rewarding to be able to work on 
+            complex problems and find solutions that are both efficient and 
+            scalable. In my previous internship, I even managed to speed up 
+            API performance by a whopping 200x.
           </Hidden>
         </p>
-        <Hidden mdUp> 
-            <MoreInfoButton variant='outlined' href={'/Marcus_Peh_Resume.pdf'} >More Info</MoreInfoButton> 
-          </Hidden>
       </Grid>
 
     </Grid>
