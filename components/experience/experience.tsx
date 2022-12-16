@@ -16,7 +16,9 @@ function Experience() {
     >
       <div>
         <h3>MY EXPERIENCE</h3>
-        <TabPanel />
+        <div style={{ overflow:"hidden", width: "100vw" }}>
+          <TabPanel />
+        </div>
       </div>
     </Grid>
   )

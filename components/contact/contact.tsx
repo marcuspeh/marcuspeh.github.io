@@ -52,13 +52,22 @@ function Contact() {
           <NameLabel>Marcus Peh</NameLabel>
           <SocialP>Mobile: (+65) 9776 8352 <br /> Email: hkmpeh@gmail.com</SocialP>
           <Stack spacing={2} direction="row">
-            {SocialData.map(item => 
-              <SocialButton variant="contained" color="primary" size="medium" href={item.link} target="_blank">{<item.image />}</SocialButton>
+            {SocialData.map((item, index) => 
+              <SocialButton 
+                  variant="contained" 
+                  color="primary" 
+                  size="medium" 
+                  href={item.link} 
+                  target="_blank"
+                  key={index}
+              >
+                {<item.image />}
+              </SocialButton>
             )}
           </Stack>
         </Grid>
         <Grid item xs={12}>
-          <p>Let's start a conversation</p>
+          <p>Let&apos;s start a conversation</p>
           <ContactForm />
         </Grid>
       </Grid>

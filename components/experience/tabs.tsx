@@ -62,12 +62,12 @@ function VerticalTabs() {
             {props.date}
           </p>
           <ul>
-            { props.description.map(x => <li>{x}</li>) }
+            { props.description.map((x: string, index: number) => <li key={index}>{x}</li>) }
             { props.listHeader ? 
                 <li>
                   {props.listHeader}
                   <ul>
-                    {props.listContent?.map((x, index) => <li key={index}>{x}</li>)}
+                    {props.listContent?.map((x: string, index: number) => <li key={index}>{x}</li>)}
                   </ul>  
                 </li> : "" }
           </ul>

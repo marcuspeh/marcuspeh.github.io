@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <title>Marcus Peh</title>
       <meta name="description" content="Marcus Peh's Portfolio" />
       <link rel="icon" type="image/png" href="/favicon.ico" />
-      <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossOrigin="anonymous"></script>
     </Head>
     <Component {...pageProps} />
   </>

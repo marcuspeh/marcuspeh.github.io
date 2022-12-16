@@ -16,7 +16,7 @@ function ProjectSlide(props: any) {
     >
       <h3>{props.data.title}</h3>
       <Stack direction="row" spacing={1}>
-        {props.data.techStacks.map(item => <Chip label={item} />)}
+        {props.data.techStacks.map((item: string, index: number) => <Chip label={item} key={index}/>)}
       </Stack>
       <p style={{ width: "50%", textAlign: "justify" }}>
         {props.data.description}
