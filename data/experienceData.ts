@@ -4,9 +4,9 @@ const govTechIntern: ExperienceDataModel = {
   "title": "Software Engineering Intern",
   "header": "GovTech",
   "company": "Government Technology Agency",
-  "date": "May 2022 - Jul 2022",
+  "date": "May 2022 - Jul 2022, Dec 2022 - Jan 2023",
   "description": [
-    "Developed platform to crowdsource sentiments from members of public.",
+    "•	Reduced loading time of web page by 5% by removing unnecessary API calls.",
     "Improved security by implementing Two-Factor Authentication (2FA).",
     "Increased server query response time under load by 200x through API restructuring."
   ]

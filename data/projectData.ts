@@ -10,7 +10,7 @@ const awe80: ProjectDataModel = {
 
 const markeet: ProjectDataModel = {
   "title": "POINT OF SALES SYSTEM" ,
-  "techStacks": ['MongoDb', 'ExpressJS', 'ReactJs', 'NodeJs (JavaScript)'],
+  "techStacks": ['MongoDb', 'ExpressJS', 'ReactJs', 'NodeJs'],
   "description": 'Designed with both the business and consumers interest at heart. It incorporates a online web system to help store manage their sales and inventory as well as a telegram bot to help users check for stock in stores.', 
   "projectLink": 'https://github.com/marcuspeh/markeet',
 }
@@ -18,7 +18,7 @@ const markeet: ProjectDataModel = {
 
 const splitlux: ProjectDataModel = {
   "title": "SPLITLUX",
-  "techStacks": ['Flutter (dart)', 'Django (Python)', 'ReactNative (TypeScript)'],
+  "techStacks": ['Flutter', 'Django', 'React Native'],
   "description": 'Build using Flutter and Django, Splitlux targets travellers in sight of borders opening from the pandemic. It aims to expedites the process by splitting and monitoring bills in an efficient manner during travel.', 
   "projectLink": 'https://github.com/marcuspeh/Splitlux',
 }
