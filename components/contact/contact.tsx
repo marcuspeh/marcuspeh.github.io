@@ -18,11 +18,6 @@ const SocialP = styled('p') ({
   marginBlockEnd: "0.5rem"
 })
 
-const SocialButton = styled(Button) ({
-  borderRadius: "30%",
-  width: "3rem",
-  height: "3rem"
-})
 
 const ProfileImg = styled('img') ({
   width: "90%",
@@ -53,16 +48,21 @@ function Contact() {
           <SocialP>Mobile: (+65) 9776 8352 <br /> Email: hkmpeh@gmail.com</SocialP>
           <Stack spacing={2} direction="row">
             {SocialData.map((item, index) => 
-              <SocialButton 
+              <Button 
                   variant="contained" 
                   color="primary" 
                   size="medium" 
-                  href={item.link} 
+                  href={item.link}
                   target="_blank"
                   key={index}
+                  sx={{
+                    borderRadius: "30%",
+                    width: "3rem",
+                    height: "3rem"
+                  }}
               >
                 {<item.image />}
-              </SocialButton>
+              </Button>
             )}
           </Stack>
         </Grid>
