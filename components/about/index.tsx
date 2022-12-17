@@ -38,7 +38,7 @@ function About() {
           justifyContent: "space-between"
         }}>
           <h3>ABOUT ME </h3>
-          <MoreInfoButton variant='outlined' href={'/Marcus_Peh_Resume.pdf'} >More Info</MoreInfoButton> 
+          <MoreInfoButton variant='outlined' href={'/moreInfo'} >More Info</MoreInfoButton> 
         </div>
         <p>
           I love writing code. Ever since writing my first program 

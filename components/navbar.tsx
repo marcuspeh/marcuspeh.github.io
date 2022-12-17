@@ -9,8 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
-import AdbIcon from '@mui/icons-material/Adb'
-
 const pages = ['ABOUT', 'EXPERIENCE', 'PROJECT', 'CONTACT']
 
 function NavBar() {
@@ -28,12 +26,11 @@ function NavBar() {
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/#intro"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -77,18 +74,17 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} href={`#` + page.toLowerCase()} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} href={`/#` + page.toLowerCase()} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/#intro"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -100,14 +96,14 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Marcus
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                href={`#` + page.toLowerCase()}
+                href={`/#` + page.toLowerCase()}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
