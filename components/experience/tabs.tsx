@@ -91,7 +91,7 @@ function VerticalTabs() {
           >          
             {
               experienceData.map((x, index) => 
-                <Tab key={`tab1-{index}`} label={x.header} {...a11yProps(index)} />
+                <Tab key={`tab1-${index}`} label={x.header} {...a11yProps(index)} />
               )
             }
           </Tabs>
@@ -104,7 +104,7 @@ function VerticalTabs() {
             <Tabs value={value} onChange={handleChange} variant="scrollable"  aria-label="Horizontal Tabs - Experience">
               {
                 experienceData.map((x, index) => 
-                  <Tab key={`tab2-{index}`} label={x.header} {...a11yProps(index)} />
+                  <Tab key={`tab2-${index}`} label={x.header} {...a11yProps(index)} />
                 )
               }
             </Tabs>

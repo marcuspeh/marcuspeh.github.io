@@ -11,17 +11,15 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <Container>
-        <Intro />
-        <hr />
-        <About />
-        <hr />
-        <Experience />
-        <hr />
-        <Project />
-        <hr />
-        <Contact />
-      </Container>
+      <Intro />
+      <hr />
+      <About />
+      <hr />
+      <Experience />
+      <hr />
+      <Project />
+      <hr />
+      <Contact />
     </>
   )
 }

@@ -13,7 +13,7 @@ function Project() {
       direction="column"
       justifyContent="center"
       alignItems="left" 
-      sx={{ minHeight: '95vh', marginTop: '5vh' }}
+      sx={{ minHeight: '95vh', marginTop: '5vh', padding: "0% 10%"  }}
       id="project"
     >
       <div>

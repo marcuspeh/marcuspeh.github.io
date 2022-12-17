@@ -24,7 +24,7 @@ function About() {
       direction="row"
       justifyContent="center"
       alignItems="center" 
-      sx={{ minHeight: '95vh', marginTop: '5vh' }}
+      sx={{ minHeight: '95vh', marginTop: '5vh', padding: "0% 10%" }}
       id="about"
     >
       <Grid item sm={12} md={6} sx={{ display: "flex", justifyContent: "center"}}>
