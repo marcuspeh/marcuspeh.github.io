@@ -1,7 +1,24 @@
 import ExperienceDataModel from "../models/experienceDataModel"
+import GovtechIcon from "../assets/company/govtech.png"
+import NusIcon from "../assets/company/nus.png"
+import ReluvateIcon from "../assets/company/reluvate.jpg"
+import RobotoIcon from "../assets/company/roboto.png"
 
+const uventsDeveloper: ExperienceDataModel = {
+  "title": "Software Developer (UVENTS)",
+  "logo": NusIcon,
+  "header": "NUS IT",
+  "company": "NUS Information Technology",
+  "date": "Jan 2023 - Present",
+  "description": [
+    "Developed NUS event management portal with more than 10000 users.",
+    "Hardened portal against potential attacks.",
+    "Added extra features such as zoom integration and attendance tracking."
+  ]
+}
 const govTechIntern: ExperienceDataModel = {
   "title": "Software Engineering Intern",
+  "logo": GovtechIcon,
   "header": "GovTech",
   "company": "Government Technology Agency",
   "date": "May 2022 - Jul 2022, Dec 2022 - Jan 2023",
@@ -14,6 +31,7 @@ const govTechIntern: ExperienceDataModel = {
 
 const reluvateIntern: ExperienceDataModel = {
   "title": "Software Engineering Intern",
+  "logo": ReluvateIcon,
   "header": "Reluvate Technologies",
   "company": "Reluvate Technologies",
   "date": "Nov 2021 - Jan 2022",
@@ -24,20 +42,10 @@ const reluvateIntern: ExperienceDataModel = {
   ]
 }
 
-const orbital: ExperienceDataModel = {
-  "title": "Software Developer",
-  "header": "Orbital Program",
-  "company": "NUS Orbital Program",
-  "date": "May 2021 - Jul 2022",
-  "description": [
-    "Competed in the NUS Orbital Software Development Program to achieve Artemis (Distinction).",
-    "Utilized MERN stack to manage inventory and manage sales.",
-    "Employed comprehensive end-to-end testing of primary user flows with Cypress."
-  ]
-}
 
 const nusTa: ExperienceDataModel = {
   "title": "Teaching Assistant",
+  "logo": NusIcon,
   "header": "NUS",
   "company": "National University of Singapore",
   "date": "Jan 2021 - Nov 2022",
@@ -56,6 +64,7 @@ const nusTa: ExperienceDataModel = {
 
 const robotoFreelance: ExperienceDataModel = {
   "title": "Coding Instructor",
+  "logo": RobotoIcon,
   "header": "Roboto",
   "company": "Roboto Coding Academy",
   "date": "Jul 2020 - Present",
@@ -68,11 +77,11 @@ const robotoFreelance: ExperienceDataModel = {
 
 
 const ExperienceData: ExperienceDataModel[] = [
+  uventsDeveloper,
   robotoFreelance,
-  nusTa,
   govTechIntern,
+  nusTa,
   reluvateIntern,
-  orbital
 ]
 
 export default ExperienceData

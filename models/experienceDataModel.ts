@@ -1,5 +1,8 @@
+import { StaticImageData } from "next/image";
+
 interface ExperienceDataModel {
   "title": string,
+  "logo": StaticImageData,
   "header": string,
   "company": string,
   "date": string,

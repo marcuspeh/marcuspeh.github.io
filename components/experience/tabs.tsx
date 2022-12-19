@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Hidden from '@mui/material/Hidden'
+import Image from "next/image"
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -53,26 +54,33 @@ function VerticalTabs() {
 
   function tabDetails(props: any, index: number)
   {
-      return (
-        <TabPanel value={value} index={index}>
+    return (
+      <TabPanel value={value} index={index}>
+        <div style={{ display: "flex", flexDirection: "row"}}>
+          {
+            props.logo && (
+              <Image src={props.logo} style={{ height: "4rem", width: "auto", marginRight: "10px" }} alt={`${props.company} logo`} />
+            )
+          }
           <p>{props.company}</p>
-          <p>
-            <b>{props.title}</b>
-            <br/>
-            {props.date}
-          </p>
-          <ul>
-            { props.description.map((x: string, index: number) => <li key={index}>{x}</li>) }
-            { props.listHeader ? 
-                <li>
-                  {props.listHeader}
-                  <ul>
-                    {props.listContent?.map((x: string, index: number) => <li key={index}>{x}</li>)}
-                  </ul>  
-                </li> : "" }
-          </ul>
-        </TabPanel>
-      )
+        </div>
+        <p>
+          <b>{props.title}</b>
+          <br/>
+          {props.date}
+        </p>
+        <ul>
+          { props.description.map((x: string, index: number) => <li key={index}>{x}</li>) }
+          { props.listHeader ? 
+              <li>
+                {props.listHeader}
+                <ul>
+                  {props.listContent?.map((x: string, index: number) => <li key={index}>{x}</li>)}
+                </ul>  
+              </li> : "" }
+        </ul>
+      </TabPanel>
+    )
   }
 
   return (
