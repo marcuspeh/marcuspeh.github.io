@@ -15,6 +15,12 @@ const MoreInfoButton = styled(Button)({
   margin: "1rem 0rem"
 })
 
+const PictureImage = styled(Image) ({
+  width: "90%", 
+  height: "auto", 
+  maxWidth: "70vh"
+})
+
 function About() {
   return (
     <Grid
@@ -26,7 +32,7 @@ function About() {
       id="about"
     >
       <Grid item sm={12} md={6} sx={{ display: "flex", justifyContent: "center"}}>
-        <Image src={AboutPicture} alt={'About me picture'} style={{ width: "90%", height: "auto"}}/>
+        <PictureImage src={AboutPicture} alt={'My picture'} />
       </Grid>
 
       <Grid item sm={12} md={6}>

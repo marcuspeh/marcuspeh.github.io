@@ -25,6 +25,9 @@ const ProfileImg = styled(Image) ({
   width: "90%",
   height: 'auto',
   borderRadius: "50%",
+  maxWidth: "30vh",
+  maxHeight: "30vh",
+  marginRight: "20px"
 })
 
 function Contact() {
@@ -38,36 +41,36 @@ function Contact() {
       id="contact"
     >
       <Grid container item>
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           <h3>CONTACT ME</h3>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item style={{ display: "flex", flexDirection: "row"}}>
           <Hidden mdDown>
             <ProfileImg src={ProfilePicture} alt='Profile picture' />
           </Hidden>
-        </Grid>
-        <Grid container item xs={12} md={8} direction="column" justifyContent="center" alignItems="left" >
-          <NameLabel>Marcus Peh</NameLabel>
-          <SocialP>Mobile: (+65) 9776 8352 <br /> Email: hkmpeh@gmail.com</SocialP>
-          <Stack spacing={2} direction="row">
-            {SocialData.map((item, index) => 
-              <Button 
-                  variant="contained" 
-                  color="primary" 
-                  size="medium" 
-                  href={item.link}
-                  target="_blank"
-                  key={index}
-                  sx={{
-                    borderRadius: "30%",
-                    width: "3rem",
-                    height: "3rem"
-                  }}
-              >
-                {<item.image />}
-              </Button>
-            )}
-          </Stack>
+          <Grid container direction="column" justifyContent="center" alignItems="left" >
+            <NameLabel>Marcus Peh</NameLabel>
+            <SocialP>Mobile: (+65) 9776 8352 <br /> Email: hkmpeh@gmail.com</SocialP>
+            <Stack spacing={2} direction="row">
+              {SocialData.map((item, index) => 
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                    size="medium" 
+                    href={item.link}
+                    target="_blank"
+                    key={index}
+                    sx={{
+                      borderRadius: "30%",
+                      width: "3rem",
+                      height: "3rem"
+                    }}
+                >
+                  {<item.image />}
+                </Button>
+              )}
+            </Stack>
+          </Grid>
         </Grid>
         <Grid item xs={12}>
           <p>Let&apos;s start a conversation</p>
