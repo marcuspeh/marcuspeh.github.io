@@ -4,10 +4,8 @@ import styled from '@mui/system/styled'
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
 import Hidden from '@mui/material/Hidden'
-
-const AboutPicture = styled('img')({
-  width: '90%',
-})
+import AboutPicture from '../../assets/about_picture.jpeg'
+import Image from 'next/image'
 
 const MoreInfoButton = styled(Button)({
   fontSize: "1.25rem",
@@ -28,7 +26,7 @@ function About() {
       id="about"
     >
       <Grid item sm={12} md={6} sx={{ display: "flex", justifyContent: "center"}}>
-        <AboutPicture src='/aboutPicture.png' />
+        <Image src={AboutPicture} alt={'About me picture'} style={{ width: "90%", height: "auto"}}/>
       </Grid>
 
       <Grid item sm={12} md={6}>

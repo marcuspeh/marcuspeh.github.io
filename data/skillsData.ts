@@ -2,12 +2,12 @@ import SkillsDataModel from "../models/skillsDataModel"
 
 const ProgrammingLanguage: SkillsDataModel = {
   "header": "Programming Language",
-  "skills": "Python, Java, C, C++, Dart, JavaScript, TypeScript"
+  "skills": "Python, Java, C, C++, Dart, JavaScript, TypeScript, SQL"
 }
 
 const LibraryLanguage: SkillsDataModel = {
   "header": "Libraries & Frameworks",
-  "skills": "ReactJs, NextJs, Django, Flutter, React Native, Junit, Pandas, Tabula, Tensorflow"
+  "skills": "ReactJs, NextJs, Django, Flutter, React Native"
 }
 
 const Databases: SkillsDataModel = {
@@ -17,7 +17,7 @@ const Databases: SkillsDataModel = {
 
 const Tools: SkillsDataModel = {
   "header": "Tools",
-  "skills": "Figma, Heroku, Vercel, Git"
+  "skills": "Figma, Heroku, Vercel, Unix, Git"
 }
 
 const SoftSkills: SkillsDataModel = {

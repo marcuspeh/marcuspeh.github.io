@@ -7,6 +7,8 @@ import Button from '@mui/material/Button'
 import styled from '@mui/system/styled'
 import Stack from '@mui/material/Stack'
 import { Hidden } from '@mui/material'
+import ProfilePicture from '../../assets/profile_picture.jpg'
+import Image from 'next/image'
 
 
 const NameLabel = styled('h2')({
@@ -19,8 +21,9 @@ const SocialP = styled('p') ({
 })
 
 
-const ProfileImg = styled('img') ({
+const ProfileImg = styled(Image) ({
   width: "90%",
+  height: 'auto',
   borderRadius: "50%",
 })
 
@@ -40,7 +43,7 @@ function Contact() {
         </Grid>
         <Grid item xs={12} md={4}>
           <Hidden mdDown>
-            <ProfileImg src='/profile.jpeg' />
+            <ProfileImg src={ProfilePicture} alt='Profile picture' />
           </Hidden>
         </Grid>
         <Grid container item xs={12} md={8} direction="column" justifyContent="center" alignItems="left" >
