@@ -48,7 +48,7 @@ const nusTa: ExperienceDataModel = {
   "logo": NusIcon,
   "header": "NUS",
   "company": "National University of Singapore",
-  "date": "Jan 2021 - Nov 2022",
+  "date": "Jan 2021 - Present",
   "description": [
     "Led more than 60 students towards active learning of Computer Science modules.",
     "Mentored students by providing apt feedback to queries and assignments.",
@@ -58,7 +58,7 @@ const nusTa: ExperienceDataModel = {
     "CS1010X Programming Methodology I (2021 Spring)",
     "CS2030S Programming Methodology II (2021 Fall)",
     "CS2040S Data Structures and Algorithms (2022 Spring)",
-    "CS2103T Software Engineering (2022 Fall)"
+    "CS2103T Software Engineering (2022 Fall, 2022 Spring)"
   ]
 }
 
@@ -78,9 +78,9 @@ const robotoFreelance: ExperienceDataModel = {
 
 const ExperienceData: ExperienceDataModel[] = [
   uventsDeveloper,
+  nusTa,
   robotoFreelance,
   govTechIntern,
-  nusTa,
   reluvateIntern,
 ]
 

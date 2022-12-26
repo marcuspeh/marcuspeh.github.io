@@ -15,9 +15,9 @@ function ProjectSlide(props: any) {
       sx={{ minHeight: "40vh" }}
     >
       <h3>{props.data.title}</h3>
-      <Stack direction="row" spacing={1}>
-        {props.data.techStacks.map((item: string, index: number) => <Chip label={item} key={index}/>)}
-      </Stack>
+      <div style={{ display: "flex", flexDirection: "row", overflow: "scroll"}}>
+        {props.data.techStacks.map((item: string, index: number) => <Chip label={item} key={index} sx={{ marginRight: "3px", marginLeft: "3px" }} />)}
+      </div>
       <p style={{ width: "50%", textAlign: "justify" }}>
         {props.data.description}
       </p>

@@ -17,7 +17,7 @@ const awe80: ProjectDataModel = {
 
 const markeet: ProjectDataModel = {
   "title": "POINT OF SALES SYSTEM" ,
-  "techStacks": ['MongoDb', 'ExpressJS', 'ReactJs', 'NodeJs'],
+  "techStacks": ['MongoDb', 'ReactJs', 'NodeJs'],
   "description": 'Designed with both the business and consumers interest at heart. It incorporates a online web system to help store manage their sales and inventory as well as a telegram bot to help users check for stock in stores.', 
   "projectLink": 'https://github.com/marcuspeh/markeet',
   "backgroundImage": demoMarkeet
@@ -44,7 +44,7 @@ const _2048Solver: ProjectDataModel = {
 
 const todoManager: ProjectDataModel = {
   "title": "TODO MANAGER",
-  "techStacks": ['ReactJs', "NextJs", "TypeScript", "TypeOrm", "Koa", "Postgres"],
+  "techStacks": ['ReactJs', "NextJs", "Postgres"],
   "description": 'This to-do manager is designed as 2 separate parts for backend and frontend for scalability. The backend provides API for the frontend to call. Sensitive information such as password is done securely by encrypting the data before sending to the backend.Hash is also done before storing the data.',
   "projectLink": 'https://github.com/marcuspeh/todo-manager',
   "backgroundImage": demoTodo
