@@ -5,7 +5,7 @@ interface ProjectDataModel {
   "techStacks": string[],
   "description": string,
   "projectLink": string,
-  "backgroundImage": StaticImageData
+  "image": StaticImageData
 }
 
 export default ProjectDataModel

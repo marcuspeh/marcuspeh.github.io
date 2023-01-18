@@ -18,9 +18,11 @@ function Project() {
     >
       <div>
         <h3>FEATURED PROJECTS</h3>
-      <Carousel interval={5000}>
-          { ProjectData.map( (item, i) => <ProjectSlide key={i} data={item} /> ) }
-        </Carousel>
+        <div style={{ border: "ridge 1px grey", padding: "20px 0px", borderRadius: "8px" }}>
+          <Carousel interval={5000}>
+            { ProjectData.map( (item, i) => <ProjectSlide key={i} data={item} /> ) }
+          </Carousel>
+        </div>
       </div>
     </Grid>
   )
