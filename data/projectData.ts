@@ -33,15 +33,6 @@ const splitlux: ProjectDataModel = {
 }
 
 
-const _2048Solver: ProjectDataModel = {
-  "title": "2048 SOLVER",
-  "techStacks": ['Python'],
-  "description": 'The solver plays the 2048 game based on Monte-Carlo (MC) algorithm. Since each step in 2048 will generate a new tile in random position, MC is the best algorithm for it.', 
-  "projectLink": 'https://github.com/marcuspeh/2048solver',
-  "backgroundImage": demo2048
-}
-
-
 const todoManager: ProjectDataModel = {
   "title": "TODO MANAGER",
   "techStacks": ['ReactJs', "NextJs", "Postgres"],
@@ -64,7 +55,6 @@ export const ProjectData: ProjectDataModel[] = [
   awe80,
   markeet,
   splitlux,
-  _2048Solver,
   todoManager,
   gardnerMiniChessAi,
 ]

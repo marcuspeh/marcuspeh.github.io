@@ -46,7 +46,7 @@ function Contact() {
         </Grid>
         <Grid item style={{ display: "flex", flexDirection: "row"}}>
           <Hidden mdDown>
-            <ProfileImg src={ProfilePicture} alt='Profile picture' />
+            <ProfileImg src={ProfilePicture} alt='Profile picture' height={200}/>
           </Hidden>
           <Grid container direction="column" justifyContent="center" alignItems="left" >
             <NameLabel>Marcus Peh</NameLabel>

@@ -18,7 +18,7 @@ function Project() {
     >
       <div>
         <h3>FEATURED PROJECTS</h3>
-      <Carousel navButtonsAlwaysVisible={true} interval={5000}>
+      <Carousel interval={5000}>
           { ProjectData.map( (item, i) => <ProjectSlide key={i} data={item} /> ) }
         </Carousel>
       </div>
