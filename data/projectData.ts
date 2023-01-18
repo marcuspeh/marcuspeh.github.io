@@ -44,7 +44,7 @@ const todoManager: ProjectDataModel = {
 const gardnerMiniChessAi: ProjectDataModel = {
   "title": "GARDNER MINI CHESS AI" ,
   "techStacks": ['Python'],
-  "description": "Implemented to solve Gardner's Mini Chess, this AI is designed using Alpha-Beta Pruning. To balance between response and performance, Alpha-Beta Pruning is done to a max depth of 4. It achieves 100% win/draw rates against other intelligent agents.s" ,
+  "description": "Implemented to solve Gardner's Mini Chess, this AI is designed using Alpha-Beta Pruning. To balance between response and performance, Alpha-Beta Pruning is done to a max depth of 4. It achieves 100% win/draw rates against other intelligent agents." ,
   "projectLink": 'https://github.com/marcuspeh/gardner-mini-chess-AI' ,
   "image": demoGardnerMini
 }
