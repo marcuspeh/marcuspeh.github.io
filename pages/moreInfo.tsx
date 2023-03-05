@@ -12,7 +12,7 @@ export default function Home() {
         direction="column"
         justifyContent="center"
         alignItems="left" 
-        sx={{ minHeight: '95vh', marginTop: '5vh', padding: "0% 10%"  }}
+        sx={{ minHeight: '95vh', margin: '10vh 0', padding: "0% 10%"  }}
         id="experience"
       >
         <Grid item>

@@ -69,7 +69,7 @@ function VerticalTabs() {
           <br/>
           {props.date}
         </p>
-        <ul>
+        <ul style={{ minHeight: "8rem" }}>
           { props.description.map((x: string, index: number) => <li key={index}>{x}</li>) }
           { props.listHeader ? 
               <li>

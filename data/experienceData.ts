@@ -4,9 +4,21 @@ import NusIcon from "../assets/company/nus.png"
 import ReluvateIcon from "../assets/company/reluvate.jpg"
 import RobotoIcon from "../assets/company/roboto.png"
 import GoogleIcon from "../assets/company/google.png"
+import BytedanceIcon from "../assets/company/bytedance.png"
+
+const bytedanceIntern: ExperienceDataModel = {
+  "title": "Incoming Software Engineering Intern (Global Payments)",
+  "logo": BytedanceIcon,
+  "header": "Bytedance",
+  "company": "Bytedance",
+  "date": "Aug 2023 - Dec 2023",
+  "description": [
+    "To be updated..."
+  ]
+}
 
 const googleIntern: ExperienceDataModel = {
-  "title": "Incoming Software Engineering Intern",
+  "title": "Incoming Software Engineering Intern (Google Pay)",
   "logo": GoogleIcon,
   "header": "Google",
   "company": "Google",
@@ -89,6 +101,7 @@ const robotoFreelance: ExperienceDataModel = {
 
 
 const ExperienceData: ExperienceDataModel[] = [
+  bytedanceIntern,
   googleIntern,
   uventsDeveloper,
   nusTa,

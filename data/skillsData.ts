@@ -2,7 +2,7 @@ import SkillsDataModel from "../models/skillsDataModel"
 
 const ProgrammingLanguage: SkillsDataModel = {
   "header": "Programming Language",
-  "skills": "Python, Java, C, C++, Dart, JavaScript, TypeScript, SQL"
+  "skills": "Python, C++, JavaScript, TypeScript, SQL, C, Java, Dart"
 }
 
 const LibraryLanguage: SkillsDataModel = {
