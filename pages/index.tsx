@@ -10,7 +10,6 @@ import Contact from "../components/contact"
 export default function Home() {
   return (
     <div style={{ marginBottom: "10vh" }}>
-      <NavBar />
       <Intro />
       <hr />
       <About />

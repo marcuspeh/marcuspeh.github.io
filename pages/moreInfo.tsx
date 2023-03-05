@@ -6,7 +6,6 @@ import Skills from "../components/skills"
 export default function Home() {
   return (
     <>
-      <NavBar />
       <Grid
         container   
         direction="column"
