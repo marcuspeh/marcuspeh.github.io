@@ -18,13 +18,15 @@ const bytedanceIntern: ExperienceDataModel = {
 }
 
 const googleIntern: ExperienceDataModel = {
-  "title": "Incoming Software Engineering Intern (Google Pay)",
+  "title": "Software Engineering Intern (Google Pay)",
   "logo": GoogleIcon,
   "header": "Google",
   "company": "Google",
   "date": "May 2023 - Aug 2023",
   "description": [
-    "To be updated..."
+    "Worked on Google Pay (India) Merchant App and Backend RPCs.",
+    "Reduced memory usage by fixing memory leak issues and resolving 195 violations in a week.",
+    "Optimized workflow in verification of merchants."
   ]
 }
 
@@ -35,9 +37,9 @@ const uventsDeveloper: ExperienceDataModel = {
   "company": "NUS Information Technology",
   "date": "Jan 2023 - Present",
   "description": [
-    "Developed NUS event management portal with more than 10000 users.",
-    "Hardened portal against potential attacks.",
-    "Added extra features such as scheduled email reminder."
+    "Strengthened system security by implementing encryption for sensitive information.",
+    "Increased user's engagement by adding virtual reality platform.",
+    "Optimized performance by removing depreciated libraries and updating libraries."
   ]
 }
 

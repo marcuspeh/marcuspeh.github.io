@@ -3,7 +3,7 @@ import EducationDataModel from "../models/educationDataModel"
 export const EducationData: EducationDataModel = {
   "univerity": "National University Of Singapore",
   "major": "Bachelor of Computing, Computer Science (Honors)",
-  "gpa": "4.78 / 5.00 (First Class Honors)",
+  "gpa": "4.76 / 5.00 (First Class Honors)",
   "date": "August 2020 - Dec 2023",
   "modules": [
     `CS1010X: Programming Methodology I`,
