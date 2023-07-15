@@ -7,7 +7,7 @@ const ProgrammingLanguage: SkillsDataModel = {
 
 const LibraryLanguage: SkillsDataModel = {
   "header": "Libraries & Frameworks",
-  "skills": "ReactJs, NextJs, Django, Flutter, React Native"
+  "skills": "ReactJs, NextJs, Django, Flutter, React Native, ProtoBuf, Baze, Android Studio, gRPC, koa"
 }
 
 const Databases: SkillsDataModel = {
