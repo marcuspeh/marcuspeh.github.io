@@ -3,25 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --landing-foreground-rgb: 0, 0, 0;
+  --landing-background-start-rgb: 214, 219, 220;
+  --landing-background-end-rgb: 255, 255, 255;
+
+  --background: 234, 235, 255;
+  --background-dark: 178, 179, 217;
+  --primary: 5, 10, 139;
+  --primary-dark: 19, 23, 58;
+  --primary-text: 0, 0, 0;
+  --primary-text-inactive: 0, 0, 0, 0.6;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    --landing-foreground-rgb: 255, 255, 255;
+    --landing-background-start-rgb: 0, 0, 0;
+    --landing-background-end-rgb: 0, 0, 0;
+    --background: 37, 47, 93;
+    --background-dark: 30, 38, 81;
+    --primary: 212, 246, 242;
+    --primary-dark: 0, 199, 171;
+    --primary-text: 247, 247, 247;
+    --primary-text-inactive: 247, 247, 247, 0.6;
+}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--landing-foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--landing-background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--landing-background-start-rgb));
 }
