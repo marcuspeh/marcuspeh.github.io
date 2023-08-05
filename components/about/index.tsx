@@ -6,15 +6,15 @@ import AboutImage from '@/public/about-picture.jpg'
 function Landing() {
     return (
       <div className='flex flex-col items-center justify-between py-24 px-8'>
-        <Grid container spacing={2} className="container">
-          <Grid xs={12} md={12} className="flex flex-col items-center justify-between items-center p-6">
+        <Grid container className="container">
+          <Grid xs={12} md={12} item className="flex flex-col items-center justify-between items-center p-6">
             <Box className='heading1 primary'>About</Box>
             <Box className='subtitle primary-dark sm:hidden md:block' sx={{display: {xs: 'none', md: 'flex'}}}>Let me introduce myself</Box>
           </Grid>              
-          <Grid xs={4} sx={{display: {xs: 'none', md: 'flex'}}}>
-            <Image src={AboutImage} alt={"My picture"} className="w-100 p-12"/>
+          <Grid xs={4} item sx={{display: {xs: 'none', md: 'flex'}}}>
+            <Image src={AboutImage} alt={"My picture"} className="w-100 p-12" priority/>
           </Grid>
-          <Grid xs={8}  className='flex-row items-center items-center' sx={{display: {xs: 'none', md: 'flex'}}}>
+          <Grid xs={8} item className='flex-row items-center items-center' sx={{display: {xs: 'none', md: 'flex'}}}>
             <Box>
               <Box className='text'>
                 I’m <b>MARCUS PEH</b>, a final year Computer Science undergraduate at the National 
@@ -41,7 +41,7 @@ function Landing() {
               </Box>
             </Box>
           </Grid>
-          <Grid xs={12} className='flex-row items-center items-center' sx={{display: {xs: 'flex', md: 'none'}}}>
+          <Grid xs={12} item className='flex-row items-center items-center' sx={{display: {xs: 'flex', md: 'none'}}}>
             <Box className="text text-center">
               I'm Marcus Peh, a final year Computer Science undergraduate at the National 
               University of Singapore. I'm passionate about software engineering and enjoy 
@@ -55,13 +55,13 @@ function Landing() {
               exceptional user experiences.
             </Box>
           </Grid>
-          <Grid xs={12} md={6} className='flex flex-col items-center items-center'>
+          <Grid xs={12} md={6} item className='flex flex-col items-center items-center'>
             <Button variant="contained" className='background-primary max-w-full w-96 mt-3'>Contact me</Button>
           </Grid>
-          <Grid xs={12} md={6} className='flex flex-col items-center items-center mt-3'>
+          <Grid xs={12} md={6} item className='flex flex-col items-center items-center mt-3'>
             <Button variant="outlined" className='max-w-full w-96'>Download my resume</Button>
           </Grid>
-          <Grid xs={12} sx={{display: {xs: 'block', md: 'none'}}}>
+          <Grid xs={12} item sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={AboutImage} alt={"My picture"} className="w-100 pt-12"/>
           </Grid>
         </Grid>

@@ -6,8 +6,8 @@ import LandingImage from '@/public/landing-picture.png'
 function Landing() {
     return (
       <Box className='flex flex-col items-center justify-between'>
-        <Grid container spacing={2} className="min-h-screen container pb-0 pt-24 px-8">
-          <Grid xs={12} md={7} className="flex flex-row items-center justify-between items-center">
+        <Grid container className="min-h-screen container pb-0 pt-24 px-8">
+          <Grid xs={12} md={7} item className="flex flex-row items-center justify-between items-center">
             <Box>
               <Box className='heading2 primary-dark'>Hello I'm</Box>
               <Box className='title primary py-8'>MARCUS PEH</Box>
@@ -19,8 +19,8 @@ function Landing() {
               </Box>
             </Box>
           </Grid>
-          <Grid xs={12} md={5} className='flex flex-row items-end'>
-            <Image src={LandingImage} alt={"My picture"} className="w-100"/>
+          <Grid xs={12} md={5} item className='flex flex-row items-end'>
+            <Image src={LandingImage} alt={"My picture"} className="w-100" priority/>
           </Grid>
         </Grid>
       </Box>
