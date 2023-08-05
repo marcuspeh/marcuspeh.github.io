@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --landing-foreground-rgb: 0, 0, 0;
-  --landing-background-start-rgb: 214, 219, 220;
-  --landing-background-end-rgb: 255, 255, 255;
-
   --background: 234, 235, 255;
   --background-dark: 178, 179, 217;
   --primary: 5, 10, 139;
@@ -15,26 +11,69 @@
   --primary-text-inactive: 0, 0, 0, 0.6;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --landing-foreground-rgb: 255, 255, 255;
-    --landing-background-start-rgb: 0, 0, 0;
-    --landing-background-end-rgb: 0, 0, 0;
     --background: 37, 47, 93;
     --background-dark: 30, 38, 81;
     --primary: 212, 246, 242;
     --primary-dark: 0, 199, 171;
     --primary-text: 247, 247, 247;
     --primary-text-inactive: 247, 247, 247, 0.6;
-}
-}
+  }
+} */
 
 body {
-  color: rgb(var(--landing-foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--landing-background-end-rgb))
-    )
-    rgb(var(--landing-background-start-rgb));
+  color: rgb(var(--primary-text));
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.heading1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.text {
+  line-height: 1.2;
+}
+
+.primary {
+  color: rgb(var(--primary));
+}
+
+.primary-dark {
+  color: rgb(var(--primary-dark));
+}
+
+.primary-text-inactive {
+  color: rgb(var(--primary-text-inactive));
+}
+
+.background {
+  background-color: rgb(var(--background));
+}
+
+.background-dark {
+  background-color: rgb(var(--background-dark));
+}
+
+.background-primary {
+  background-color: rgb(var(--primary));
 }
