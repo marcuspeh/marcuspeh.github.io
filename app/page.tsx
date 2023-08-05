@@ -2,6 +2,7 @@ import Landing from '@/components/landing'
 import About from '@/components/about'
 import Skills from '@/components/skills'
 import Experience from '@/components/experience'
+import Footer from '@/components/footer'
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
       </div>
       <div className="background">
         <Experience />
+      </div>
+      <div className="background">
+        <Footer />
       </div>
     </main>
   )
