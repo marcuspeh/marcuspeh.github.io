@@ -17,7 +17,7 @@ function Skills() {
             <Grid container>
               {
                 SkillsIconData.map((skillsIcon: SkillsIconModel) => (
-                  <Grid md={1} sm={2} xs={3} item id={skillsIcon.id}>
+                  <Grid md={1} sm={2} xs={3} item key={skillsIcon.id}>
                     <Tooltip title={skillsIcon.text}>
                       <Button href={skillsIcon.link} target="_blank" className='m-2'>
                         <Image src={skillsIcon.pic} alt={skillsIcon.text}/>
