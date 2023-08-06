@@ -56,10 +56,17 @@ function Landing() {
             </Box>
           </Grid>
           <Grid xs={12} md={6} item className='flex flex-col items-center items-center'>
-            <Button variant="contained" className='background-primary max-w-full w-96 mt-3'>Contact me</Button>
+            <Button variant="contained" href="/#contact" className='background-primary max-w-full w-96 mt-3'>Contact me</Button>
           </Grid>
           <Grid xs={12} md={6} item className='flex flex-col items-center items-center mt-3'>
-            <Button variant="outlined" className='max-w-full w-96'>Download my resume</Button>
+            <Button 
+                variant="outlined" 
+                href={'/Marcus_Peh_Resume.pdf'} 
+                target="_blank" 
+                rel="noopener noreferrer"  
+                className='max-w-full w-96'>
+              Download my resume
+            </Button>
           </Grid>
           <Grid xs={12} item sx={{display: {xs: 'block', md: 'none'}}}>
             <Image src={AboutImage} alt={"My picture"} className="w-100 pt-12"/>

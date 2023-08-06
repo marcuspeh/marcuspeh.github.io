@@ -77,3 +77,7 @@ body {
 .background-primary {
   background-color: rgb(var(--primary));
 }
+
+.max-w-64 {
+  max-width: 64px;
+}
