@@ -1,9 +1,12 @@
 import ExperienceDataModel from "@/models/experienceDataModel"
 
-import BytedanceImage from "@/public/work/bytedance.svg"
+import OgpImage from "@/public/hack/ogp.svg"
+import JpmImage from "@/public/hack/jpm.svg"
+import GicImage from "@/public/hack/gic.svg"
+import NusHackersImage from "@/public/hack/nushackers.svg"
 
 const buildForGood2023: ExperienceDataModel = {
-  logo: BytedanceImage,
+  logo: OgpImage,
   logoAlt: "Open Government Product logo",
   company: "Open Government Product",
   title: "Build For Good 2023",
@@ -24,9 +27,9 @@ const buildForGood2023: ExperienceDataModel = {
 }
 
 const codeForGood2022: ExperienceDataModel = {
-  logo: BytedanceImage,
-  logoAlt: "JP Morgan logo",
-  company: "JP Morgan",
+  logo: JpmImage,
+  logoAlt: "J.P. Morgan logo",
+  company: "J.P. Morgan",
   title: "Code For Good 2022",
   date: "Oct 2022",
   description: [
@@ -45,7 +48,7 @@ const codeForGood2022: ExperienceDataModel = {
 }
 
 const codeToImpact2022: ExperienceDataModel = {
-  logo: BytedanceImage,
+  logo: GicImage,
   logoAlt: "GIC logo",
   company: "GIC",
   title: "Code to Impact 2022",
@@ -66,7 +69,7 @@ const codeToImpact2022: ExperienceDataModel = {
 }
 
 const hackAndRoll2022: ExperienceDataModel = {
-  logo: BytedanceImage,
+  logo: NusHackersImage,
   logoAlt: "NUS Hackers logo",
   company: "NUS Hackers",
   title: "Hack & Roll 2022",
