@@ -3,23 +3,30 @@ import About from '@/components/about'
 import Skills from '@/components/skills'
 import Experience from '@/components/experience'
 import Footer from '@/components/footer'
+import Contact from '@/components/contact'
 
 export default function Home() {
   return (
     <main >
-      <div className="background-dark">
+      <div className="background-dark" id="landing">
         <Landing />
       </div>
-      <div className="background">
+      <div className="background" id="about">
         <About />
       </div>
-      <div className="background-dark">
+      <div className="background-dark" id="skills">
         <Skills />
       </div>
-      <div className="background">
+      <div className="background" id="experience">
         <Experience />
       </div>
-      <div className="background">
+      <div className="background-dark" id="projects">
+
+      </div>
+      <div className="background" id="contact">
+        <Contact />
+      </div>
+      <div className="background" id="footer">
         <Footer />
       </div>
     </main>
