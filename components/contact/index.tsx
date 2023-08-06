@@ -13,7 +13,7 @@ function Contact() {
       <Grid container className="container">
         <Grid xs={12} item className="flex flex-col items-center justify-between">
           <Box className='heading1 primary'>Contact</Box>
-          <Box className="subtitle primary-dark">Let's make a connection</Box>
+          <Box className="subtitle primary-dark">Let&apos;s make a connection</Box>
         </Grid>
         <Grid xs={12} item className="flex flex-row items-center justify-center">
         {

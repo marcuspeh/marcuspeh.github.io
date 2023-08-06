@@ -98,7 +98,7 @@ function ContactForm() {
         </Grid>
       : <></>
     }
-    <Grid xs={12} md={6} item className="pr-2">
+    <Grid xs={12} md={6} item className="md:pr-2 sm:pr-0">
       { 
         contactInputField({ 
           errorMessage: nameError,
@@ -108,7 +108,7 @@ function ContactForm() {
         }) 
       }
     </Grid>
-    <Grid xs={12} md={6} item className="pl-2">
+    <Grid xs={12} md={6} item className="md:pl-2 sm:pl-0">
       { 
         contactInputField({ 
           errorMessage: emailError,

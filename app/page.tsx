@@ -4,6 +4,7 @@ import Skills from '@/components/skills'
 import Experience from '@/components/experience'
 import Footer from '@/components/footer'
 import Contact from '@/components/contact'
+import Project from "@/components/project"
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         <Experience />
       </div>
       <div className="background-dark" id="projects">
-
+        <Project />
       </div>
       <div className="background" id="contact">
         <Contact />

@@ -22,11 +22,11 @@ function Experience(props: TimelineProps) {
   
   return (
     <Box>
-      <Box xs={12} item  sx={{display: {xs: 'none', md: 'block'}}}>
+      <Box sx={{display: {xs: 'none', md: 'block'}}}>
         <Timeline position="alternate-reverse">
           {
             experience.map((data, index) => (
-              <TimelineItem>
+              <TimelineItem key={`${data.id}_desktop`}>
                 <TimelineSeparator>
                   <TimelineDot />
                   <TimelineConnector />
@@ -39,11 +39,11 @@ function Experience(props: TimelineProps) {
           }
         </Timeline>
       </Box>
-      <Box xs={12} item  sx={{display: {xs: 'block', md: 'none'}}}>
+      <Box sx={{display: {xs: 'block', md: 'none'}}}>
         <Timeline>
           {
             experience.map(data => (
-              <TimelineItem>
+              <TimelineItem key={`${data.id}_mobile`}>
                 <TimelineOppositeContent sx={{ display: 'none' }}></TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot />

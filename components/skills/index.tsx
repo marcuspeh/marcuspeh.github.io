@@ -10,8 +10,8 @@ function Skills() {
       <div className='flex flex-col items-center justify-between py-24 px-8'>
         <Grid container className="container">
           <Grid xs={12} item className="flex flex-col items-center justify-between p-6">
-            <Box className='heading1 primary'>About</Box>
-            <Box className='subtitle primary-dark sm:hidden md:block' sx={{display: {xs: 'none', md: 'flex'}}}>Let me introduce myself</Box>
+            <Box className='heading1 primary'>Skills</Box>
+            <Box className='subtitle primary-dark' sx={{display: {xs: 'none', md: 'flex'}}}>Here are some technology I worked with</Box>
           </Grid>              
           <Grid xs={12} item>
             <Grid container>

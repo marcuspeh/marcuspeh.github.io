@@ -7,9 +7,9 @@ function Landing() {
     return (
       <div className='flex flex-col items-center justify-between py-24 px-8'>
         <Grid container className="container">
-          <Grid xs={12} md={12} item className="flex flex-col items-center justify-between items-center p-6">
+          <Grid xs={12} item className="flex flex-col items-center justify-between items-center p-6">
             <Box className='heading1 primary'>About</Box>
-            <Box className='subtitle primary-dark sm:hidden md:block' sx={{display: {xs: 'none', md: 'flex'}}}>Let me introduce myself</Box>
+            <Box className='subtitle primary-dark' sx={{display: {xs: 'none', md: 'flex'}}}>Let me introduce myself</Box>
           </Grid>              
           <Grid xs={4} item sx={{display: {xs: 'none', md: 'flex'}}}>
             <Image src={AboutImage} alt={"My picture"} className="w-100 p-12" priority/>
@@ -43,10 +43,10 @@ function Landing() {
           </Grid>
           <Grid xs={12} item className='flex-row items-center items-center' sx={{display: {xs: 'flex', md: 'none'}}}>
             <Box className="text text-center">
-              I'm Marcus Peh, a final year Computer Science undergraduate at the National 
-              University of Singapore. I'm passionate about software engineering and enjoy 
+              I&apos;m Marcus Peh, a final year Computer Science undergraduate at the National 
+              University of Singapore. I&apos;m passionate about software engineering and enjoy 
               using code to solve practical challenges. Since my early days of programming 
-              in Python, I've been fascinated by the transformative power of software in 
+              in Python, I&apos;ve been fascinated by the transformative power of software in 
               solving real-world problems. During a previous internship, I successfully 
               optimized API performance by an impressive 200x, demonstrating my ability 
               to enhance system efficiency. As a Software Engineer, I continuously seek 

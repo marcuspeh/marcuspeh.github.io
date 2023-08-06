@@ -29,7 +29,7 @@ function Footer() {
   }, [])
 
   return (
-    <Box className="flex flex-row justify-center py-5 primary-text-inactive">
+    <Box className="flex flex-row justify-center pt-5 pb-1 primary-text-inactive">
       <Box>
         &copy; {new Date().getFullYear()}, Marcus Peh 
       </Box>

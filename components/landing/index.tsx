@@ -9,7 +9,7 @@ function Landing() {
         <Grid container className="min-h-screen container pb-0 pt-24 px-8">
           <Grid xs={12} md={7} item className="flex flex-row items-center justify-between items-center">
             <Box>
-              <Box className='heading2 primary-dark'>Hello I'm</Box>
+              <Box className='heading2 primary-dark'>Hello I&apos;m</Box>
               <Box className='title primary py-8'>MARCUS PEH</Box>
               <Box className='subtitle primary-dark'>
                 Performance-driven penultimate Computer Science undergraduate at 
