@@ -14,10 +14,10 @@ function Skills() {
             <Box className='subtitle primary-dark' sx={{display: {xs: 'none', md: 'flex'}}}>Here are some technology I worked with</Box>
           </Grid>              
           <Grid xs={12} item>
-            <Grid container columns={12}>
+            <Grid container columns={10}>
               {
                 SkillsIconData.map((skillsIcon: SkillsIconModel) => (
-                  <Grid md={1} sm={2} xs={3} item key={skillsIcon.id}>
+                  <Grid md={1} xs={2} item key={skillsIcon.id}>
                     <Tooltip title={skillsIcon.text}>
                       <Button href={skillsIcon.link} target="_blank" className='m-2 max-w-64'>
                         <Image src={skillsIcon.pic} alt={skillsIcon.text}/>
