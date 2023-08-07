@@ -33,10 +33,10 @@ function Footer() {
       <Box>
         &copy; {new Date().getFullYear()}, Marcus Peh 
       </Box>
-      <Box className="mx-2"> 
+      <Box className="mx-2" sx={{display: {xs: 'none', md: 'flex'}}}> 
         |
       </Box>
-      <Box>
+      <Box sx={{display: {xs: 'none', md: 'flex'}}}>
         Last Updated: {lastUpdated.toDateString()}
       </Box>
     </Box>

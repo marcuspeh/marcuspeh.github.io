@@ -12,7 +12,7 @@ function Landing() {
             <Box className='subtitle primary-dark' sx={{display: {xs: 'none', md: 'flex'}}}>Let me introduce myself</Box>
           </Grid>              
           <Grid xs={4} item sx={{display: {xs: 'none', md: 'flex'}}}>
-            <Image src={AboutImage} alt={"My picture"} className="w-100 p-12" priority/>
+            <Image src={AboutImage} alt={"My picture"} className="w-100 p-12 rounded-full" />
           </Grid>
           <Grid xs={8} item className='flex-row items-center items-center' sx={{display: {xs: 'none', md: 'flex'}}}>
             <Box>
@@ -69,7 +69,7 @@ function Landing() {
             </Button>
           </Grid>
           <Grid xs={12} item sx={{display: {xs: 'block', md: 'none'}}}>
-            <Image src={AboutImage} alt={"My picture"} className="w-100 pt-12"/>
+            <Image src={AboutImage} alt={"My picture"} className="w-100 pt-12 rounded-full"/>
           </Grid>
         </Grid>
       </div>

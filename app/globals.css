@@ -89,5 +89,9 @@ body {
 }
 
 .max-w-64 {
-  max-width: 64px;
+  max-width: 3rem;
+}
+
+.max-w-32 {
+  max-width: 1.5rem;
 }
