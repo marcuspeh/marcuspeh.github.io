@@ -16,20 +16,20 @@ function ProjectCard(projectData: ProjectDataModel) {
       <CardContent>
         <Box className="subtitle">
           {projectData.title}
-          {
-            projectData.link && (
-              <Button href={projectData.link} target="_blank">
-                <Image src={GitHubImage} alt={"Project link"} className='max-w-32'/>
-              </Button>
-            )
-          }
         </Box>
         <Box className="flex flex-row flex-wrap">
           {
             projectData.tech.map(tech => <Chip label={tech.text} key={tech.id} className="mr-2 my-1 font-semibold background-dark primary-light" />)
           }
         </Box>
-        <Box className="text">{projectData.description}</Box>
+        <Box className="text my-2">{projectData.description}</Box>
+        {
+            projectData.link && (
+              <a href={projectData.link} target="_blank">
+                <Image src={GitHubImage} alt={"Project link"} className='max-w-32 inline'/>
+              </a>
+            )
+          }
       </CardContent>
     </Card>
   </Grid>
