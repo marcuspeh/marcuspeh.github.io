@@ -72,6 +72,10 @@ body {
   color: rgb(var(--primary-text-inactive));
 }
 
+.primary-text {
+  color: rgb(var(--primary-text));
+}
+
 .background {
   background-color: rgb(var(--background));
 }

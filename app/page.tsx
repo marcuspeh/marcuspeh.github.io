@@ -5,10 +5,12 @@ import Experience from '@/components/experience'
 import Footer from '@/components/footer'
 import Contact from '@/components/contact'
 import Project from "@/components/project"
+import NavBar from '@/components/navbar'
 
 export default function Home() {
   return (
     <main >
+      <NavBar />
       <div className="background-dark" id="landing">
         <Landing />
       </div>
