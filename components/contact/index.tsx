@@ -9,7 +9,7 @@ import ContactDataModel from '@/models/contactDataModel'
 
 function Contact() {
   return (
-    <Box className='flex flex-col items-center justify-between py-24 px-8'>
+    <Box className='flex flex-col items-center justify-between px-8 py-12 md:py-24'>
       <Grid container className="container">
         <Grid xs={12} item className="flex flex-col items-center justify-between">
           <Box className='heading1 primary'>Contact</Box>

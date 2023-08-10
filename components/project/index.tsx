@@ -5,7 +5,7 @@ import ProjectCard from './projectCard'
 
 function Project() {
     return (
-      <div className='flex flex-col items-center justify-between py-24 px-8'>
+      <div className='flex flex-col items-center justify-between px-8 py-12 md:py-24'>
         <Grid container className="container">
           <Grid xs={12} item className="flex flex-col items-center justify-between items-center p-6">
             <Box className='heading1 primary'>Project</Box>

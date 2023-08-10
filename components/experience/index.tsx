@@ -29,12 +29,12 @@ function Experience() {
   }
 
   return (
-    <div className='flex flex-col items-center justify-between py-24 px-8'>
+    <div className='flex flex-col items-center justify-between px-8 py-12 md:py-24'>
       <Grid container className="container">
         <Grid xs={12} item className="flex flex-col items-center justify-between p-6">
         <Box className='heading1 primary'>Experience</Box>
         </Grid>
-        <Grid xs={12} item className="flex flex-row items-center justify-center">
+        <Grid xs={12} item className="flex flex-row items-center justify-center pb-3">
           <Button onClick={workClick}>
             <Box className={"subtitle underline " + (tabStateEnum == TabStateEnum.WORK ? "primary-text" : "primary-text-inactive")}>
               ./work

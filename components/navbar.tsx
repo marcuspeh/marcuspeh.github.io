@@ -33,7 +33,7 @@ function NavBarMobile() {
 
   return (
     <Grid xs={12} item className="flex-row items-center justify-start pl-3"  sx={{display: {xs: 'flex', md: 'none'}}}>
-      <Button aria-label="menu" variant="outlined" onClick={() => setIsOpen(true)}>
+      <Button aria-label="menu" variant="outlined" onClick={() => setIsOpen(true)} className="w-7">
         <MenuIcon />
       </Button>
       <Button href="#landing" className="subtitle primary underline text-bold">Marcus</Button>
