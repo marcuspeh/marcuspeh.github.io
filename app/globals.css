@@ -92,6 +92,14 @@ body {
   background-color: rgb(var(--primary-dark));
 }
 
+.border-color-primary {
+  border-color: rgb(var(--primary));
+}
+
+.border-color-background {
+  border-color: rgb(var(--background));
+}
+
 .max-w-64 {
   max-width: 3rem;
 }
