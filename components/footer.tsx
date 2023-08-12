@@ -1,28 +1,19 @@
 'use client';
 
 import {useState, useEffect} from 'react';
-import axios from 'axios';
-import packageJson from '../package.json';
 import {Box} from '@mui/material';
+import {fetchLastUpdate} from '@/services/api/fetchLastUpdate';
 
 export function Footer() {
   const [lastUpdated, updateLastUpdated] = useState(new Date());
 
-  const getLastUpdate = async () => {
-    const url = `https://api.github.com/repos/${packageJson.owner}/${packageJson.repository}/branches/${packageJson.branch}`;
-    axios.get(url).then(response => {
-      const commitDate = response.data.commit.commit.author.date;
-
-      if (!commitDate) {
+  useEffect(() => {
+    fetchLastUpdate().then(lastDate => {
+      if (!lastDate) {
         return;
       }
-
-      updateLastUpdated(new Date(commitDate));
+      updateLastUpdated(new Date(lastDate));
     });
-  };
-
-  useEffect(() => {
-    getLastUpdate();
   }, []);
 
   return (

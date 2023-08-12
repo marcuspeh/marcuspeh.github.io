@@ -57,7 +57,6 @@ export function ContactForm() {
     const isValid: boolean = validateInput();
     if (!isValid) return;
 
-    console.log(name, email, message);
     const responseCode = await submitContactForm(name, email, message);
     if (responseCode === 200) {
       setSubmitted(true);
