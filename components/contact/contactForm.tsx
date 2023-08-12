@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import Button from "@mui/material/Button"
-import Alert from "@mui/material/Alert"
-import contactInputField from './contactInputField'
-import { submitContactForm } from "@/services/api/submitFormController"
-import CheckIcon from '@mui/icons-material/Check'
-import { Grid } from "@mui/material"
+import React, {useState} from 'react';
+import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
+import {ContactFormField} from './contactInputField';
+import {submitContactForm} from '@/services/api/submitFormController';
+import {Check as CheckIcon} from '@mui/icons-material';
+import {Grid} from '@mui/material';
 
 const validateEmail = (email: string) => {
   return email
@@ -14,129 +14,143 @@ const validateEmail = (email: string) => {
     );
 };
 
-function ContactForm() {
-  const [submitted, setSubmitted] = useState(false)
-  const [name, setName] = useState("")
-  const [nameError, setNameError] = useState("")
-  const [email, setEmail] = useState("")
-  const [emailError, setEmailError] = useState("")
-  const [message, setMessage] = useState("")
-  const [messageError, setMessageError] = useState("")
+export function ContactForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [message, setMessage] = useState('');
+  const [messageError, setMessageError] = useState('');
 
   function validateInput() {
-    var isValid: boolean = true
+    let isValid = true;
 
-    if (name === "") {
-      setNameError("Name is required.")
-      isValid = false
+    if (name === '') {
+      setNameError('Name is required.');
+      isValid = false;
     } else {
-      setNameError("")
+      setNameError('');
     }
 
-    if (email === "") {
-      setEmailError("Email is required.")
-      isValid = false
+    if (email === '') {
+      setEmailError('Email is required.');
+      isValid = false;
     } else if (!validateEmail(email)) {
-      setEmailError("Invalid email.")
-      isValid = false
+      setEmailError('Invalid email.');
+      isValid = false;
     } else {
-      setEmailError("")
+      setEmailError('');
     }
 
-    if (message === "") {
-      setMessageError("Message is required.")
-      isValid = false
+    if (message === '') {
+      setMessageError('Message is required.');
+      isValid = false;
     } else {
-      setMessageError("")
+      setMessageError('');
     }
 
-    return isValid
+    return isValid;
   }
 
   async function onSubmit() {
-    var isValid: boolean = validateInput()
-    if (!isValid) return
-    
-    console.log(name, email, message)
-    var responseCode = await submitContactForm(name, email, message)
+    const isValid: boolean = validateInput();
+    if (!isValid) return;
+
+    console.log(name, email, message);
+    const responseCode = await submitContactForm(name, email, message);
     if (responseCode === 200) {
-      setSubmitted(true)
-      setName("")
-      setEmail("")
-      setMessage("")
+      setSubmitted(true);
+      setName('');
+      setEmail('');
+      setMessage('');
     }
   }
 
   function onNameChange(name: string) {
-    setName(name)
+    setName(name);
     if (nameError) {
-      setNameError("")
+      setNameError('');
     }
   }
 
   function onEmailChange(email: string) {
-    setEmail(email)
+    setEmail(email);
     if (emailError) {
-      setEmailError("")
+      setEmailError('');
     }
   }
 
   function onMessageChange(message: string) {
-    setMessage(message)
+    setMessage(message);
     if (messageError) {
-      setMessageError("")
+      setMessageError('');
     }
   }
 
-  return <Grid container>
-    {
-      submitted ? 
-        <Grid xs={12} item>
-          <Alert icon={<CheckIcon fontSize="inherit" />} severity="success" onClose={() => {setSubmitted(false)}}>
+  return (
+    <Grid container>
+      {submitted ? (
+        <Grid xs={12} item className="pb-4">
+          <Alert
+            icon={<CheckIcon fontSize="inherit" />}
+            severity="success"
+            onClose={() => {
+              setSubmitted(false);
+            }}
+          >
             Cheers, I have received your message! I will be in touch soon.
           </Alert>
         </Grid>
-      : <></>
-    }
-    <Grid xs={12} md={6} item className="md:pr-2 sm:pr-0">
-      { 
-        contactInputField({ 
+      ) : (
+        <></>
+      )}
+      <Grid xs={12} md={6} item className="md:pr-2 sm:pr-0">
+        {ContactFormField({
           errorMessage: nameError,
-          label: "Name",
+          label: 'Name',
           value: name,
           onChange: onNameChange,
-        }) 
-      }
-    </Grid>
-    <Grid xs={12} md={6} item className="md:pl-2 sm:pl-0">
-      { 
-        contactInputField({ 
+        })}
+      </Grid>
+      <Grid xs={12} md={6} item className="md:pl-2 sm:pl-0">
+        {ContactFormField({
           errorMessage: emailError,
-          label: "Email",
+          label: 'Email',
           value: email,
           onChange: onEmailChange,
-          type: "email"
-        }) 
-      }
-    </Grid>
-    <Grid xs={12} item>
-      { 
-        contactInputField({ 
+          type: 'email',
+        })}
+      </Grid>
+      <Grid xs={12} item>
+        {ContactFormField({
           errorMessage: messageError,
-          label: "Message",
+          label: 'Message',
           value: message,
           onChange: onMessageChange,
-          multiline: true
-        }) 
-      }
+          multiline: true,
+        })}
+      </Grid>
+      <Grid xs={12} item className="flex flex-row justify-end">
+        <Button
+          variant="contained"
+          className="background-primary max-w-full w-96"
+          onClick={onSubmit}
+        >
+          Submit
+        </Button>
+        <div
+          style={{
+            textIndent: '-99999px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            position: 'absolute',
+          }}
+          aria-hidden="true"
+        >
+          <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+        </div>
+      </Grid>
     </Grid>
-    <Grid xs={12} item className="flex flex-row justify-end">
-      <Button variant="contained" className='background-primary max-w-full w-96' onClick={onSubmit}>Submit</Button>
-      <div style={{textIndent:'-99999px', whiteSpace:'nowrap', overflow:'hidden', position:'absolute'}} aria-hidden="true">
-        <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
-      </div>
-    </Grid>
-  </Grid>
+  );
 }
-
-export default ContactForm

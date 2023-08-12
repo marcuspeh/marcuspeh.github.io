@@ -1,8 +1,5 @@
-interface NavBarLinkModel {
-  link: string,
-  text: string,
-  id: string
+export interface NavBarLinkModel {
+  link: string;
+  text: string;
+  id: string;
 }
-
-
-export default NavBarLinkModel

@@ -1,15 +1,15 @@
-import Landing from '@/components/landing'
-import About from '@/components/about'
-import Skills from '@/components/skills'
-import Experience from '@/components/experience'
-import Footer from '@/components/footer'
-import Contact from '@/components/contact'
-import Project from "@/components/project"
-import NavBar from '@/components/navbar'
+import {About} from '@/components/about';
+import {Landing} from '@/components/landing';
+import {Skills} from '@/components/skills';
+import {Experience} from '@/components/experience';
+import {Footer} from '@/components/footer';
+import {Contact} from '@/components/contact';
+import {Project} from '@/components/project';
+import {NavBar} from '@/components/navbar';
 
 export default function Home() {
   return (
-    <main >
+    <main>
       <NavBar />
       <div className="background-dark" id="landing">
         <Landing />
@@ -33,5 +33,5 @@ export default function Home() {
         <Footer />
       </div>
     </main>
-  )
+  );
 }
