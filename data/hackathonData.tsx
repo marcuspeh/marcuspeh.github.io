@@ -4,6 +4,7 @@ import OgpImage from '@/public/hack/ogp.svg';
 import JpmImage from '@/public/hack/jpm.svg';
 import GicImage from '@/public/hack/gic.svg';
 import NusHackersImage from '@/public/hack/nushackers.svg';
+import GoogleImage from '@/public/hack/google.svg';
 
 const buildForGood2023: ExperienceDataModel = {
   logo: OgpImage,
@@ -26,6 +27,25 @@ const buildForGood2023: ExperienceDataModel = {
     },
   ],
   id: 'buildForGood2023_hackathon',
+};
+
+const helloAi2023: ExperienceDataModel = {
+  logo: GoogleImage,
+  logoAlt: 'Google logo',
+  company: 'Open Government Product',
+  title: 'Hello AI 2023 (Google\s internal hackathon)',
+  date: 'Jun 2023',
+  description: [
+    {
+      text: 'Engineered solution to get more inclusive responses from Large Language Model (LLM)',
+      id: 'helloAi2023_description_1',
+    },
+    {
+      text: 'Made it into the top 10 teams',
+      id: 'helloAi2023_description_2',
+    },
+  ],
+  id: 'helloAi2023_hackathon',
 };
 
 const codeForGood2022: ExperienceDataModel = {
@@ -95,6 +115,7 @@ const hackAndRoll2022: ExperienceDataModel = {
 
 export const HackathonData: ExperienceDataModel[] = [
   buildForGood2023,
+  helloAi2023,
   codeForGood2022,
   codeToImpact2022,
   hackAndRoll2022,
