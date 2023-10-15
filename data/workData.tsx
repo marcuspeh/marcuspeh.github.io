@@ -11,7 +11,16 @@ const bytedance: ExperienceDataModel = {
   company: 'Bytedance',
   title: 'Software Engineering Intern (Global Payments)',
   date: 'Aug 2023 - Present',
-  description: [{text: 'to be updated...', id: 'bytedance_description_1'}],
+  description: [
+    {
+      text: 'Improve efficiency of approval process by integrating in-house solution', 
+      id: 'bytedance_description_1'
+    },
+    {
+      text: 'Worked on channel platform, with daily transactions of over USD 1 million', 
+      id: 'bytedance_description_2'
+    }
+  ],
   id: 'bytedance_internship',
 };
 

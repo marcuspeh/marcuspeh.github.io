@@ -17,7 +17,7 @@ export function Landing() {
             <Box className="heading2 primary-dark">Hello I&apos;m</Box>
             <Box className="title primary py-8">MARCUS PEH</Box>
             <Box className="subtitle primary-dark">
-              Performance-driven penultimate Computer Science undergraduate at
+              Performance-driven final year Computer Science undergraduate at
               National University of Singapore, with experience in Agile
               Software Development. Possess strong problem-solving, analytical
               and time management skills.
