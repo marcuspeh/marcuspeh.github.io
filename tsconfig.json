@@ -1,7 +1,7 @@
 {
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "rootDir": ".",
+    "target": "es5",
     "outDir": "build",
     "allowJs": true,
     "skipLibCheck": true,
@@ -12,7 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["DOM"],
+    "lib": ["DOM", "ESNext", "DOM.Iterable"],
     "plugins": [
       {
         "name": "next"
