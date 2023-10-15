@@ -12,7 +12,7 @@
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
-    "fix": "gts fix",
+    "fix": "gts fix"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
