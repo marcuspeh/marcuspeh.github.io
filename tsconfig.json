@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "lib": ["DOM"],
     "plugins": [
       {
         "name": "next"
@@ -21,9 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts",
-    ".next/types/**/*.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

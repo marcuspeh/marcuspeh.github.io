@@ -33,7 +33,7 @@ const helloAi2023: ExperienceDataModel = {
   logo: GoogleImage,
   logoAlt: 'Google logo',
   company: 'Open Government Product',
-  title: 'Hello AI 2023 (Google\s internal hackathon)',
+  title: 'Hello AI 2023 (Google&apos;s internal hackathon)',
   date: 'Jun 2023',
   description: [
     {
