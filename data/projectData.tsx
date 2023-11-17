@@ -145,7 +145,7 @@ export const ProjectData: ProjectDataModel[] = [
   aroundTheWorldIn80,
   markeet,
   splitlux,
+  mediclear,
   todoManager,
   gardnerMiniChessAi,
-  mediclear,
 ];

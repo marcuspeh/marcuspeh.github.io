@@ -13,12 +13,16 @@ const bytedance: ExperienceDataModel = {
   date: 'Aug 2023 - Present',
   description: [
     {
-      text: 'Improve efficiency of approval process by integrating in-house solution',
+      text: 'Enhanced approval process efficiency by integrating in-house solution',
       id: 'bytedance_description_1',
     },
     {
-      text: 'Worked on channel platform, with daily transactions of over USD 1 million',
+      text: 'Contributed to channel platform with monthly transactions exceeding USD $7.5 billion',
       id: 'bytedance_description_2',
+    },
+    {
+      text: 'Improved performance of channels rating API by over 55% through effective concurrency strategies',
+      id: 'bytedance_description_3',
     },
   ],
   id: 'bytedance_internship',
@@ -32,15 +36,15 @@ const google: ExperienceDataModel = {
   date: 'May 2023 - Aug 2023',
   description: [
     {
-      text: 'Reduced memory usage by fixing at least 32 memory leak issues and resolving 195 violations',
+      text: 'Optimized QR code loading time by 93.5% (from 1.38s to 0.09s) through elimination of RPC calls',
       id: 'google_description_1',
     },
     {
-      text: 'Decreased QR code loading time by 93.5% from 1.38s to 0.09s by removing RPC call',
+      text: 'Lowered proximity verification range by 99.5% from 2km to 10m by leveraging Bluetooth Low Energy',
       id: 'google_description_2',
     },
     {
-      text: 'Lowered proximity verification range by 99.5% from 2km to 10m by using Bluetooth Low Energy',
+      text: 'Ranked among top 10 teams in a Google internal AI hackathon',
       id: 'google_description_3',
     },
   ],
