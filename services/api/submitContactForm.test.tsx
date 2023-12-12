@@ -2,21 +2,25 @@ import axios from 'axios';
 import {submitContactForm} from './submitContactForm';
 
 jest.mock('axios');
+const mockedAxios = axios as jest.Mocked<typeof axios>;
+
+beforeEach(() => {
+  jest.resetAllMocks();
+});
 
 describe('Submit contact form function', () => {
   test('success', async () => {
-    axios.post.mockReturnValueOnce(() => Promise.resolve({data: apiResponse}));
-
+    mockedAxios.post.mockResolvedValueOnce({status: 200, data: {}});
     const response = await submitContactForm('name', 'email', 'message');
     expect(axios.post).toHaveBeenCalled();
-    expect(response.status).toEqual(200);
+    expect(response).toEqual(200);
   });
-  
+
   test('unexpected response', async () => {
-    axios.post.mockReturnValueOnce(() => Promise.reject('Server error'));
+    mockedAxios.post.mockRejectedValueOnce({status: 400, data: {}});
 
     const response = await submitContactForm('name', 'email', 'message');
     expect(axios.post).toHaveBeenCalled();
-    expect(response.status).toEqual(401);
+    expect(response).toEqual(400);
   });
 });

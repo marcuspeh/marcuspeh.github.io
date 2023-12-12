@@ -2,6 +2,11 @@ import axios from 'axios';
 import {fetchLastUpdate} from './fetchLastUpdate';
 
 jest.mock('axios');
+const mockedAxios = axios as jest.Mocked<typeof axios>;
+
+beforeEach(() => {
+  jest.resetAllMocks();
+});
 
 describe('Fetch Lat Update function', () => {
   test('success', async () => {
@@ -18,7 +23,10 @@ describe('Fetch Lat Update function', () => {
       },
     };
 
-    axios.get.mockImplementationOnce(() => Promise.resolve({data: apiResponse}));
+    mockedAxios.get.mockResolvedValueOnce({
+      status: 200,
+      data: apiResponse,
+    });
 
     const response = await fetchLastUpdate();
     expect(axios.get).toHaveBeenCalled();
@@ -32,18 +40,21 @@ describe('Fetch Lat Update function', () => {
       date: lastUpdated,
     };
 
-    axios.get.mockImplementationOnce(() =>
-      Promise.resolve({data: apiResponse})
-    );
+    mockedAxios.get.mockResolvedValueOnce({
+      status: 200,
+      data: apiResponse,
+    });
 
     const response = await fetchLastUpdate();
     expect(axios.get).toHaveBeenCalled();
     expect(response).toEqual('unknown');
   });
 
-  
   test('unexpected response', async () => {
-    axios.get.mockImplementationOnce(() => Promise.reject('Server error'));
+    mockedAxios.get.mockRejectedValueOnce({
+      status: 400,
+      data: {},
+    });
 
     const response = await fetchLastUpdate();
     expect(axios.get).toHaveBeenCalled();
