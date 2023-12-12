@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
 import {ContactFormField} from './contactInputField';
-import {submitContactForm} from '@/services/api/submitFormController';
+import {submitContactForm} from '@/services/api/submitContactForm';
 import {Check as CheckIcon} from '@mui/icons-material';
 import {Grid} from '@mui/material';
 
