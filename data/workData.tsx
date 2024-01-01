@@ -10,7 +10,7 @@ const bytedance: ExperienceDataModel = {
   logoAlt: 'Bytedance logo',
   company: 'Bytedance',
   title: 'Software Engineering Intern (Global Payments)',
-  date: 'Aug 2023 - Present',
+  date: 'Aug 2023 - Dec 2023',
   description: [
     {
       text: 'Enhanced approval process efficiency by integrating in-house solution',
@@ -21,7 +21,7 @@ const bytedance: ExperienceDataModel = {
       id: 'bytedance_description_2',
     },
     {
-      text: 'Improved performance of channels rating API by over 55% through effective concurrency strategies',
+      text: 'Improved performance of channels rating API by over 90% through effective optimization strategies',
       id: 'bytedance_description_3',
     },
   ],
