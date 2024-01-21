@@ -35,11 +35,11 @@ export function About() {
         >
           <Box>
             <Box className="text">
-              I’m <b>MARCUS PEH</b>, a final year Computer Science undergraduate
-              at the National University of Singapore. My passion lies in
-              software engineering, and I find joy in writing code to tackle
-              practical challenges. From my early days of programming in Python
-              during National Service, I have been captivated by the ability of
+              I’m <b>MARCUS PEH</b>, a Computer Science (honors) graduate from
+              National University of Singapore. My passion lies in software
+              engineering, and I find joy in writing code to tackle practical
+              challenges. From my early days of programming in Python during
+              National Service, I have been captivated by the ability of
               software to solve real-world problems. I firmly believe in the
               transformative power of programming, and I am dedicated to
               leveraging it to enhance the lives of people globally.
@@ -69,11 +69,11 @@ export function About() {
           sx={{display: {xs: 'flex', md: 'none'}}}
         >
           <Box className="text text-center">
-            I&apos;m Marcus Peh, a final year Computer Science undergraduate at
-            the National University of Singapore. I&apos;m passionate about
-            software engineering and enjoy using code to solve practical
-            challenges. Since my early days of programming in Python, I&apos;ve
-            been fascinated by the transformative power of software in solving
+            I&apos;m Marcus Peh, a Computer Science (honors) graduate from
+            National University of Singapore. I&apos;m passionate about software
+            engineering and enjoy using code to solve practical challenges.
+            Since my early days of programming in Python, I&apos;ve been
+            fascinated by the transformative power of software in solving
             real-world problems. During a previous internship, I successfully
             optimized API performance by an impressive 200x, demonstrating my
             ability to enhance system efficiency. As a Software Engineer, I
