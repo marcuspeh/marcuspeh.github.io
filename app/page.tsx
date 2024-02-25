@@ -18,7 +18,7 @@ export default function Home() {
       <div className="background-dark" id="landing">
         <Landing />
       </div>
-        <Suspense>
+      <Suspense>
         <div className="background" id="about">
           <About />
         </div>
@@ -38,7 +38,6 @@ export default function Home() {
           <Footer />
         </div>
       </Suspense>
-     
       <Analytics />
       <SpeedInsights />
     </main>
