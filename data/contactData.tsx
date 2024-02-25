@@ -22,7 +22,7 @@ const github: ContactDataModel = {
   pic: GitHubImage,
   link: 'https://github.com/marcuspeh',
   text: 'GitHub',
-  id: 'linkedin_contact',
+  id: 'github_contact',
 };
 
 export const ContactData: ContactDataModel[] = [linkedin, github, email];
