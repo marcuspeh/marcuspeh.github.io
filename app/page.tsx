@@ -1,3 +1,6 @@
+import {Analytics} from '@vercel/analytics/react';
+import {SpeedInsights} from '@vercel/speed-insights/next';
+
 import {About} from '@/components/about';
 import {Landing} from '@/components/landing';
 import {Skills} from '@/components/skills';
@@ -32,6 +35,8 @@ export default function Home() {
       <div className="background" id="footer">
         <Footer />
       </div>
+      <Analytics />
+      <SpeedInsights />
     </main>
   );
 }
