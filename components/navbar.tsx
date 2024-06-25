@@ -21,10 +21,7 @@ function NavBarDesktop() {
       sx={{display: {xs: 'none', md: 'flex'}}}
     >
       <Box className="mr-2">
-        <Button
-          href="#landing"
-          className="subtitle primary font-black pl-0"
-        >
+        <Button href="#landing" className="subtitle primary font-black pl-0">
           Marcus
         </Button>
       </Box>
