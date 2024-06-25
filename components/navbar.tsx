@@ -23,7 +23,7 @@ function NavBarDesktop() {
       <Box className="mr-2">
         <Button
           href="#landing"
-          className="subtitle primary underline font-black pl-0"
+          className="subtitle primary font-black pl-0"
         >
           Marcus
         </Button>
