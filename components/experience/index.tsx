@@ -86,8 +86,8 @@ export function Experience() {
               tabStateEnum === TabStateEnum.WORK
                 ? WorkData
                 : tabStateEnum === TabStateEnum.HACK
-                ? HackathonData
-                : TeachData
+                  ? HackathonData
+                  : TeachData
             }
           />
         </Grid>

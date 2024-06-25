@@ -4,6 +4,30 @@ import BytedanceImage from '@/public/work/bytedance.svg';
 import GoogleIcon from '@/public/work/google.svg';
 import GovtechIcon from '@/public/work/govtech.svg';
 import ReluvateIcon from '@/public/work/reluvate.svg';
+import TikTokIcon from '@/public/work/tiktok.svg';
+
+const tiktok: ExperienceDataModel = {
+  logo: TikTokIcon,
+  logoAlt: 'TikTok logo',
+  company: 'TikTok',
+  title: 'Backend Software Engineer (TikTok Live)',
+  date: 'Apr 2024 - Present',
+  description: [
+    {
+      text: 'Reduced metric monitoring time from 3 PD to 0 PD by unifying data platform systems',
+      id: 'tiktok_description_1',
+    },
+    {
+      text: 'Contributed to channel platform with monthly transactions exceeding USD $7.5 billion',
+      id: 'tiktok_description_2',
+    },
+    {
+      text: 'Improved workflows for data metrics by streamlining search functionality based on user feedback',
+      id: 'tiktok_description_3',
+    },
+  ],
+  id: 'tiktok_full_time',
+};
 
 const bytedance: ExperienceDataModel = {
   logo: BytedanceImage,
@@ -98,6 +122,7 @@ const reluvate: ExperienceDataModel = {
 };
 
 export const WorkData: ExperienceDataModel[] = [
+  tiktok,
   bytedance,
   google,
   govtech,

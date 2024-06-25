@@ -14,15 +14,15 @@ const buildForGood2023: ExperienceDataModel = {
   date: 'Jun 2023',
   description: [
     {
-      text: 'Engineered solution to simplify medical health report for the general public',
+      text: 'Engineered user-friendly solution for simplifying medical health reports for general public',
       id: 'buildForGood2023_description_1',
     },
     {
-      text: 'Implemented the parsing of pdf report',
+      text: 'Talked to domain experts and stakeholders for gathering essential requirements',
       id: 'buildForGood2023_description_2',
     },
     {
-      text: 'Utilized Large Language Model (LLM) and hard coded data process health report data',
+      text: 'Pitched to ministers and other government officials',
       id: 'buildForGood2023_description_3',
     },
   ],
@@ -37,12 +37,16 @@ const helloAi2023: ExperienceDataModel = {
   date: 'Jun 2023',
   description: [
     {
-      text: 'Engineered solution to get more inclusive responses from Large Language Model (LLM)',
+      text: 'Built Large Language Model (LLM) prototype for more inclusive search results, incorporating diverse cultural perspectives',
       id: 'helloAi2023_description_1',
     },
     {
-      text: 'Made it into the top 10 teams',
+      text: 'Pitched the Artificial intelligence (AI) solution, showcasing strong communication and presentation skills',
       id: 'helloAi2023_description_2',
+    },
+    {
+      text: 'Ranked among the top 10 teams, demonstrating teamwork and excellence in problem-solving',
+      id: 'helloAi2023_description_3',
     },
   ],
   id: 'helloAi2023_hackathon',
