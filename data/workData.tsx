@@ -18,11 +18,11 @@ const tiktok: ExperienceDataModel = {
       id: 'tiktok_description_1',
     },
     {
-      text: 'Contributed to channel platform with monthly transactions exceeding USD $7.5 billion',
+      text: 'Created >10 real-time indicators to enhance management of LIVE creators, improving UV of new creators by more than 40%',
       id: 'tiktok_description_2',
     },
     {
-      text: 'Improved workflows for data metrics by streamlining search functionality based on user feedback',
+      text: 'Refined workflows for data metrics by streamlining search functionality',
       id: 'tiktok_description_3',
     },
   ],
