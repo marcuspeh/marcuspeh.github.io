@@ -5,7 +5,7 @@ import {ContactFormField} from './contactInputField';
 import {submitContactForm} from '@/services/api/submitContactForm';
 import {Check as CheckIcon, Send as SendIcon} from '@mui/icons-material';
 import {Grid} from '@mui/material';
-import {motion} from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 
 const validateEmail = (email: string) => {
   return email
@@ -95,21 +95,27 @@ export function ContactForm() {
 
   return (
     <Grid container>
-      {submitted ? (
-        <Grid xs={12} item className="pb-4">
-          <Alert
-            icon={<CheckIcon fontSize="inherit" />}
-            severity="success"
-            onClose={() => {
-              setSubmitted(false);
-            }}
-          >
-            Cheers, I have received your message! I will be in touch soon.
-          </Alert>
-        </Grid>
-      ) : (
-        <></>
-      )}
+      <AnimatePresence>
+        {submitted && (
+          <Grid xs={12} item className="pb-4">
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Alert
+                icon={<CheckIcon fontSize="inherit" />}
+                severity="success"
+                onClose={() => setSubmitted(false)}
+                className="mb-4 rounded-lg border border-green-200 dark:border-green-800"
+              >
+                Cheers, I have received your message! I will be in touch soon.
+              </Alert>
+            </motion.div>
+          </Grid>
+        )}
+      </AnimatePresence>
       <Grid xs={12} md={6} item className="md:pr-2 sm:pr-0">
         {ContactFormField({
           errorMessage: nameError,
