@@ -35,30 +35,27 @@ export function About() {
         >
           <Box>
             <Box className="text">
-              I’m <b>MARCUS PEH</b>, a Computer Science (honors) graduate from
-              National University of Singapore. My passion lies in software
-              engineering, and I find joy in writing code to tackle practical
-              challenges. From my early days of programming in Python during
-              National Service, I have been captivated by the ability of
-              software to solve real-world problems. I firmly believe in the
-              transformative power of programming, and I am dedicated to
-              leveraging it to enhance the lives of people globally.
+              I&apos;m <b>Marcus Peh</b>, a Computer Science (Honors) graduate from the
+              National University of Singapore, passionate about software
+              engineering and crafting solutions to real-world challenges. My
+              journey began during National Service, where programming in
+              Python sparked my fascination with software&apos;s transformative
+              potential.
+              <br />
             </Box>
             <br />
             <Box className="text">
-              I find great satisfaction in tackling complex problems and
-              devising efficient and scalable solutions. In fact, during a
-              previous internship, I successfully enhanced API performance by an
-              astounding 200x, which highlighted my ability to optimize systems
-              and improve overall efficiency.
+              I thrive on solving complex problems and optimizing systems, as
+              demonstrated by enhancing API performance by 200x during an
+              internship. With a focus on developing high-performance,
+              user-centric applications, I am committed to leveraging technology
+              to create meaningful impact globally.
+              
             </Box>
             <br />
             <Box className="text">
-              As I continue to grow as a Software Engineer, I am constantly
-              seeking new challenges and opportunities to expand my skills. I am
-              particularly focused on leveraging my expertise to develop
-              high-performance applications that address real-world issues and
-              provide users with exceptional experiences.
+              As I grow in my career, I look forward to tackling new challenges
+              and pushing the boundaries of what software can achieve.
             </Box>
           </Box>
         </Grid>
@@ -69,17 +66,13 @@ export function About() {
           sx={{display: {xs: 'flex', md: 'none'}}}
         >
           <Box className="text text-center">
-            I&apos;m Marcus Peh, a Computer Science (honors) graduate from
-            National University of Singapore. I&apos;m passionate about software
-            engineering and enjoy using code to solve practical challenges.
-            Since my early days of programming in Python, I&apos;ve been
-            fascinated by the transformative power of software in solving
-            real-world problems. During a previous internship, I successfully
-            optimized API performance by an impressive 200x, demonstrating my
-            ability to enhance system efficiency. As a Software Engineer, I
-            continuously seek new challenges to grow and expand my skills. My
-            focus is on developing high-performance applications that address
-            real-world issues and deliver exceptional user experiences.
+            I&apos;m <b>Marcus Peh</b>, a Computer Science (Honors) graduate from the
+            National University of Singapore. Passionate about software
+            engineering, I specialize in developing high-performance
+            applications and optimizing systems to solve real-world
+            challenges. With a track record of improving API performance by
+            200x, I&apos;m committed to leveraging technology to create impactful,
+            user-centric solutions.
           </Box>
         </Grid>
         <Grid

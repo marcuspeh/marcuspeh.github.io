@@ -5,7 +5,7 @@ const aroundTheWorldIn80: ProjectDataModel = {
   link: 'https://github.com/marcuspeh/Around_The_World_In_80',
   title: 'Around the World in $80',
   description:
-    'Splitting bills during travel is often a hassle. Most travel groups often designate one person to pay. This method of settling payments poses a vexing task of splitting costs at the end of the day or on the spot. Our app effectively splits bills between different contacts to serve this purpose.',
+    'Splitting bills while traveling can be a hassle, often leaving one person to handle payments and the tedious task of dividing costs later. Our app simplifies this process by seamlessly splitting expenses among group members.',
   tech: [
     {
       link: 'https://dev.java/',
@@ -26,7 +26,7 @@ const markeet: ProjectDataModel = {
   link: 'https://github.com/marcuspeh/markeet',
   title: 'Points Of Sales System',
   description:
-    'Designed with both the business and consumers interest at heart. It incorporates a online web system to help store manage their sales and inventory as well as a telegram bot to help users check for stock in stores.',
+    'Designed to serve both businesses and consumers, this solution features an online web system for managing sales and inventory, complemented by a Telegram bot that lets users check store stock effortlessly.',
   tech: [
     {
       link: 'https://www.mongodb.com/',
@@ -52,7 +52,7 @@ const splitlux: ProjectDataModel = {
   link: 'https://github.com/marcuspeh/Splitlux',
   title: 'Splitlux',
   description:
-    'Build using Flutter and Django, Splitlux targets travellers in sight of borders opening from the pandemic. It aims to expedites the process by splitting and monitoring bills in an efficient manner during travel.',
+    'Built with Flutter and Django, Splitlux targets travelers as borders reopen post-pandemic. It streamlines the process of splitting and tracking bills, making travel expenses more efficient and hassle-free.',
   tech: [
     {
       link: 'https://flutter.dev/',
@@ -78,7 +78,7 @@ const todoManager: ProjectDataModel = {
   link: 'https://github.com/marcuspeh/todo-manager',
   title: 'To Do Manager',
   description:
-    'This to-do manager is designed as 2 separate parts for backend and frontend for scalability. The backend provides API for the frontend to call. Sensitive information such as password is done securely by encrypting the data before sending to the backend.Hash is also done before storing the data.',
+    'This to-do manager is built with separate backend and frontend components for scalability. The backend provides APIs for the frontend, with sensitive data like passwords encrypted before transmission and hashed before storage for security.',
   tech: [
     {
       link: 'https://react.dev/',
@@ -104,7 +104,7 @@ const gardnerMiniChessAi: ProjectDataModel = {
   link: 'https://github.com/marcuspeh/gardner-mini-chess-AI',
   title: 'Gardner Mini Chess AI',
   description:
-    "Implemented to solve Gardner's Mini Chess, this AI is designed using Alpha-Beta Pruning. To balance between response and performance, Alpha-Beta Pruning is done to a max depth of 4. It achieves 100% win/draw rates against other intelligent agents.",
+    "Implemented to solve Gardner's Mini Chess, this AI uses Alpha-Beta Pruning with a maximum depth of 4 to balance response time and performance. It achieves a 100% win/draw rate against other intelligent agents.",
   tech: [
     {
       link: 'https://www.python.org/',
@@ -120,7 +120,7 @@ const mediclear: ProjectDataModel = {
   link: 'https://github.com/mediclear/MediClear_website',
   title: 'MediClear',
   description:
-    'Design to simplify health checkup report, MediClear is an easy to use platform that provides clear and contextualized test results. Apart from simplified test result, it also provides lifestyle management tips for the user.',
+    'Designed to simplify health checkup reports, MediClear is an easy-to-use platform that offers clear, contextualized test results. It also provides personalized lifestyle management tips to help users improve their well-being.',
   tech: [
     {
       link: 'https://nextjs.org/',

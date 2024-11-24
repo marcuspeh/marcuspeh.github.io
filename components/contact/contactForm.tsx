@@ -3,8 +3,9 @@ import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
 import {ContactFormField} from './contactInputField';
 import {submitContactForm} from '@/services/api/submitContactForm';
-import {Check as CheckIcon} from '@mui/icons-material';
+import {Check as CheckIcon, Send as SendIcon} from '@mui/icons-material';
 import {Grid} from '@mui/material';
+import {motion} from 'framer-motion';
 
 const validateEmail = (email: string) => {
   return email
@@ -22,6 +23,8 @@ export function ContactForm() {
   const [emailError, setEmailError] = useState('');
   const [message, setMessage] = useState('');
   const [messageError, setMessageError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   function validateInput() {
     let isValid = true;
@@ -57,7 +60,10 @@ export function ContactForm() {
     const isValid: boolean = validateInput();
     if (!isValid) return;
 
+    setIsSubmitting(true);
     const responseCode = await submitContactForm(name, email, message);
+    setIsSubmitting(false);
+
     if (responseCode === 200) {
       setSubmitted(true);
       setName('');
@@ -131,13 +137,21 @@ export function ContactForm() {
         })}
       </Grid>
       <Grid xs={12} item className="flex flex-row justify-end">
-        <Button
-          variant="contained"
-          className="background-primary max-w-full w-96"
-          onClick={onSubmit}
-        >
-          Submit
-        </Button>
+        <motion.div
+          className="flex justify-end"
+          whileHover={{scale: 1.02}}
+          whileTap={{scale: 0.98}}
+            >
+              <Button
+                variant="contained"
+                className="background-primary px-8 py-3 rounded-full"
+                onClick={onSubmit}
+                disabled={isSubmitting}
+                startIcon={<SendIcon />}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </Button>
+            </motion.div>
         <div
           style={{
             textIndent: '-99999px',
