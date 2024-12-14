@@ -26,7 +26,7 @@ export function AboutContent() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-          className="flex flex-col items-center justify-between items-center p-6"
+          className="flex flex-col items-center justify-between items-center p-6 mb-12"
           >
             <Box className="heading1 primary">About</Box>
             <Box className="subtitle primary-dark">
