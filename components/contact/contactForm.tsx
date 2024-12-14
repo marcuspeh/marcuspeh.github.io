@@ -25,7 +25,6 @@ export function ContactForm() {
   const [messageError, setMessageError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-
   function validateInput() {
     let isValid = true;
 
@@ -99,10 +98,10 @@ export function ContactForm() {
         {submitted && (
           <Grid xs={12} item className="pb-4">
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={{opacity: 0, height: 0}}
+              animate={{opacity: 1, height: 'auto'}}
+              exit={{opacity: 0, height: 0}}
+              transition={{duration: 0.3}}
             >
               <Alert
                 icon={<CheckIcon fontSize="inherit" />}
@@ -147,17 +146,17 @@ export function ContactForm() {
           className="flex justify-end"
           whileHover={{scale: 1.02}}
           whileTap={{scale: 0.98}}
-            >
-              <Button
-                variant="contained"
-                className="background-primary px-8 py-3 rounded-full"
-                onClick={onSubmit}
-                disabled={isSubmitting}
-                startIcon={<SendIcon />}
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </Button>
-            </motion.div>
+        >
+          <Button
+            variant="contained"
+            className="background-primary px-8 py-3 rounded-full"
+            onClick={onSubmit}
+            disabled={isSubmitting}
+            startIcon={<SendIcon />}
+          >
+            {isSubmitting ? 'Sending...' : 'Send Message'}
+          </Button>
+        </motion.div>
         <div
           style={{
             textIndent: '-99999px',

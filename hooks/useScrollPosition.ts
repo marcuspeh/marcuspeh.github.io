@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 
 export function useScrollPosition() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -13,4 +13,4 @@ export function useScrollPosition() {
   }, []);
 
   return scrollPosition;
-} 
+}

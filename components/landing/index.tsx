@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
-import { AnimatedSection } from './AnimatedSection';
+import {Box} from '@mui/material';
+import {AnimatedSection} from './AnimatedSection';
 
 export function Landing() {
   return (

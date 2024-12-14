@@ -1,22 +1,24 @@
 import * as React from 'react';
 import {ProjectDataModel} from '@/models/projectDataModel';
-import {CardContent, CardMedia, Box, Chip, Card, CardActions} from '@mui/material';
+import {CardContent, CardMedia, Box, Chip, Card} from '@mui/material';
 import {motion} from 'framer-motion';
 import {GitHub} from '@mui/icons-material';
 
 export function ProjectCard(projectData: ProjectDataModel) {
   return (
     <motion.div
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.3 }}
+      whileHover={{y: -8}}
+      transition={{duration: 0.3}}
       className="h-full"
     >
-      <Card className="
+      <Card
+        className="
         h-full rounded-2xl overflow-hidden
         bg-white
         shadow-lg hover:shadow-xl
         transition-all duration-300
-      ">
+      "
+      >
         <div className="relative group">
           <CardMedia
             component="img"
@@ -29,9 +31,9 @@ export function ProjectCard(projectData: ProjectDataModel) {
             "
           />
           {projectData.link && (
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
+            <motion.div
+              initial={{opacity: 0}}
+              whileHover={{opacity: 1}}
               className="
                 absolute inset-0
                 bg-black/50 backdrop-blur-sm
@@ -50,8 +52,8 @@ export function ProjectCard(projectData: ProjectDataModel) {
                   text-white
                   transition-colors duration-300
                 "
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
               >
                 <GitHub className="text-2xl" />
               </motion.a>
@@ -61,9 +63,9 @@ export function ProjectCard(projectData: ProjectDataModel) {
 
         <CardContent className="p-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.3}}
           >
             <Box className="subtitle">{projectData.title}</Box>
 

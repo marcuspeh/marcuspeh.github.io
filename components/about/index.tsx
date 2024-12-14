@@ -1,9 +1,6 @@
 import * as React from 'react';
-import {Grid, Box, Button} from '@mui/material';
-import Image from 'next/image';
-import AboutImage from '@/public/about-picture.jpg';
-import { AboutContent } from './AboutContent';
-import { motion } from 'framer-motion';
+import {Box} from '@mui/material';
+import {AboutContent} from './AboutContent';
 
 export function About() {
   return (

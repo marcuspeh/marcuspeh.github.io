@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Box, Grid } from '@mui/material';
+import {motion} from 'framer-motion';
+import {Box, Grid} from '@mui/material';
 import Image from 'next/image';
 import LandingImage from '@/public/landing-picture.png';
 
@@ -16,27 +16,25 @@ export function AnimatedSection() {
       >
         <Box>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
           >
             <Box className="heading2 primary-dark">Hello I&apos;m</Box>
           </motion.div>
-          
+
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={{opacity: 0, x: -50}}
+            animate={{opacity: 1, x: 0}}
+            transition={{duration: 0.7, delay: 0.2}}
           >
-            <Box className="title primary py-8">
-              MARCUS PEH
-            </Box>
+            <Box className="title primary py-8">MARCUS PEH</Box>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.4}}
           >
             <Box className="subtitle primary-dark">
               Performance-driven Software Engineer with expertise in backend
@@ -50,9 +48,9 @@ export function AnimatedSection() {
 
       <Grid xs={12} md={5} item className="flex flex-row items-end">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          initial={{opacity: 0, scale: 0.9}}
+          animate={{opacity: 1, scale: 1}}
+          transition={{duration: 0.7, delay: 0.3}}
           className="w-full"
         >
           <Image
@@ -65,4 +63,4 @@ export function AnimatedSection() {
       </Grid>
     </Grid>
   );
-} 
+}

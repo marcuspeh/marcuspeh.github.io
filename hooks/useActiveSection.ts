@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-
+import {useState, useEffect} from 'react';
 
 // doesnt work remove
 export function useActiveSection(sectionIds: string[]) {
@@ -20,7 +19,10 @@ export function useActiveSection(sectionIds: string[]) {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
 
     const sections = sectionIds.map(id => document.getElementById(id));
     sections.forEach(section => {
@@ -39,4 +41,4 @@ export function useActiveSection(sectionIds: string[]) {
   }, [sectionIds]);
 
   return activeSection;
-} 
+}

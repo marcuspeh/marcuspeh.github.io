@@ -1,10 +1,9 @@
 'use client';
 
 import {useState, useEffect} from 'react';
-import {Box} from '@mui/material';
 import {fetchLastUpdate} from '@/services/api/fetchLastUpdate';
-import { GitHub, LinkedIn, Email } from '@mui/icons-material';
-import { motion } from 'framer-motion';
+import {GitHub, LinkedIn, Email} from '@mui/icons-material';
+import {motion} from 'framer-motion';
 
 export function Footer() {
   const [lastUpdated, updateLastUpdated] = useState(new Date());
@@ -22,18 +21,18 @@ export function Footer() {
     {
       icon: <GitHub />,
       href: 'https://github.com/marcuspeh',
-      label: 'GitHub'
+      label: 'GitHub',
     },
     {
       icon: <LinkedIn />,
       href: 'https://www.linkedin.com/in/marcus-peh/',
-      label: 'LinkedIn'
+      label: 'LinkedIn',
     },
     {
       icon: <Email />,
       href: 'mailto:marcuspeh@gmail.com',
-      label: 'Email'
-    }
+      label: 'Email',
+    },
   ];
 
   return (
@@ -42,9 +41,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Copyright */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
             className="text-center md:text-left"
           >
             <p className="text-gray-600">
@@ -54,20 +53,20 @@ export function Footer() {
 
           {/* Social Links */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.2}}
             className="flex justify-center space-x-4"
           >
-            {socialLinks.map((link, index) => (
+            {socialLinks.map(link => (
               <motion.a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full text-gray-600 hover:text-primary transition-colors duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
                 aria-label={link.label}
               >
                 {link.icon}
@@ -77,9 +76,9 @@ export function Footer() {
 
           {/* Last Updated */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.4}}
             className="text-center md:text-right text-gray-600"
           >
             Last Updated: {lastUpdated.toDateString()}
