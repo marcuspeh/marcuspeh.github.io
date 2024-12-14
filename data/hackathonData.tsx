@@ -5,6 +5,30 @@ import JpmImage from '@/public/hack/jpm.svg';
 import GicImage from '@/public/hack/gic.svg';
 import NusHackersImage from '@/public/hack/nushackers.svg';
 import GoogleImage from '@/public/hack/google.svg';
+import TiktokImage from '@/public/hack/tiktok.svg';
+
+const tiktokEngHackathon2024: ExperienceDataModel = {
+  logo: TiktokImage,
+  logoAlt: 'Tiktok Product logo',
+  company: 'TikTok',
+  title: 'TikTok Engineering Hackathon 2024',
+  date: 'Nov 2024',
+  description: [
+    {
+      text: 'Developed a product that transforms user prompts into actionable SQL queries and visual dashboards',
+      id: 'tiktokEngHackathon2024_description_1',
+    },
+    {
+      text: 'Integrated LLM to dynamically generate SQL queries from natural language inputs',
+      id: 'tiktokEngHackathon2024_description_2',
+    },
+    {
+      text: 'Designed an intuitive UI allowing users to customize chart types and data axes for visualizations',
+      id: 'tiktokEngHackathon2024_description_3',
+    },
+  ],
+  id: 'tiktokEngHackathon2024_hackathon',
+};
 
 const buildForGood2023: ExperienceDataModel = {
   logo: OgpImage,
@@ -33,7 +57,7 @@ const helloAi2023: ExperienceDataModel = {
   logo: GoogleImage,
   logoAlt: 'Google logo',
   company: 'Open Government Product',
-  title: 'Hello AI 2023 (Google&apos;s internal hackathon)',
+  title: 'Hello AI 2023 (Google\'s internal hackathon)',
   date: 'Jun 2023',
   description: [
     {
@@ -118,6 +142,7 @@ const hackAndRoll2022: ExperienceDataModel = {
 };
 
 export const HackathonData: ExperienceDataModel[] = [
+  tiktokEngHackathon2024,
   buildForGood2023,
   helloAi2023,
   codeForGood2022,

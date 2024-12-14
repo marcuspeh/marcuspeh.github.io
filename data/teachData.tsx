@@ -9,7 +9,16 @@ const roboto: ExperienceDataModel = {
   company: 'Roboto Coding Academy',
   title: 'Coding Instructor',
   date: 'Jul 2020 - Present',
-  description: [],
+  description: [
+    {
+      text: 'Taught in numerous primary and secondary school',
+      id: 'roboto_description_1',
+    },
+    {
+      text: 'Mentored more than 100 students in enrichment class',
+      id: 'roboto_description_1',
+    },
+  ],
   id: 'roboto_teaching',
 };
 

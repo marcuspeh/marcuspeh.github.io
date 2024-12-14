@@ -2,6 +2,7 @@ import * as React from 'react';
 import {ExperienceDataModel} from '@/models/experienceDataModel';
 import {Box} from '@mui/material';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface TimelineSectionProps {
   experience: ExperienceDataModel;
@@ -12,6 +13,11 @@ export function TimelineSection(props: TimelineSectionProps) {
   const {experience, isLeft} = props;
 
   return (
+    <motion.div
+      initial={{ opacity: 0, x: isLeft ? -20 : 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
     <Box key={experience.id} className="mb-3">
       {isLeft ? (
         <Box className="flex flex-row items-center justify-end">
@@ -44,8 +50,9 @@ export function TimelineSection(props: TimelineSectionProps) {
               {description.text}
             </li>
           ))}
-        </ul>
+          </ul>
+          </Box>
       </Box>
-    </Box>
+    </motion.div>
   );
 }
