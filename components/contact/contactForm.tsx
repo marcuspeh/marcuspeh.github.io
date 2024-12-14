@@ -108,7 +108,7 @@ export function ContactForm() {
                 icon={<CheckIcon fontSize="inherit" />}
                 severity="success"
                 onClose={() => setSubmitted(false)}
-                className="mb-4 rounded-lg border border-green-200 dark:border-green-800"
+                className="mb-4 rounded-lg border border-green-200"
               >
                 Cheers, I have received your message! I will be in touch soon.
               </Alert>
