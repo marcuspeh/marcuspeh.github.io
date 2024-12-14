@@ -30,7 +30,7 @@ export function Skills() {
               viewport={{ once: true }}
               className="flex flex-col items-center justify-between px-8 py-16 md:py-32"
             >
-              <Box className="heading1 primary">Skills & Technologies</Box>
+              <Box className="heading1 primary">Skills</Box>
               <Box
                 className="subtitle primary-dark"
                 sx={{display: {xs: 'none', md: 'flex'}}}
