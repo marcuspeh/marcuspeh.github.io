@@ -15,28 +15,28 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-      <div className="background-dark" id="landing">
+      <section className="background-dark" id="landing">
         <Landing />
-      </div>
+      </section>
       <Suspense>
-        <div className="background" id="about">
+        <section className="background" id="about">
           <About />
-        </div>
-        <div className="background-dark" id="skills">
+        </section>
+        <section className="background-dark" id="skills">
           <Skills />
-        </div>
-        <div className="background" id="experience">
+        </section>
+        <section className="background" id="experience">
           <Experience />
-        </div>
-        <div className="background-dark" id="projects">
+        </section>
+        <section className="background-dark" id="projects">
           <Project />
-        </div>
-        <div className="background" id="contact">
+        </section>
+        <section className="background" id="contact">
           <Contact />
-        </div>
-        <div className="background" id="footer">
+        </section>
+        <section className="background-dark" id="footer">
           <Footer />
-        </div>
+        </section>
       </Suspense>
       <Analytics />
       <SpeedInsights />
