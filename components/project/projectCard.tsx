@@ -1,42 +1,87 @@
 import * as React from 'react';
 import {ProjectDataModel} from '@/models/projectDataModel';
-import GitHubImage from '@/public/contact/github.svg';
-import Image from 'next/image';
-import {CardContent, CardMedia, Grid, Box, Chip, Card} from '@mui/material';
+import {CardContent, CardMedia, Box, Chip, Card, CardActions} from '@mui/material';
+import {motion} from 'framer-motion';
+import {GitHub} from '@mui/icons-material';
 
 export function ProjectCard(projectData: ProjectDataModel) {
   return (
-    <Grid item xs={12} sm={6} md={4} key={projectData.id}>
-      <Card className="h-full background rounded-2xl">
-        <CardMedia
-          component="img"
-          image={projectData.pic}
-          title={`${projectData.title} image`}
-          className="p-4 pb-0"
-        />
-        <CardContent>
-          <Box className="subtitle">{projectData.title}</Box>
-          <Box className="flex flex-row flex-wrap">
-            {projectData.tech.map(tech => (
-              <Chip
-                label={tech.text}
-                key={tech.id}
-                className="mr-2 my-1 font-semibold background-dark primary-light"
-              />
-            ))}
-          </Box>
-          <Box className="text my-2">{projectData.description}</Box>
+    <motion.div
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.3 }}
+      className="h-full"
+    >
+      <Card className="
+        h-full rounded-2xl overflow-hidden
+        bg-white
+        shadow-lg hover:shadow-xl
+        transition-all duration-300
+      ">
+        <div className="relative group">
+          <CardMedia
+            component="img"
+            image={projectData.pic}
+            title={`${projectData.title} image`}
+            className="
+              aspect-video object-cover
+              transform group-hover:scale-105
+              transition-transform duration-300
+            "
+          />
           {projectData.link && (
-            <a href={projectData.link} target="_blank">
-              <Image
-                src={GitHubImage}
-                alt={'Project link'}
-                className="max-w-32 inline"
-              />
-            </a>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              className="
+                absolute inset-0
+                bg-black/50 backdrop-blur-sm
+                flex items-center justify-center
+                gap-4
+                transition-opacity duration-300
+              "
+            >
+              <motion.a
+                href={projectData.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  p-3 rounded-full
+                  bg-white/10 hover:bg-white/20
+                  text-white
+                  transition-colors duration-300
+                "
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <GitHub className="text-2xl" />
+              </motion.a>
+            </motion.div>
           )}
+        </div>
+
+        <CardContent className="p-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Box className="subtitle">{projectData.title}</Box>
+
+            <div className="flex flex-wrap gap-2 mb-4 mt-2">
+              {projectData.tech.map(tech => (
+                <Chip
+                  key={tech.id}
+                  label={tech.text}
+                  className="bg-primary/10 text-primary"
+                  size="small"
+                />
+              ))}
+            </div>
+
+            <Box className="text mb-4">{projectData.description}</Box>
+          </motion.div>
         </CardContent>
       </Card>
-    </Grid>
+    </motion.div>
   );
 }
