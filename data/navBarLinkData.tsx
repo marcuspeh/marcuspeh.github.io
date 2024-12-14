@@ -1,31 +1,31 @@
 import {NavBarLinkModel} from '@/models/navbarLinkModel';
 
 const about: NavBarLinkModel = {
-  link: '#about',
+  link: 'about',
   text: 'About',
   id: 'about_navbar_link',
 };
 
 const skills: NavBarLinkModel = {
-  link: '#skills',
+  link: 'skills',
   text: 'Skills',
   id: 'skills_navbar_link',
 };
 
 const experience: NavBarLinkModel = {
-  link: '#experience',
+  link: 'experience',
   text: 'Experience',
   id: 'experience_navbar_link',
 };
 
 const projects: NavBarLinkModel = {
-  link: '#projects',
+  link: 'projects',
   text: 'Project',
   id: 'projects_navbar_link',
 };
 
 const contact: NavBarLinkModel = {
-  link: '#contact',
+  link: 'contact',
   text: 'Contact',
   id: 'contact_navbar_link',
 };

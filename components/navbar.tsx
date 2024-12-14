@@ -1,96 +1,129 @@
 'use client';
 
 import * as React from 'react';
-import {Box, Button, Grid} from '@mui/material';
-import {Menu as MenuIcon} from '@mui/icons-material';
-import {
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-} from '@mui/material';
-import {NavBarLinkData} from '@/data/navBarLinkData';
+import { Box, Button, AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material';
+import { NavBarLinkData } from '@/data/navBarLinkData';
+import { motion } from 'framer-motion';
+import { useScrollPosition } from '@/hooks/useScrollPosition';
+import { useActiveSection } from '@/hooks/useActiveSection';
 
-function NavBarDesktop() {
+function NavBarDesktop({ activeSection }: { activeSection: string | null }) {
+  const scrollPosition = useScrollPosition();
+
   return (
-    <Grid
-      xs={12}
-      item
-      className="flex-row items-end justify-start"
-      sx={{display: {xs: 'none', md: 'flex'}}}
+    <motion.div
+      className="hidden md:flex items-center space-x-6"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <Box className="mr-2">
-        <Button href="#landing" className="subtitle primary font-black pl-0">
-          Marcus
-        </Button>
-      </Box>
-      {NavBarLinkData.map(data => (
-        <Box className="mr-2" key={`${data.id}_desktop`}>
-          <Button href={data.link} className="subtitle primary-text font-bold">
+      {NavBarLinkData.map((data) => (
+        <motion.div
+          key={`${data.id}_desktop`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Button
+            href={`#${data.link}`}
+            className={`
+              primary-text font-medium
+              text-lg
+              hover:text-primary 
+              transition-colors duration-300
+              ${scrollPosition > 50 ? 'py-2' : 'py-3'}
+              ${activeSection === data.link ? 'underline' : ''}
+            `}
+          >
             {data.text}
           </Button>
-        </Box>
+        </motion.div>
       ))}
-    </Grid>
+    </motion.div>
   );
 }
 
-function NavBarMobile() {
+function NavBarMobile({ activeSection }: { activeSection: string | null }) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Grid
-      xs={12}
-      item
-      className="flex-row items-center justify-start"
-      sx={{display: {xs: 'flex', md: 'none'}}}
-    >
-      <Button
+    <div className="md:hidden">
+      <IconButton
+        edge="start"
+        color="inherit"
         aria-label="menu"
-        variant="outlined"
         onClick={() => setIsOpen(true)}
-        className="mr-2 primary border-color-primary"
+        className="primary-text"
       >
         <MenuIcon />
-      </Button>
-      <Button href="#landing" className="subtitle primary font-black">
-        Marcus
-      </Button>
-      <Drawer anchor={'top'} open={isOpen} onClose={() => setIsOpen(false)}>
+      </IconButton>
+      <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
         <Box
+          className="w-64 h-full bg-white p-4"
           role="presentation"
           onClick={() => setIsOpen(false)}
           onKeyDown={() => setIsOpen(false)}
-          className="background"
         >
+          <div className="flex justify-end">
+            <IconButton onClick={() => setIsOpen(false)}>
+              <CloseIcon />
+            </IconButton>
+          </div>
           <List>
-            {NavBarLinkData.map(data => (
-              <ListItem disablePadding key={`${data.id}_mobile`}>
-                <ListItemButton href={data.link}>
-                  <ListItemText
-                    primary={data.text}
-                    className="text primary-dark"
-                  />
-                </ListItemButton>
+            {NavBarLinkData.map((data) => (
+              <ListItem
+                button
+                key={`${data.id}_mobile`}
+                component="a"
+                href={`#${data.link}`}
+                className={`my-2 ${activeSection === data.link ? 'text-primary' : ''}`}
+              >
+                <ListItemText
+                  primary={data.text}
+                  className="primary-text"
+                />
               </ListItem>
             ))}
           </List>
         </Box>
       </Drawer>
-    </Grid>
+    </div>
   );
 }
 
 export function NavBar() {
+  const scrollPosition = useScrollPosition();
+  const sectionIds = NavBarLinkData.map(data => data.link);
+  const activeSection = useActiveSection(sectionIds);
+
   return (
-    <Box className="flex flex-col items-center absolute top-4 w-screen">
-      <Box className="px-8 container">
-        <Grid container className="pb-2 border-b border-color-background">
-          <NavBarDesktop />
-          <NavBarMobile />
-        </Grid>
-      </Box>
-    </Box>
+    <AppBar
+      position="fixed"
+      className={`
+        bg-white/60 
+        backdrop-blur-md
+        transition-all duration-300 ease-in-out
+        ${scrollPosition > 50 ? 'py-2' : 'py-4'}
+      `}
+      elevation={scrollPosition > 50 ? 4 : 0}
+    >
+      <Toolbar className="container mx-auto px-4">
+        <motion.div
+          className="flex-grow"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Button
+            href="#landing"
+            className="subtitle font-bold primary pl-0"
+          >
+            Marcus Peh
+          </Button>
+        </motion.div>
+        <NavBarDesktop activeSection={activeSection} />
+        <NavBarMobile activeSection={activeSection} />
+      </Toolbar>
+    </AppBar>
   );
 }
