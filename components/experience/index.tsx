@@ -20,8 +20,8 @@ export function Experience() {
 
   const tabs = [
     {state: TabStateEnum.WORK, label: 'Work', icon: <Work />},
-    {state: TabStateEnum.HACK, label: 'Hackathons', icon: <Code />},
-    {state: TabStateEnum.TEACH, label: 'Teaching', icon: <School />},
+    {state: TabStateEnum.HACK, label: 'Hack', icon: <Code />},
+    {state: TabStateEnum.TEACH, label: 'Teach', icon: <School />},
   ];
 
   return (

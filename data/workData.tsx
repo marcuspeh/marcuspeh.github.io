@@ -14,7 +14,7 @@ const tiktok: ExperienceDataModel = {
   date: 'Apr 2024 - Present',
   description: [
     {
-      text: 'Reduced metric monitoring time from 3 PD to 0 PD by unifying data platform systems',
+      text: 'Designed and launched widget table with visualization query support, enabling low-code solution for nontechnical users; scaled to cover 70%+ of table use cases across TikTok Live',
       id: 'tiktok_description_1',
     },
     {
@@ -22,7 +22,7 @@ const tiktok: ExperienceDataModel = {
       id: 'tiktok_description_2',
     },
     {
-      text: 'Refined workflows for data metrics by streamlining search functionality',
+      text: 'Implemented Redis caching for data widgets, enhancing request response times by 30% and improving system scalability under high-load conditions',
       id: 'tiktok_description_3',
     },
   ],
@@ -37,7 +37,7 @@ const bytedance: ExperienceDataModel = {
   date: 'Aug 2023 - Dec 2023',
   description: [
     {
-      text: 'Enhanced approval process efficiency by integrating in-house solution',
+      text: 'Overhauled approval process by integrating in-house solution, increasing efficiency >30%',
       id: 'bytedance_description_1',
     },
     {
