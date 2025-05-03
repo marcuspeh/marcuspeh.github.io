@@ -7,12 +7,14 @@ import {WorkData} from '@/data/workData';
 import {HackathonData} from '@/data/hackathonData';
 import {TeachData} from '@/data/teachData';
 import {motion, AnimatePresence} from 'framer-motion';
-import {Work, Code, School} from '@mui/icons-material';
+import {Work, Code, School, MenuBook} from '@mui/icons-material';
+import {SchoolData} from '@/data/schoolData';
 
 enum TabStateEnum {
   TEACH,
   WORK,
   HACK,
+  SCHOOL,
 }
 
 export function Experience() {
@@ -21,7 +23,8 @@ export function Experience() {
   const tabs = [
     {state: TabStateEnum.WORK, label: 'Work', icon: <Work />},
     {state: TabStateEnum.HACK, label: 'Hack', icon: <Code />},
-    {state: TabStateEnum.TEACH, label: 'Teach', icon: <School />},
+    {state: TabStateEnum.TEACH, label: 'Teach', icon: <MenuBook />},
+    {state: TabStateEnum.SCHOOL, label: 'Study', icon: <School />},
   ];
 
   return (
@@ -96,7 +99,9 @@ export function Experience() {
                     ? WorkData
                     : tabStateEnum === TabStateEnum.HACK
                       ? HackathonData
-                      : TeachData
+                      : tabStateEnum === TabStateEnum.TEACH
+                        ? TeachData
+                        : SchoolData
                 }
               />
             </motion.div>

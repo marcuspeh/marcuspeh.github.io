@@ -26,6 +26,8 @@ export function TimelineSection(props: TimelineSectionProps) {
               src={experience.logo}
               alt={experience.logoAlt}
               className="pl-3"
+              height={72}
+              width={72}
             />
           </Box>
         ) : (
