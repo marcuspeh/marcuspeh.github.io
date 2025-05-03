@@ -12,12 +12,11 @@ const gatech: ExperienceDataModel = {
   description: [
     {
       text: 'GPA: 4.00 / 4.00',
-      id: 'gatech_description_1', 
-    }
+      id: 'gatech_description_1',
+    },
   ],
   id: 'gatech_school',
 };
-
 
 const nus: ExperienceDataModel = {
   logo: NusImage,
@@ -28,21 +27,18 @@ const nus: ExperienceDataModel = {
   description: [
     {
       text: 'GPA: 4.78 / 5.00 (Highest Distinction)',
-      id: 'nus_description_1', 
+      id: 'nus_description_1',
     },
     {
       text: 'Artificial Intelligence Focus Area (Distinction)',
       id: 'nus_description_2',
-    }, 
+    },
     {
-      text: 'Dean\'s List: AY22/23 Sem 1, AY23/24 Sem 1',
+      text: "Dean's List: AY22/23 Sem 1, AY23/24 Sem 1",
       id: 'nus_description_3',
     },
   ],
   id: 'nus_school',
 };
 
-export const SchoolData: ExperienceDataModel[] = [
-  gatech,
-  nus,  
-]
+export const SchoolData: ExperienceDataModel[] = [gatech, nus];
