@@ -18,7 +18,7 @@ const tiktok: ExperienceDataModel = {
       id: 'tiktok_description_1',
     },
     {
-      text: 'Created >10 real-time indicators to enhance management of LIVE creators, improving UV of new creators by more than 40%',
+      text: 'Led development of a global user analysis feature from scratch, including cross-region data pipelines, backend logic, and orchestration for dynamic cohort refinement',
       id: 'tiktok_description_2',
     },
     {
