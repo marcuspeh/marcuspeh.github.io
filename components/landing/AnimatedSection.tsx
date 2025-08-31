@@ -38,7 +38,7 @@ export function AnimatedSection() {
           >
             <Box className="subtitle primary-dark">
               Performance-driven Software Engineer with expertise in backend
-              engineering, Agile methodologies, and optimization, delivering
+              engineering, agile methodologies, and optimization, delivering
               impactful solutions and high-quality results under tight
               deadlines.
             </Box>

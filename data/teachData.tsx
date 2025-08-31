@@ -8,7 +8,7 @@ const roboto: ExperienceDataModel = {
   logoAlt: 'Roboto Coding Academy logo',
   company: 'Roboto Coding Academy',
   title: 'Coding Instructor',
-  date: 'Jul 2020 - Present',
+  date: 'Jul 2020 - Apr 2024',
   description: [
     {
       text: 'Taught in numerous primary and secondary school',

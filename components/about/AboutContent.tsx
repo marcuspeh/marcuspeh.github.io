@@ -60,22 +60,19 @@ export function AboutContent() {
               className="space-y-4"
             >
               <Box className="text-lg leading-relaxe">
-                I&apos;m <b>Marcus Peh</b>, a Computer Science (Honors) graduate
-                from the National University of Singapore, passionate about
-                software engineering and crafting solutions to real-world
-                challenges.
+                I&apos;m <b>Marcus Peh</b>, a Software Engineer passionate about
+                building scalable systems and solving complex problems.
+                Currently at <b>TikTok</b>, I design backend systems powering
+                TikTok Live, from global user analysis pipelines to low-code
+                data widgets.
               </Box>
               <Box className="text-lg leading-relaxe">
-                I thrive on solving complex problems and optimizing systems, as
-                demonstrated by enhancing API performance by 200x during an
-                internship. With a focus on developing high-performance,
-                user-centric applications, I am committed to leveraging
-                technology to create meaningful impact globally.
-              </Box>
-              <Box className="text-lg leading-relaxed">
-                As I grow in my career, I look forward to tackling new
-                challenges and pushing the boundaries of what software can
-                achieve.
+                Previously at Google, ByteDance, and GovTech, I&apos;ve
+                delivered impact ranging from a 93% faster QR code flow at
+                Google Pay to a 200x API performance boost at GovTech. With a
+                strong foundation in Computer Science (NUS, Highest Distinction)
+                and ongoing Master&apos;s studies at Georgia Tech, I&apos;m
+                driven to push the boundaries of what software can achieve.
               </Box>
             </motion.div>
           </Grid>
@@ -91,11 +88,14 @@ export function AboutContent() {
             className="text-center space-y-4"
           >
             <Box className="text-lg leading-relaxed">
-              I&apos;m <b>Marcus Peh</b>, a Computer Science (Honors) graduate
-              from the National University of Singapore. Passionate about
-              software engineering, I specialize in developing high-performance
-              applications and optimizing systems to solve real-world
-              challenges.
+              I&apos;m <b>Marcus Peh</b>, a Software Engineer at TikTok
+              experience across Google, ByteDance, and GovTech. I specialize in
+              building scalable backend systems, from powering TikTok
+              Live&apos;s global data pipelines to boosting API performance by
+              200x. With a strong foundation in Computer Science (NUS, Highest
+              Distinction) and ongoing Master&apos;s studies at Georgia Tech,
+              I&apos;m passionate about creating high-performance solutions that
+              make a global impact.
             </Box>
           </motion.div>
         </Grid>
