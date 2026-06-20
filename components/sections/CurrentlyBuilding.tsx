@@ -3,67 +3,70 @@
 import {motion} from 'framer-motion';
 import {buildingItems} from '@/data/socials';
 import {FadeIn} from '@/components/ui/FadeIn';
-import {Section} from '@/components/ui/Section';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
+const statusFor = (i: number) => {
+  const statuses = ['In progress', 'Exploring', 'Building', 'Studying'];
+  return statuses[i % statuses.length];
+};
+
 export function CurrentlyBuilding() {
   return (
-    <Section
+    <section
       id="building"
-      eyebrow="03 — Currently"
-      title={
-        <>
-          Currently <span className="text-primary-muted">building</span>.
-        </>
-      }
-      description="Side projects, research, and systems I'm investing time into right now."
-      className="border-t border-border"
+      className="relative border-t border-border px-6 py-28 md:px-10 md:py-40"
     >
-      <div className="relative overflow-hidden rounded-3xl border border-border bg-surface/40 p-8 md:p-12">
-        {/* glow */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-accent/10 blur-3xl"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-accent/10 blur-3xl"
-        />
+      <div className="mx-auto w-full max-w-content">
+        <FadeIn>
+          <p className="text-eyebrow uppercase text-primary-muted">
+            03— Currently
+          </p>
+          <h2 className="mt-6 max-w-3xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
+            Where my <span className="text-primary-muted">attention</span> is.
+          </h2>
+          <p className="mt-8 max-w-prose text-lg leading-relaxed text-primary-muted text-pretty md:text-xl">
+            Research and infra work happening alongside production systems.
+          </p>
+        </FadeIn>
 
-        <div className="relative grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
+        <div className="mt-20 overflow-hidden rounded-3xl border border-border bg-surface/30">
           {buildingItems.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{opacity: 0, y: 12}}
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true, margin: '-60px'}}
-              transition={{duration: 0.5, delay: i * 0.06, ease}}
-              className="group relative bg-bg/40 p-8 transition-colors duration-300 hover:bg-surface/80"
+              transition={{duration: 0.5, delay: i * 0.05, ease}}
+              className={`group relative grid grid-cols-[60px_1fr_auto] items-center gap-6 px-6 py-7 transition-colors duration-300 hover:bg-surface/60 md:grid-cols-[80px_1.6fr_1fr_auto] md:gap-10 md:px-10 md:py-9 ${
+                i < buildingItems.length - 1 ? 'border-b border-border/60' : ''
+              }`}
             >
-              <FadeIn direction="none" duration={0.4} delay={i * 0.05}>
-                <div className="flex items-baseline gap-4">
-                  <span className="text-sm font-medium text-primary-muted">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h3 className="text-lg font-semibold tracking-tight md:text-xl">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="mt-3 pl-9 text-sm leading-relaxed text-primary-muted">
+              <span className="font-mono text-sm text-primary-muted">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
+              <div>
+                <h3 className="text-lg font-semibold tracking-tight md:text-xl">
+                  {item.title}
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-primary-muted">
                   {item.detail}
                 </p>
-              </FadeIn>
-              <span
-                aria-hidden
-                className="absolute right-6 top-6 text-2xl text-primary-muted/40 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent"
-              >
-                →
+              </div>
+
+              <span className="hidden text-sm text-primary-muted md:block">
+                {item.detail.split('.')[0]}
+              </span>
+
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-bg/40 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-primary-muted">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                {statusFor(i)}
               </span>
             </motion.div>
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

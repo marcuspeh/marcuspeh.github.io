@@ -10,90 +10,63 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative isolate overflow-hidden border-t border-border px-6 py-32 md:px-10 md:py-44"
+      className="relative isolate overflow-hidden border-t border-border px-6 py-28 md:px-10 md:py-40"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/2 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.06] blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-[600px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.05] blur-3xl" />
       </div>
 
       <div className="mx-auto w-full max-w-content">
-        <FadeIn direction="up">
+        <FadeIn>
           <p className="text-eyebrow uppercase text-primary-muted">
             05 — Get in touch
           </p>
-          <h2 className="mt-6 max-w-3xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
-            Let&apos;s build something{' '}
-            <span className="text-primary-muted">worth shipping</span>.
+          <h2 className="mt-6 max-w-4xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
+            Open to senior backend roles and{' '}
+            <span className="text-primary-muted">systems conversations</span>.
           </h2>
-          <p className="mt-6 max-w-prose text-lg text-primary-muted text-pretty">
-            Open to interesting systems work, trading infrastructure, and
-            conversations about scaling data platforms.
+        </FadeIn>
+
+        <FadeIn delay={0.1}>
+          <p className="mt-10 max-w-prose text-lg leading-relaxed text-primary-muted md:text-xl">
+            Especially interested in real-time infrastructure, decisioning
+            platforms, and distributed-systems teams.
           </p>
         </FadeIn>
 
-        <div className="mt-16 grid gap-4 md:grid-cols-2">
+        <div className="mt-20 overflow-hidden rounded-3xl border border-border bg-surface/30">
           {socials.map((link, i) => (
-            <ContactButton key={link.id} link={link} index={i} />
+            <motion.a
+              key={link.id}
+              href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener noreferrer' : undefined}
+              initial={{opacity: 0, y: 12}}
+              whileInView={{opacity: 1, y: 0}}
+              viewport={{once: true, margin: '-60px'}}
+              transition={{duration: 0.5, delay: i * 0.05, ease}}
+              className={`group flex items-center justify-between px-6 py-7 transition-colors duration-300 hover:bg-surface/70 md:px-10 md:py-9 ${
+                i < socials.length - 1 ? 'border-b border-border/60' : ''
+              }`}
+            >
+              <div className="flex items-center gap-6">
+                <span className="hidden font-mono text-sm text-primary-muted md:block">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="text-2xl font-medium tracking-tight md:text-3xl">
+                  {link.label}
+                </span>
+              </div>
+              <span
+                aria-hidden
+                className="text-2xl text-primary-muted/40 transition-all duration-300 group-hover:translate-x-2 group-hover:text-accent"
+              >
+                →
+              </span>
+            </motion.a>
           ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function ContactButton({
-  link,
-  index,
-}: {
-  link: {id: string; label: string; href: string; external?: boolean};
-  index: number;
-}) {
-  return (
-    <motion.a
-      href={link.href}
-      target={link.external ? '_blank' : undefined}
-      rel={link.external ? 'noopener noreferrer' : undefined}
-      initial={{opacity: 0, y: 16}}
-      whileInView={{opacity: 1, y: 0}}
-      viewport={{once: true, margin: '-60px'}}
-      transition={{duration: 0.6, delay: index * 0.06, ease}}
-      whileHover={{y: -2}}
-      className="group flex items-center justify-between rounded-2xl border border-border bg-surface/40 p-6 transition-all duration-300 hover:border-white/20 hover:bg-surface/80 md:p-8"
-    >
-      <div className="flex items-center gap-4">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg/60 text-primary-muted transition-colors duration-300 group-hover:border-accent/40 group-hover:text-accent">
-          <ArrowIcon />
-        </span>
-        <span className="text-xl font-medium tracking-tight md:text-2xl">
-          {link.label}
-        </span>
-      </div>
-      <span
-        aria-hidden
-        className="text-2xl text-primary-muted transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary"
-      >
-        →
-      </span>
-    </motion.a>
-  );
-}
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3 7h8M7.5 3.5L11 7l-3.5 3.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }

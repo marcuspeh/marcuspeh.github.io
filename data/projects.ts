@@ -2,6 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  detail: string;
   stack: string[];
   link?: string;
   accent: string;
@@ -9,34 +10,32 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'ai-trading',
-    title: 'AI Trading System',
-    description:
-      'Multi-agent trading platform that ingests Truth Social posts and executes trades automatically against live brokerages.',
-    stack: ['Python', 'Docker', 'PostgreSQL', 'LLMs'],
-    accent: 'from-blue-500/30 to-indigo-500/10',
-  },
-  {
-    id: 'portfolio-manager',
-    title: 'Portfolio Manager',
-    description:
-      'Factor-based portfolio optimizer and backtesting framework for systematic strategy research.',
-    stack: ['Python', 'QuantConnect', 'Pandas'],
-    accent: 'from-emerald-500/20 to-teal-500/10',
-  },
-  {
     id: 'home-lab',
-    title: 'Home Lab Infrastructure',
+    title: 'Home Lab & Observability',
     description:
-      'Self-hosted Ubuntu server running Docker containers, Prometheus, Grafana, MySQL, and AI agents for observability.',
-    stack: ['Ubuntu', 'Docker', 'Prometheus', 'Grafana'],
+      'Self-hosted infrastructure running Docker containers, Prometheus, Grafana, and an internal service mesh — built as a sandbox for distributed-systems experimentation.',
+    detail:
+      'Used as a personal staging environment to validate deployment patterns, failure modes, and observability wiring before applying them at work.',
+    stack: ['Ubuntu Server', 'Docker', 'Prometheus', 'Grafana'],
     accent: 'from-amber-500/20 to-orange-500/10',
   },
   {
-    id: 'widget-framework',
-    title: 'Widget Framework',
+    id: 'multi-agent',
+    title: 'Multi-Agent Orchestration',
     description:
-      'Low-code analytics framework that powers scalable, configurable dashboards for non-technical users.',
+      'Agent runtime with bounded execution, tool-routing, and observability primitives — designed for operating production systems with autonomous workflows.',
+    detail:
+      'Applying lessons from real-time distributed systems to AI agents: explicit timeouts, retry policies, structured outputs, and full traces.',
+    stack: ['Python', 'Docker', 'LLMs'],
+    accent: 'from-blue-500/30 to-indigo-500/10',
+  },
+  {
+    id: 'widget-framework',
+    title: 'Low-code Widget Framework',
+    description:
+      'Analytics framework that powers scalable, configurable dashboards inside the live operations platform.',
+    detail:
+      'Built and maintained as part of the production platform; adopted by the majority of internal use cases.',
     stack: ['Java', 'Spring Boot', 'Redis'],
     accent: 'from-violet-500/20 to-fuchsia-500/10',
   },

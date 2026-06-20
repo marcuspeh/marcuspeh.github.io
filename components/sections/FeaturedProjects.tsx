@@ -2,169 +2,120 @@
 
 import {motion} from 'framer-motion';
 import {projects, type Project} from '@/data/projects';
-import {Section} from '@/components/ui/Section';
+import {FadeIn} from '@/components/ui/FadeIn';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export function FeaturedProjects() {
   return (
-    <Section
+    <section
       id="projects"
-      eyebrow="02 — Projects"
-      title={
-        <>
-          Featured <span className="text-primary-muted">projects</span>.
-        </>
-      }
-      description="Things I'm building or maintaining outside of work."
-      className="border-t border-border"
+      className="relative border-t border-border px-6 py-28 md:px-10 md:py-40"
     >
-      <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project, i) => (
-          <ProjectCard key={project.id} project={project} index={i} />
-        ))}
-      </div>
-    </Section>
-  );
-}
+      <div className="mx-auto w-full max-w-content">
+        <FadeIn>
+          <p className="text-eyebrow uppercase text-primary-muted">
+            02 — Side work
+          </p>
+          <h2 className="mt-6 max-w-3xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
+            Infrastructure{' '}
+            <span className="text-primary-muted">on the side</span>.
+          </h2>
+          <p className="mt-8 max-w-prose text-lg leading-relaxed text-primary-muted text-pretty md:text-xl">
+            Three things I run or maintain outside of production.
+          </p>
+        </FadeIn>
 
-function ProjectCard({project, index}: {project: Project; index: number}) {
-  return (
-    <motion.article
-      initial={{opacity: 0, y: 24}}
-      whileInView={{opacity: 1, y: 0}}
-      viewport={{once: true, margin: '-80px'}}
-      transition={{duration: 0.7, delay: index * 0.05, ease}}
-      whileHover={{y: -4}}
-      className="group relative overflow-hidden rounded-3xl border border-border bg-surface/40 transition-colors duration-500 hover:border-white/15 hover:bg-surface/70"
-    >
-      {/* Visual */}
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <div
-          aria-hidden
-          className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-70`}
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.18),transparent_50%)]"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)',
-            backgroundSize: '32px 32px',
-          }}
-        />
-        <ProjectGlyph index={index} />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-bg/90 to-transparent" />
-        <span className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg/40 px-3 py-1 text-xs text-primary-muted backdrop-blur-md">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-          {String(index + 1).padStart(2, '0')}
-        </span>
-      </div>
-
-      {/* Body */}
-      <div className="space-y-5 p-8">
-        <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">
-          {project.title}
-        </h3>
-        <p className="text-[15px] leading-relaxed text-primary-muted text-pretty">
-          {project.description}
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {project.stack.map(tech => (
-            <span
-              key={tech}
-              className="rounded-full border border-border bg-bg/40 px-3 py-1 text-xs text-primary/90"
-            >
-              {tech}
-            </span>
+        <div className="mt-24 grid gap-px overflow-hidden rounded-3xl border border-border bg-border/60 md:grid-cols-3">
+          {projects.map((project, i) => (
+            <ProjectColumn
+              key={project.id}
+              project={project}
+              index={i}
+              total={projects.length}
+            />
           ))}
         </div>
       </div>
-    </motion.article>
+    </section>
+  );
+}
+
+function ProjectColumn({
+  project,
+  index,
+  total,
+}: {
+  project: Project;
+  index: number;
+  total: number;
+}) {
+  return (
+    <motion.div
+      initial={{opacity: 0, y: 16}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{once: true, margin: '-60px'}}
+      transition={{duration: 0.7, delay: index * 0.08, ease}}
+      className="group relative flex flex-col bg-surface/40 p-8 transition-colors duration-500 hover:bg-surface/80 md:p-10"
+    >
+      {/* Header */}
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-eyebrow uppercase text-primary-muted">
+            {String(index + 1).padStart(2, '0')} /{' '}
+            {String(total).padStart(2, '0')}
+          </p>
+          <h3 className="mt-6 text-2xl font-semibold tracking-tight md:text-3xl text-balance">
+            {project.title}
+          </h3>
+        </div>
+        <span
+          aria-hidden
+          className="text-2xl text-primary-muted/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent"
+        >
+          →
+        </span>
+      </div>
+
+      {/* Visual glyph */}
+      <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-2xl border border-border/60 bg-bg/40">
+        <div
+          aria-hidden
+          className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-60`}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent_60%)]"
+        />
+        <ProjectGlyph index={index} />
+      </div>
+
+      {/* Body */}
+      <p className="mt-8 text-[15px] leading-relaxed text-primary/90">
+        {project.description}
+      </p>
+      <p className="mt-4 text-[13px] leading-relaxed text-primary-muted">
+        {project.detail}
+      </p>
+
+      {/* Stack */}
+      <div className="mt-8 flex flex-wrap gap-1.5">
+        {project.stack.map(tech => (
+          <span
+            key={tech}
+            className="rounded-full border border-border bg-bg/40 px-2.5 py-0.5 text-[11px] text-primary-muted"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+    </motion.div>
   );
 }
 
 function ProjectGlyph({index}: {index: number}) {
   const glyphs = [
-    // Trading chart
-    <svg
-      key="trading"
-      viewBox="0 0 320 200"
-      className="h-full w-full text-white/90"
-      fill="none"
-    >
-      <path
-        d="M10 150 L70 130 L120 100 L170 110 L220 70 L260 80 L310 40"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M10 170 L70 160 L120 145 L170 150 L220 130 L260 135 L310 115"
-        stroke="currentColor"
-        strokeOpacity="0.3"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>,
-    // Portfolio / bars
-    <svg
-      key="portfolio"
-      viewBox="0 0 320 200"
-      className="h-full w-full text-white/90"
-      fill="none"
-    >
-      <rect
-        x="40"
-        y="120"
-        width="32"
-        height="60"
-        rx="4"
-        fill="currentColor"
-        opacity="0.7"
-      />
-      <rect
-        x="90"
-        y="80"
-        width="32"
-        height="100"
-        rx="4"
-        fill="currentColor"
-        opacity="0.8"
-      />
-      <rect
-        x="140"
-        y="100"
-        width="32"
-        height="80"
-        rx="4"
-        fill="currentColor"
-        opacity="0.6"
-      />
-      <rect
-        x="190"
-        y="50"
-        width="32"
-        height="130"
-        rx="4"
-        fill="currentColor"
-        opacity="0.9"
-      />
-      <rect
-        x="240"
-        y="90"
-        width="32"
-        height="90"
-        rx="4"
-        fill="currentColor"
-        opacity="0.7"
-      />
-    </svg>,
-    // Server / nodes
+    // Home lab — server stack
     <svg
       key="server"
       viewBox="0 0 320 200"
@@ -201,8 +152,77 @@ function ProjectGlyph({index}: {index: number}) {
       <circle cx="80" cy="58" r="3" fill="currentColor" />
       <circle cx="80" cy="104" r="3" fill="currentColor" />
       <circle cx="80" cy="150" r="3" fill="currentColor" />
+      <path
+        d="M100 58h140M100 104h140M100 150h140"
+        stroke="currentColor"
+        strokeOpacity="0.4"
+        strokeWidth="1"
+      />
     </svg>,
-    // Widget grid
+    // Multi-agent — nodes & edges
+    <svg
+      key="agents"
+      viewBox="0 0 320 200"
+      className="h-full w-full text-white/90"
+      fill="none"
+    >
+      <line
+        x1="60"
+        y1="60"
+        x2="160"
+        y2="100"
+        stroke="currentColor"
+        strokeOpacity="0.3"
+        strokeWidth="1"
+      />
+      <line
+        x1="60"
+        y1="140"
+        x2="160"
+        y2="100"
+        stroke="currentColor"
+        strokeOpacity="0.3"
+        strokeWidth="1"
+      />
+      <line
+        x1="160"
+        y1="100"
+        x2="260"
+        y2="60"
+        stroke="currentColor"
+        strokeOpacity="0.3"
+        strokeWidth="1"
+      />
+      <line
+        x1="160"
+        y1="100"
+        x2="260"
+        y2="140"
+        stroke="currentColor"
+        strokeOpacity="0.3"
+        strokeWidth="1"
+      />
+      <circle cx="60" cy="60" r="14" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="60" cy="140" r="14" stroke="currentColor" strokeWidth="1.5" />
+      <circle
+        cx="160"
+        cy="100"
+        r="20"
+        fill="currentColor"
+        fillOpacity="0.2"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+      <circle cx="260" cy="60" r="14" stroke="currentColor" strokeWidth="1.5" />
+      <circle
+        cx="260"
+        cy="140"
+        r="14"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+    </svg>,
+    // Widget framework
     <svg
       key="widgets"
       viewBox="0 0 320 200"

@@ -4,145 +4,185 @@ import Image from 'next/image';
 import {motion} from 'framer-motion';
 import {experience, type ExperienceItem} from '@/data/experience';
 import {FadeIn} from '@/components/ui/FadeIn';
-import {Section} from '@/components/ui/Section';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export function SelectedWork() {
+  const [current, ...previous] = experience;
+
   return (
-    <Section
+    <section
       id="work"
-      eyebrow="01 — Experience"
-      title={
-        <>
-          Selected <span className="text-primary-muted">work</span>.
-        </>
-      }
-      description="A focused look at roles where I shipped systems at scale."
+      className="relative border-t border-border px-6 py-28 md:px-10 md:py-40"
     >
-      <ol className="relative space-y-16 md:space-y-24">
-        {/* vertical accent line */}
-        <span
-          aria-hidden
-          className="absolute bottom-6 left-[15px] top-6 hidden w-px bg-gradient-to-b from-transparent via-border to-transparent md:left-1/2 md:block"
-        />
-        {experience.map((item, index) => (
-          <TimelineItem key={item.id} item={item} index={index} />
-        ))}
-      </ol>
-    </Section>
-  );
-}
+      <div className="mx-auto w-full max-w-content">
+        <FadeIn>
+          <p className="text-eyebrow uppercase text-primary-muted">
+            01 — Experience
+          </p>
+          <h2 className="mt-6 max-w-3xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
+            Now, and <span className="text-primary-muted">before</span>.
+          </h2>
+          <p className="mt-8 max-w-prose text-lg leading-relaxed text-primary-muted text-pretty md:text-xl">
+            Currently shipping production systems. Previously: engineering
+            internships where I learned to operate at scale.
+          </p>
+        </FadeIn>
 
-function TimelineItem({item, index}: {item: ExperienceItem; index: number}) {
-  const isLeft = index % 2 === 0;
-
-  return (
-    <FadeIn direction="up" duration={0.7}>
-      <li className="relative grid grid-cols-[32px_1fr] items-start gap-4 md:grid-cols-2 md:gap-12">
-        {/* Dot */}
-        <span
-          aria-hidden
-          className="absolute left-[10px] top-3 hidden h-2 w-2 rounded-full bg-accent shadow-[0_0_0_4px_rgba(59,130,246,0.15)] md:absolute md:left-1/2 md:top-6 md:block md:-translate-x-1/2"
-        />
-
-        <div
-          className={`hidden md:block ${
-            isLeft ? 'md:order-1 md:text-right' : 'md:order-2'
-          }`}
-        >
-          {isLeft ? (
-            <RoleCard item={item} align="right" />
-          ) : (
-            <StackCard stack={item.stack} />
-          )}
-        </div>
-
-        <div className={`pl-2 md:pl-0 ${isLeft ? 'md:order-2' : 'md:order-1'}`}>
-          {isLeft ? (
-            <StackCard stack={item.stack} />
-          ) : (
-            <RoleCard item={item} align="left" />
-          )}
-
-          {/* Mobile inline meta */}
-          <div className="mt-6 flex items-center gap-3 md:hidden">
-            <span className="h-2 w-2 rounded-full bg-accent" />
-            <p className="text-sm text-primary-muted">{item.period}</p>
+        {/* Current */}
+        <FadeIn delay={0.1}>
+          <div className="mt-24">
+            <p className="text-eyebrow uppercase text-primary-muted">
+              Now · Current role
+            </p>
+            {current && <ExperienceRow item={current} featured />}
           </div>
-        </div>
-      </li>
-    </FadeIn>
+        </FadeIn>
+
+        {/* Previously */}
+        <FadeIn delay={0.15}>
+          <div className="mt-24">
+            <p className="text-eyebrow uppercase text-primary-muted">
+              Before · Engineering internships
+            </p>
+            <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border/60 md:grid-cols-3">
+              {previous.map(item => (
+                <ExperienceCompact key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
   );
 }
 
-function RoleCard({
+function ExperienceRow({
   item,
-  align,
+  featured,
 }: {
   item: ExperienceItem;
-  align: 'left' | 'right';
+  featured?: boolean;
 }) {
   return (
-    <motion.div
+    <motion.article
       whileHover={{y: -2}}
       transition={{duration: 0.3, ease}}
-      className={`group relative overflow-hidden rounded-2xl border border-border bg-surface/40 p-8 backdrop-blur-sm transition-colors duration-300 hover:border-white/15 hover:bg-surface/70 ${
-        align === 'right' ? 'md:ml-auto md:text-right' : ''
+      className={`group relative mt-8 overflow-hidden rounded-3xl border border-border transition-colors duration-500 hover:border-white/15 ${
+        featured ? 'bg-surface/50 p-8 md:p-14' : 'bg-surface/30 p-8 md:p-10'
       }`}
     >
+      <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <div className="flex items-start gap-4">
+          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg border border-border bg-bg/60">
+            <Image
+              src={item.logo}
+              alt={`${item.company} logo`}
+              width={24}
+              height={24}
+              className="opacity-90"
+            />
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold tracking-tight md:text-2xl">
+              {item.role}
+            </h3>
+            <p className="mt-1 text-base text-primary-muted">
+              @ {item.company}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-start md:items-end">
+          <p className="text-sm font-medium text-primary-muted">
+            {item.period}
+          </p>
+          <p className="text-sm text-primary-muted/70">{item.location}</p>
+        </div>
+      </div>
+
+      {featured && (
+        <span
+          aria-hidden
+          className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-accent"
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          Current
+        </span>
+      )}
+
+      {item.narrative && (
+        <p className="mt-10 max-w-prose text-base leading-relaxed text-primary/90 md:text-lg text-pretty">
+          {item.narrative}
+        </p>
+      )}
+
+      {item.highlights && (
+        <ul className="mt-10 space-y-4">
+          {item.highlights.map((line, i) => (
+            <li
+              key={i}
+              className="flex gap-3 text-[15px] leading-relaxed text-primary/90 md:text-base"
+            >
+              <span
+                aria-hidden
+                className="mt-2.5 h-1 w-1 flex-none rounded-full bg-primary-muted"
+              />
+              <span>{line}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <div className="mt-10 flex flex-wrap gap-2">
+        {item.stack.map(tech => (
+          <span
+            key={tech}
+            className="rounded-full border border-border bg-bg/40 px-3 py-1 text-xs text-primary/90"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+    </motion.article>
+  );
+}
+
+function ExperienceCompact({item}: {item: ExperienceItem}) {
+  return (
+    <div className="group relative bg-surface/40 p-8 transition-colors duration-300 hover:bg-surface/70">
       <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-bg/60">
+        <div className="flex h-8 w-8 items-center justify-center rounded-md border border-border bg-bg/60">
           <Image
             src={item.logo}
             alt={`${item.company} logo`}
-            width={20}
-            height={20}
+            width={18}
+            height={18}
             className="opacity-90"
           />
         </div>
-        <p className="text-sm font-medium text-primary-muted">
-          {item.period} · {item.location}
+        <p className="text-[13px] font-medium uppercase tracking-wider text-primary-muted">
+          {item.company}
         </p>
       </div>
 
-      <h3 className="mt-6 text-2xl font-semibold tracking-tight md:text-3xl">
-        {item.role}
-      </h3>
-      <p className="mt-1 text-base text-primary-muted">@ {item.company}</p>
+      <h4 className="mt-6 text-lg font-semibold tracking-tight">{item.role}</h4>
+      <p className="mt-1 text-sm text-primary-muted">{item.period}</p>
 
-      <ul className="mt-6 space-y-3">
-        {item.highlights.map((line, i) => (
-          <li
-            key={i}
-            className="flex gap-3 text-[15px] leading-relaxed text-primary/90"
-          >
-            <span
-              aria-hidden
-              className="mt-2 h-1 w-1 flex-none rounded-full bg-primary-muted"
-            />
-            <span>{line}</span>
-          </li>
-        ))}
-      </ul>
-    </motion.div>
-  );
-}
+      <p className="mt-5 text-[15px] leading-relaxed text-primary/90">
+        {item.highlights?.[0]}
+      </p>
 
-function StackCard({stack}: {stack: string[]}) {
-  return (
-    <div className="flex h-full flex-col justify-center rounded-2xl border border-dashed border-border/60 p-8">
-      <p className="text-eyebrow uppercase text-primary-muted">Stack</p>
-      <ul className="mt-4 flex flex-wrap gap-2">
-        {stack.map(tech => (
-          <li
+      <div className="mt-6 flex flex-wrap gap-1.5">
+        {item.stack.slice(0, 3).map(tech => (
+          <span
             key={tech}
-            className="rounded-full border border-border bg-bg/40 px-3 py-1 text-sm text-primary/90"
+            className="rounded-full border border-border bg-bg/40 px-2.5 py-0.5 text-[11px] text-primary-muted"
           >
             {tech}
-          </li>
+          </span>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

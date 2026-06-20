@@ -1,62 +1,56 @@
 import {FadeIn} from '@/components/ui/FadeIn';
-import {Section} from '@/components/ui/Section';
 
 export function About() {
   return (
-    <Section
+    <section
       id="about"
-      eyebrow="04 — About"
-      title={
-        <>
-          A bit <span className="text-primary-muted">about</span> me.
-        </>
-      }
-      className="border-t border-border"
+      className="relative border-t border-border px-6 py-28 md:px-10 md:py-40"
     >
-      <div className="grid gap-16 md:grid-cols-[1fr_2fr]">
-        <FadeIn direction="up">
-          <dl className="space-y-8">
-            <div>
-              <dt className="text-eyebrow uppercase text-primary-muted">
-                Based in
-              </dt>
-              <dd className="mt-2 text-lg">Singapore</dd>
-            </div>
-            <div>
-              <dt className="text-eyebrow uppercase text-primary-muted">
-                Focus
-              </dt>
-              <dd className="mt-2 text-lg">Backend systems · Quant infra</dd>
-            </div>
-            <div>
-              <dt className="text-eyebrow uppercase text-primary-muted">
-                Studying
-              </dt>
-              <dd className="mt-2 text-lg">
-                OMSCS, Georgia Tech
-                <span className="block text-sm text-primary-muted">
-                  Machine Learning
-                </span>
-              </dd>
-            </div>
-          </dl>
+      <div className="mx-auto w-full max-w-content">
+        <FadeIn>
+          <p className="text-eyebrow uppercase text-primary-muted">
+            04 — About
+          </p>
+          <h2 className="mt-6 text-section-mobile font-semibold tracking-tight text-balance md:text-section">
+            In <span className="text-primary-muted">short</span>.
+          </h2>
         </FadeIn>
 
-        <FadeIn direction="up" delay={0.1}>
-          <div className="space-y-6 text-lg leading-relaxed text-primary/90 md:text-xl">
-            <p>
-              I&apos;m a backend engineer at{' '}
-              <span className="text-primary">TikTok</span> and a Computer
-              Science graduate from NUS. I enjoy building scalable systems and
-              exploring quantitative finance.
-            </p>
-            <p className="text-primary-muted">
-              Outside work, I spend time developing trading infrastructure,
-              running self-hosted services, and studying machine learning.
-            </p>
-          </div>
+        <FadeIn delay={0.1}>
+          <p className="mt-12 max-w-3xl text-2xl font-medium leading-tight tracking-tight text-primary text-balance md:text-4xl md:leading-[1.15]">
+            I&apos;m a software engineer at TikTok building distributed systems
+            for user segmentation and decisioning.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.15}>
+          <p className="mt-10 max-w-3xl text-lg leading-relaxed text-primary-muted md:text-xl">
+            I enjoy designing scalable infrastructure, working on complex
+            systems problems, and shipping things that operate reliably at
+            scale.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <dl className="mt-20 grid grid-cols-2 gap-y-10 border-t border-border pt-10 sm:grid-cols-4">
+            <Meta label="Based in" value="Singapore" />
+            <Meta label="Focus" value="Complex systems" />
+            <Meta label="Background" value="NUS · CS" />
+            <Meta label="Studying" value="Computer Systems" />
+          </dl>
         </FadeIn>
       </div>
-    </Section>
+    </section>
+  );
+}
+
+function Meta({label, value}: {label: string; value: string}) {
+  return (
+    <div>
+      <dt className="text-eyebrow uppercase text-primary-muted">{label}</dt>
+      <dd className="mt-2 text-base font-medium tracking-tight md:text-lg">
+        {value}
+      </dd>
+    </div>
   );
 }

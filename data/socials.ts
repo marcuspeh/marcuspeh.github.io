@@ -20,7 +20,7 @@ export const socials: SocialLink[] = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/marcus-peh/',
+    href: 'https://www.linkedin.com/in/marcuspeh/',
     external: true,
   },
   {
@@ -61,7 +61,7 @@ export const buildingItems = [
     detail: 'Prometheus, Grafana, and containerized self-hosted services.',
   },
   {
-    title: 'OMSCS — Machine Learning',
-    detail: 'Studying ML systems, optimization, and applied statistics.',
+    title: 'OMSCS — Computer Systems',
+    detail: 'Studying computer systems, databases, and software engineering.',
   },
 ];
