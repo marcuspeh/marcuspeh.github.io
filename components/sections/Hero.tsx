@@ -57,16 +57,20 @@ export function Hero() {
           variants={lineVariants}
           className="mt-6 max-w-2xl text-2xl font-medium text-primary text-balance md:text-3xl"
         >
-          Software Engineer <span className="text-primary-muted">@</span>{' '}
-          <span className="text-primary">TikTok</span>.
+          Software Engineer{' '}
+          <span className="text-primary-muted">@</span>{' '}
+          <span className="text-primary">TikTok</span>
+          <span className="text-primary-muted"> · Backend &amp; Frontend</span>
+          .
         </motion.p>
 
         <motion.p
           variants={lineVariants}
           className="mt-8 max-w-prose text-body text-primary-muted text-pretty"
         >
-          Building scalable data platforms and algorithmic trading systems.
-          Previously Google, ByteDance, and GovTech.
+          Building distributed systems and maintaining the operator surfaces on
+          top. Side projects include a Telegram spending bot and a personal
+          trading algorithm. Previously Google, ByteDance, and GovTech.
         </motion.p>
 
         {/* CTA buttons */}

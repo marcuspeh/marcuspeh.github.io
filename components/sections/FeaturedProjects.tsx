@@ -15,14 +15,14 @@ export function FeaturedProjects() {
       <div className="mx-auto w-full max-w-content">
         <FadeIn>
           <p className="text-eyebrow uppercase text-primary-muted">
-            02 — Side work
+            02 — Side projects
           </p>
           <h2 className="mt-6 max-w-3xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
-            Infrastructure{' '}
+            Projects{' '}
             <span className="text-primary-muted">on the side</span>.
           </h2>
           <p className="mt-8 max-w-prose text-lg leading-relaxed text-primary-muted text-pretty md:text-xl">
-            Three things I run or maintain outside of production.
+            Things I&apos;ve built or actively maintain outside of work
           </p>
         </FadeIn>
 
@@ -69,12 +69,6 @@ function ProjectColumn({
             {project.title}
           </h3>
         </div>
-        <span
-          aria-hidden
-          className="text-2xl text-primary-muted/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent"
-        >
-          →
-        </span>
       </div>
 
       {/* Visual glyph */}
@@ -109,6 +103,19 @@ function ProjectColumn({
           </span>
         ))}
       </div>
+
+      {/* Link */}
+      {project.link ? (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 inline-flex items-center gap-1.5 self-start text-[12px] font-medium text-primary-muted transition-colors hover:text-accent"
+        >
+          View on GitHub
+          <span aria-hidden>↗</span>
+        </a>
+      ) : null}
     </motion.div>
   );
 }
@@ -159,126 +166,56 @@ function ProjectGlyph({index}: {index: number}) {
         strokeWidth="1"
       />
     </svg>,
-    // Multi-agent — nodes & edges
+    // Spending tracker — chat bubble + receipt
     <svg
-      key="agents"
+      key="spending"
       viewBox="0 0 320 200"
       className="h-full w-full text-white/90"
       fill="none"
     >
-      <line
-        x1="60"
-        y1="60"
-        x2="160"
-        y2="100"
-        stroke="currentColor"
-        strokeOpacity="0.3"
-        strokeWidth="1"
-      />
-      <line
-        x1="60"
-        y1="140"
-        x2="160"
-        y2="100"
-        stroke="currentColor"
-        strokeOpacity="0.3"
-        strokeWidth="1"
-      />
-      <line
-        x1="160"
-        y1="100"
-        x2="260"
-        y2="60"
-        stroke="currentColor"
-        strokeOpacity="0.3"
-        strokeWidth="1"
-      />
-      <line
-        x1="160"
-        y1="100"
-        x2="260"
-        y2="140"
-        stroke="currentColor"
-        strokeOpacity="0.3"
-        strokeWidth="1"
-      />
-      <circle cx="60" cy="60" r="14" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="60" cy="140" r="14" stroke="currentColor" strokeWidth="1.5" />
-      <circle
-        cx="160"
-        cy="100"
-        r="20"
-        fill="currentColor"
-        fillOpacity="0.2"
+      <path
+        d="M70 50 H230 a20 20 0 0 1 20 20 V130 a20 20 0 0 1 -20 20 H130 L100 175 V150 H70 a20 20 0 0 1 -20 -20 V70 a20 20 0 0 1 20 -20 Z"
         stroke="currentColor"
         strokeWidth="1.5"
       />
-      <circle cx="260" cy="60" r="14" stroke="currentColor" strokeWidth="1.5" />
-      <circle
-        cx="260"
-        cy="140"
-        r="14"
+      <path
+        d="M80 80 H220 M80 100 H200 M80 120 H170"
+        stroke="currentColor"
+        strokeOpacity="0.45"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <circle cx="230" cy="60" r="14" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M225 60 h10 M230 55 v10"
         stroke="currentColor"
         strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>,
-    // Widget framework
+    // Trading algo — candlestick chart
     <svg
-      key="widgets"
+      key="trading"
       viewBox="0 0 320 200"
       className="h-full w-full text-white/90"
       fill="none"
     >
-      <rect
-        x="40"
-        y="30"
-        width="110"
-        height="60"
-        rx="6"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <rect
-        x="170"
-        y="30"
-        width="110"
-        height="60"
-        rx="6"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <rect
-        x="40"
-        y="110"
-        width="110"
-        height="60"
-        rx="6"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <rect
-        x="170"
-        y="110"
-        width="110"
-        height="60"
-        rx="6"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
       <path
-        d="M55 60 L95 60 M55 70 L120 70"
+        d="M50 160 H280"
         stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        opacity="0.6"
+        strokeOpacity="0.25"
+        strokeWidth="1"
       />
-      <path
-        d="M185 60 L225 60 M185 70 L250 70"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        opacity="0.6"
-      />
+      <line x1="80" y1="60" x2="80" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
+      <rect x="74" y="90" width="12" height="40" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="120" y1="40" x2="120" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
+      <rect x="114" y="70" width="12" height="60" stroke="currentColor" strokeWidth="1.5" fill="currentColor" fillOpacity="0.2" />
+      <line x1="160" y1="55" x2="160" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
+      <rect x="154" y="85" width="12" height="35" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="200" y1="35" x2="200" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
+      <rect x="194" y="65" width="12" height="60" stroke="currentColor" strokeWidth="1.5" fill="currentColor" fillOpacity="0.2" />
+      <line x1="240" y1="50" x2="240" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
+      <rect x="234" y="80" width="12" height="45" stroke="currentColor" strokeWidth="1.5" />
     </svg>,
   ];
   return (

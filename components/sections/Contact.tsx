@@ -22,15 +22,15 @@ export function Contact() {
             05 — Get in touch
           </p>
           <h2 className="mt-6 max-w-4xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
-            Open to senior backend roles and{' '}
+            Open to senior backend + frontend roles and{' '}
             <span className="text-primary-muted">systems conversations</span>.
           </h2>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <p className="mt-10 max-w-prose text-lg leading-relaxed text-primary-muted md:text-xl">
-            Especially interested in real-time infrastructure, decisioning
-            platforms, and distributed-systems teams.
+            Especially interested in distributed infrastructure, decisioning
+            platforms, and product-focused engineering teams.
           </p>
         </FadeIn>
 

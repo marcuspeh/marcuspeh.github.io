@@ -49,12 +49,12 @@ export const metrics = [
 
 export const buildingItems = [
   {
-    title: 'Multi-agent trading infrastructure',
-    detail: 'Designing agent orchestration for live market execution.',
+    title: 'Algorithmic trading & backtester',
+    detail: 'Personal project: backtesting, risk controls, and live execution.',
   },
   {
-    title: 'Portfolio optimization research',
-    detail: 'Factor models, risk decomposition, and backtest pipelines.',
+    title: 'Spending tracker (Telegram bot)',
+    detail: 'Polls an email inbox for transaction records and auto-logs them.',
   },
   {
     title: 'Home server & observability stack',
