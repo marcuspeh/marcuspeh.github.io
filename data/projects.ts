@@ -11,7 +11,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'home-lab',
-    title: 'Home Lab & Observability',
+    title: 'Home Lab, Docker & Observability',
     description:
       'Self-hosted infrastructure running Docker, Prometheus, Grafana, and an internal service mesh — a sandbox for distributed-systems experimentation.',
     detail:

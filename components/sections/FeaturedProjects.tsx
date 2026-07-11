@@ -60,7 +60,7 @@ function ProjectColumn({
     >
       {/* Header */}
       <div className="flex items-start justify-between">
-        <div>
+        <div className="min-h-[6.5rem] md:min-h-[7.5rem]">
           <p className="text-eyebrow uppercase text-primary-muted">
             {String(index + 1).padStart(2, '0')} /{' '}
             {String(total).padStart(2, '0')}
