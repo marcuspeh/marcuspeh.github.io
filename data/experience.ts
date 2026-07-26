@@ -68,8 +68,8 @@ export const experience: ExperienceItem[] = [
     id: 'govtech',
     company: 'GovTech',
     logo: GovTechLogo,
-    role: 'Software Engineering Intern',
-    period: 'May 2022 — Jul 2022',
+    role: 'Software Engineering Intern · CrowdTaskSG',
+    period: 'May 2022 — Jul 2022, Dec 2022',
     location: 'Singapore',
     highlights: [
       'Improved server query response time by 200× through API restructuring under load.',

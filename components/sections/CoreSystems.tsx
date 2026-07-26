@@ -22,7 +22,7 @@ export function CoreSystems() {
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/4 top-1/4 h-[500px] w-[500px] rounded-full bg-accent/[0.06] blur-3xl" />
         <div className="absolute right-1/4 bottom-1/4 h-[500px] w-[500px] rounded-full bg-accent/[0.04] blur-3xl" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.018)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.018)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-ambient-grid bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)]" />
       </div>
 
       <div className="mx-auto w-full max-w-content">
@@ -64,7 +64,7 @@ function SystemCaseStudy({system, index}: {system: CoreSystem; index: number}) {
       whileInView={{opacity: 1, y: 0}}
       viewport={{once: true, margin: '-80px'}}
       transition={{duration: 0.8, delay: index * 0.1, ease}}
-      className="group relative overflow-hidden rounded-3xl border border-border bg-surface/30 transition-colors duration-500 hover:border-white/15"
+      className="group relative overflow-hidden rounded-3xl border border-border bg-surface/30 transition-colors duration-500 hover:border-primary/15"
     >
       {/* Top meta bar */}
       <div className="flex items-center justify-between border-b border-border/60 px-6 py-4 md:px-10">

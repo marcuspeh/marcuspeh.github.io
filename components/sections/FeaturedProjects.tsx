@@ -79,7 +79,7 @@ function ProjectColumn({
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,var(--ambient-glyph-highlight),transparent_60%)]"
         />
         <ProjectGlyph index={index} />
       </div>
@@ -126,7 +126,7 @@ function ProjectGlyph({index}: {index: number}) {
     <svg
       key="server"
       viewBox="0 0 320 200"
-      className="h-full w-full text-white/90"
+      className="h-full w-full text-primary/90"
       fill="none"
     >
       <rect
@@ -170,7 +170,7 @@ function ProjectGlyph({index}: {index: number}) {
     <svg
       key="spending"
       viewBox="0 0 320 200"
-      className="h-full w-full text-white/90"
+      className="h-full w-full text-primary/90"
       fill="none"
     >
       <path
@@ -197,7 +197,7 @@ function ProjectGlyph({index}: {index: number}) {
     <svg
       key="trading"
       viewBox="0 0 320 200"
-      className="h-full w-full text-white/90"
+      className="h-full w-full text-primary/90"
       fill="none"
     >
       <path

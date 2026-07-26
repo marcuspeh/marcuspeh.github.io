@@ -28,7 +28,7 @@ export function Navbar() {
           href="#top"
           className="group flex items-center gap-2 text-sm font-semibold tracking-tight"
         >
-          <span className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-surface/60 text-primary transition-colors duration-300 group-hover:border-white/30">
+          <span className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-surface/60 text-primary transition-colors duration-300 group-hover:border-primary/30">
             <span className="text-xs">M</span>
           </span>
           <span>Marcus Peh</span>
@@ -50,7 +50,7 @@ export function Navbar() {
           href="https://github.com/marcuspeh"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full border border-border bg-surface/60 px-4 py-2 text-sm font-medium transition-all duration-300 hover:border-white/20 hover:bg-surface-hover md:inline-flex"
+          className="hidden rounded-full border border-border bg-surface/60 px-4 py-2 text-sm font-medium transition-all duration-300 hover:border-primary/20 hover:bg-surface-hover md:inline-flex"
         >
           ★ GitHub
         </a>

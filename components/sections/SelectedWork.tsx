@@ -69,7 +69,7 @@ function ExperienceRow({
     <motion.article
       whileHover={{y: -2}}
       transition={{duration: 0.3, ease}}
-      className={`group relative mt-8 overflow-hidden rounded-3xl border border-border transition-colors duration-500 hover:border-white/15 ${
+      className={`group relative mt-8 overflow-hidden rounded-3xl border border-border transition-colors duration-500 hover:border-primary/15 ${
         featured ? 'bg-surface/50 p-8 md:p-14' : 'bg-surface/30 p-8 md:p-10'
       }`}
     >

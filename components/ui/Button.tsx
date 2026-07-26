@@ -22,9 +22,9 @@ const sizes: Record<Size, string> = {
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-white text-bg hover:bg-white/90 shadow-[0_1px_0_0_rgba(255,255,255,0.05)_inset,0_8px_24px_-8px_rgba(255,255,255,0.2)]',
+    'bg-primary text-bg hover:bg-primary/90 shadow-[0_1px_0_0_rgb(var(--primary-rgb)/0.05)_inset,0_8px_24px_-8px_rgb(var(--primary-rgb)/0.2)]',
   secondary:
-    'border border-border bg-surface/60 text-primary backdrop-blur-md hover:bg-surface-hover hover:border-white/20',
+    'border border-border bg-surface/60 text-primary backdrop-blur-md hover:bg-surface-hover hover:border-primary/20',
   ghost: 'text-primary-muted hover:text-primary',
 };
 

@@ -48,9 +48,38 @@ export const metadata: Metadata = {
   },
 };
 
+// Sets the initial color-scheme before React hydrates so the browser
+// renders form controls, scrollbars, and the page background correctly
+// for the user's system preference.
+const themeBootstrapScript = `
+(function () {
+  try {
+    var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    var scheme = prefersLight ? 'light' : 'dark';
+    document.documentElement.style.colorScheme = scheme;
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{__html: themeBootstrapScript}}
+        />
+        <meta
+          name="theme-color"
+          content="#0B0D12"
+          media="(prefers-color-scheme: dark)"
+        />
+        <meta
+          name="theme-color"
+          content="#FFFFFF"
+          media="(prefers-color-scheme: light)"
+        />
+      </head>
       <body className="bg-bg text-primary font-sans antialiased">
         {children}
       </body>

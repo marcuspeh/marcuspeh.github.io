@@ -8,18 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: '#0B0D12',
-        surface: '#10131A',
-        'surface-hover': '#161A23',
-        border: '#1F2330',
+        bg: 'rgb(var(--bg-rgb) / <alpha-value>)',
+        surface: 'rgb(var(--surface-rgb) / <alpha-value>)',
+        'surface-hover': 'rgb(var(--surface-hover-rgb) / <alpha-value>)',
+        border: 'rgb(var(--border-rgb) / <alpha-value>)',
         primary: {
-          DEFAULT: '#FFFFFF',
-          muted: '#A1A1AA',
-          dim: '#71717A',
+          DEFAULT: 'rgb(var(--primary-rgb) / <alpha-value>)',
+          muted: 'rgb(var(--primary-muted-rgb) / <alpha-value>)',
+          dim: 'rgb(var(--primary-dim-rgb) / <alpha-value>)',
         },
         accent: {
-          DEFAULT: '#3B82F6',
-          muted: '#3B82F620',
+          DEFAULT: 'rgb(var(--accent-rgb) / <alpha-value>)',
+          muted: 'rgb(var(--accent-rgb) / 0.12)',
         },
       },
       fontFamily: {

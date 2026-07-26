@@ -3,13 +3,45 @@
 @tailwind utilities;
 
 :root {
+  /* Dark mode is the default. */
+  --bg-rgb: 11 13 18;
+  --surface-rgb: 16 19 26;
+  --surface-hover-rgb: 22 26 35;
+  --border-rgb: 31 35 48;
+  --primary-rgb: 255 255 255;
+  --primary-muted-rgb: 161 161 170;
+  --primary-dim-rgb: 113 113 122;
+  --accent-rgb: 59 130 246;
+
+  /* Ambient + grid overlays (dark defaults). */
+  --ambient-grid: rgba(255, 255, 255, 0.018);
+  --ambient-top-fade: rgba(255, 255, 255, 0.04);
+  --ambient-glyph-highlight: rgba(255, 255, 255, 0.15);
+
   color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-rgb: 255 255 255;
+    --surface-rgb: 244 244 245;
+    --surface-hover-rgb: 228 228 231;
+    --border-rgb: 228 228 231;
+    --primary-rgb: 9 9 11;
+    --primary-muted-rgb: 82 82 91;
+    --primary-dim-rgb: 113 113 122;
+    --accent-rgb: 37 99 235;
+
+    --ambient-grid: rgba(0, 0, 0, 0.05);
+    --ambient-top-fade: rgba(0, 0, 0, 0.035);
+    --ambient-glyph-highlight: rgba(255, 255, 255, 0.7);
+
+    color-scheme: light;
+  }
 }
 
 html,
 body {
-  background-color: #0b0d12;
-  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -17,7 +49,7 @@ body {
 
 ::selection {
   background-color: rgba(59, 130, 246, 0.25);
-  color: #ffffff;
+  color: rgb(var(--primary-rgb));
 }
 
 @layer base {
@@ -31,14 +63,14 @@ body {
     height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #0b0d12;
+    background: rgb(var(--bg-rgb));
   }
   ::-webkit-scrollbar-thumb {
-    background: #1f2330;
+    background: rgb(var(--border-rgb));
     border-radius: 8px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #2a2f3d;
+    background: rgb(var(--surface-hover-rgb));
   }
 }
 
@@ -64,5 +96,16 @@ body {
     background-size: 3px 3px;
     mix-blend-mode: overlay;
     opacity: 0.5;
+  }
+  .bg-ambient-grid {
+    background-image: linear-gradient(var(--ambient-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--ambient-grid) 1px, transparent 1px);
+  }
+  .bg-ambient-top-fade {
+    background-image: radial-gradient(
+      ellipse at top,
+      var(--ambient-top-fade),
+      transparent 60%
+    );
   }
 }
