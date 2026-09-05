@@ -49,19 +49,22 @@ export const metrics = [
 
 export const buildingItems = [
   {
-    title: 'Algorithmic trading & backtester',
-    detail: 'Personal project: backtesting, risk controls, and live execution.',
+    title: 'Trading algorithm framework',
+    detail:
+      'A modular Go framework for backtesting, live execution, and risk controls.',
+  },
+  {
+    title: 'Market data service',
+    detail:
+      'Provider-agnostic historical OHLCV and ETF constituent data over REST APIs.',
   },
   {
     title: 'Spending tracker (Telegram bot)',
-    detail: 'Polls an email inbox for transaction records and auto-logs them.',
+    detail:
+      'Polls an email inbox for transaction records and auto-logs them to a personal expense ledger.',
   },
   {
-    title: 'Home server & observability stack',
-    detail: 'Prometheus, Grafana, and containerized self-hosted services.',
-  },
-  {
-    title: 'OMSCS — Computer Systems',
-    detail: 'Studying computer systems, databases, and software engineering.',
+    title: 'MSc Computer Science',
+    detail: 'Studying at Georgia Tech while continuing to build at TikTok.',
   },
 ];

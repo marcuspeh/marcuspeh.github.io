@@ -24,9 +24,9 @@ export function SelectedWork() {
             Now, and <span className="text-primary-muted">before</span>.
           </h2>
           <p className="mt-8 max-w-prose text-lg leading-relaxed text-primary-muted text-pretty md:text-xl">
-            Currently shipping distributed systems and maintaining the operator
-            surfaces on top. Previously: engineering internships where I learned
-            to operate at scale.
+            Currently focused on high-scale query infrastructure and data
+            products at TikTok. Previously, engineering internships at Google,
+            ByteDance, and GovTech.
           </p>
         </FadeIn>
 

@@ -18,8 +18,7 @@ export function FeaturedProjects() {
             02 — Side projects
           </p>
           <h2 className="mt-6 max-w-3xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
-            Projects{' '}
-            <span className="text-primary-muted">on the side</span>.
+            Projects <span className="text-primary-muted">on the side</span>.
           </h2>
           <p className="mt-8 max-w-prose text-lg leading-relaxed text-primary-muted text-pretty md:text-xl">
             Things I&apos;ve built or actively maintain outside of work
@@ -81,7 +80,7 @@ function ProjectColumn({
           aria-hidden
           className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,var(--ambient-glyph-highlight),transparent_60%)]"
         />
-        <ProjectGlyph index={index} />
+        <ProjectGlyph visual={project.visual} />
       </div>
 
       {/* Body */}
@@ -120,11 +119,15 @@ function ProjectColumn({
   );
 }
 
-function ProjectGlyph({index}: {index: number}) {
+function ProjectGlyph({visual}: {visual: Project['visual']}) {
+  const visualOrder: Record<Project['visual'], number> = {
+    data: 0,
+    trading: 1,
+  };
   const glyphs = [
-    // Home lab — server stack
+    // Data service — data nodes
     <svg
-      key="server"
+      key="data"
       viewBox="0 0 320 200"
       className="h-full w-full text-primary/90"
       fill="none"
@@ -166,9 +169,9 @@ function ProjectGlyph({index}: {index: number}) {
         strokeWidth="1"
       />
     </svg>,
-    // Spending tracker — chat bubble + receipt
+    // Search — expanding result nodes
     <svg
-      key="spending"
+      key="search"
       viewBox="0 0 320 200"
       className="h-full w-full text-primary/90"
       fill="none"
@@ -185,7 +188,15 @@ function ProjectGlyph({index}: {index: number}) {
         strokeWidth="1"
         strokeLinecap="round"
       />
-      <circle cx="230" cy="60" r="14" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.5" />
+      <circle
+        cx="230"
+        cy="60"
+        r="14"
+        fill="currentColor"
+        fillOpacity="0.25"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path
         d="M225 60 h10 M230 55 v10"
         stroke="currentColor"
@@ -193,7 +204,7 @@ function ProjectGlyph({index}: {index: number}) {
         strokeLinecap="round"
       />
     </svg>,
-    // Trading algo — candlestick chart
+    // Trading framework — candlestick chart
     <svg
       key="trading"
       viewBox="0 0 320 200"
@@ -206,21 +217,100 @@ function ProjectGlyph({index}: {index: number}) {
         strokeOpacity="0.25"
         strokeWidth="1"
       />
-      <line x1="80" y1="60" x2="80" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
-      <rect x="74" y="90" width="12" height="40" stroke="currentColor" strokeWidth="1.5" />
-      <line x1="120" y1="40" x2="120" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
-      <rect x="114" y="70" width="12" height="60" stroke="currentColor" strokeWidth="1.5" fill="currentColor" fillOpacity="0.2" />
-      <line x1="160" y1="55" x2="160" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
-      <rect x="154" y="85" width="12" height="35" stroke="currentColor" strokeWidth="1.5" />
-      <line x1="200" y1="35" x2="200" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
-      <rect x="194" y="65" width="12" height="60" stroke="currentColor" strokeWidth="1.5" fill="currentColor" fillOpacity="0.2" />
-      <line x1="240" y1="50" x2="240" y2="160" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1" />
-      <rect x="234" y="80" width="12" height="45" stroke="currentColor" strokeWidth="1.5" />
+      <line
+        x1="80"
+        y1="60"
+        x2="80"
+        y2="160"
+        stroke="currentColor"
+        strokeOpacity="0.4"
+        strokeWidth="1"
+      />
+      <rect
+        x="74"
+        y="90"
+        width="12"
+        height="40"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+      <line
+        x1="120"
+        y1="40"
+        x2="120"
+        y2="160"
+        stroke="currentColor"
+        strokeOpacity="0.4"
+        strokeWidth="1"
+      />
+      <rect
+        x="114"
+        y="70"
+        width="12"
+        height="60"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        fill="currentColor"
+        fillOpacity="0.2"
+      />
+      <line
+        x1="160"
+        y1="55"
+        x2="160"
+        y2="160"
+        stroke="currentColor"
+        strokeOpacity="0.4"
+        strokeWidth="1"
+      />
+      <rect
+        x="154"
+        y="85"
+        width="12"
+        height="35"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+      <line
+        x1="200"
+        y1="35"
+        x2="200"
+        y2="160"
+        stroke="currentColor"
+        strokeOpacity="0.4"
+        strokeWidth="1"
+      />
+      <rect
+        x="194"
+        y="65"
+        width="12"
+        height="60"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        fill="currentColor"
+        fillOpacity="0.2"
+      />
+      <line
+        x1="240"
+        y1="50"
+        x2="240"
+        y2="160"
+        stroke="currentColor"
+        strokeOpacity="0.4"
+        strokeWidth="1"
+      />
+      <rect
+        x="234"
+        y="80"
+        width="12"
+        height="45"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>,
   ];
   return (
     <div className="absolute inset-0 flex items-center justify-center p-10">
-      {glyphs[index % glyphs.length]}
+      {glyphs[visualOrder[visual]]}
     </div>
   );
 }

@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   // eslint-disable-next-line n/no-unsupported-features/node-builtins
   metadataBase: new URL('https://marcuspeh.vercel.app'),
   title: {
-    default: 'Marcus Peh — Backend Engineer @ TikTok',
+    default: 'Marcus Peh — Software Engineer @ TikTok',
     template: '%s — Marcus Peh',
   },
   description:
-    'Backend engineer at TikTok building scalable data platforms and algorithmic trading systems. Previously Google, ByteDance, and GovTech.',
+    'Software engineer at TikTok building high-scale query infrastructure and data products. Previously Google, ByteDance, and GovTech.',
   keywords: [
     'Marcus Peh',
     'Backend Engineer',
@@ -29,16 +29,14 @@ export const metadata: Metadata = {
   authors: [{name: 'Marcus Peh'}],
   openGraph: {
     type: 'website',
-    title: 'Marcus Peh — Backend Engineer @ TikTok',
-    description:
-      'Building scalable data platforms and algorithmic trading systems.',
+    title: 'Marcus Peh — Software Engineer @ TikTok',
+    description: 'Scaling query infrastructure and data products at TikTok.',
     siteName: 'Marcus Peh',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Marcus Peh — Backend Engineer @ TikTok',
-    description:
-      'Building scalable data platforms and algorithmic trading systems.',
+    title: 'Marcus Peh — Software Engineer @ TikTok',
+    description: 'Scaling query infrastructure and data products at TikTok.',
   },
   robots: {index: true, follow: true},
   icons: {

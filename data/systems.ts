@@ -19,7 +19,7 @@ export interface CoreSystem {
 
 export const coreSystems: CoreSystem[] = [
   {
-    id: 'decisioning',
+    id: 'query-engine',
     index: 'A',
     name: 'User Segmentation & Decisioning Platform',
     category: 'Production system · TikTok',
@@ -32,8 +32,8 @@ export const coreSystems: CoreSystem[] = [
     outcome:
       'A platform that decides eligibility, targeting, and outcome actions for production traffic at scale, with strict latency budgets and stable behavior under downstream stress.',
     capabilities: [
-      'Rule-tree evaluation with bounded async fan-out',
-      'Per-node circuit breakers, timeouts, and fallbacks',
+      'Multi-million-QPS query execution',
+      'P99 latency and availability optimization',
       'Eligibility, targeting & decision outcomes in-line',
       'Multi-tier caching tuned for hot path access',
     ],
@@ -41,9 +41,10 @@ export const coreSystems: CoreSystem[] = [
       {label: 'Throughput', value: 'M-QPS'},
       {label: 'Tail latency', value: 'P99 < 50ms'},
       {label: 'Execution', value: 'Distributed'},
+      {label: 'Availability', value: '>99.99% SLA'},
     ],
     architecture: [
-      {label: 'Ingest', detail: 'Incoming events & user attributes'},
+      {label: 'Query', detail: 'Online requests and cache access'},
       {label: 'Evaluate', detail: 'Rule tree, async fan-out'},
       {label: 'Decide', detail: 'Targeting & eligibility outcomes'},
     ],
@@ -54,7 +55,7 @@ export const coreSystems: CoreSystem[] = [
     name: 'Distributed User Group Analysis System',
     category: 'Designed & built · TikTok',
     tagline:
-      'On-demand cohort computation over population-scale data.',
+      'On-demand creator intelligence, from cohort analysis to visualization.',
     problem:
       'Product teams need to ask questions about very large user populations — segments defined by dynamic, multi-attribute rules — and get answers with low latency. Naive scans are too slow; the system needs to construct distributed query plans that can hit multiple data services concurrently.',
     approach:
@@ -84,7 +85,7 @@ export const systemNarrative = {
   eyebrow: '01 — Production systems',
   title: 'Two systems. One user intelligence layer.',
   description:
-    'Together, these platforms form the substrate for targeting, personalization, and operational decisioning at TikTok.',
+    'At TikTok, I work across query infrastructure and data products where performance, availability, and useful interfaces have to coexist.',
 };
 
 export const systemMetrics = [

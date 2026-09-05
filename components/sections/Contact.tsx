@@ -22,7 +22,7 @@ export function Contact() {
             05 — Get in touch
           </p>
           <h2 className="mt-6 max-w-4xl text-section-mobile font-semibold tracking-tight text-balance md:text-section">
-            Open to senior backend + frontend roles and{' '}
+            Open to senior software engineering roles and{' '}
             <span className="text-primary-muted">systems conversations</span>.
           </h2>
         </FadeIn>

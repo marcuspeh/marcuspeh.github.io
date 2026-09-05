@@ -68,9 +68,9 @@ export function Hero() {
           variants={lineVariants}
           className="mt-8 max-w-prose text-body text-primary-muted text-pretty"
         >
-          Building distributed systems and maintaining the operator surfaces on
-          top. Side projects include a Telegram spending bot and a personal
-          trading algorithm. Previously Google, ByteDance, and GovTech.
+          Scaling query infrastructure and data products at TikTok, with a
+          focus on high-throughput systems and the interfaces that make them
+          useful. Previously Google, ByteDance, and GovTech.
         </motion.p>
 
         {/* CTA buttons */}
